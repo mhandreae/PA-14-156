@@ -191,25 +191,25 @@ Language'', (\textit{accepted to the Journal of Statistical Software})
 \subsection*{rstanarm: An R package to democratize Stan}
 
 Part of the power of Stan is that researchers can specify almost any
-model with the Stan language, and Stan's algorithms will, perhaps
-with a few tweaks, likely be able to efficiently produce a set of
-random draws from the posterior distribution of that model. However,
-the hurdle of specifying a model in the Stan language can be too high
-for beginners or for quantitative researchers that have limited formal
-training in probability theory. The rstanarm R package is our latest
-attempt to make Stan accessable to a wider set of researchers by providing
-a handful of models in the Stan language that are ready to be executed
-by R functions whose syntax is very familiar to anyone who has fit
-models in R before.
+model with the Stan language, and Stan's algorithms will, albeit sometime 
+requiring transformations, auxiliary parameterizations and other tweaks, 
+likely be able to efficiently produce a set of random draws from the 
+posterior distribution of that model. However, the hurdle of specifying a model 
+in the Stan language can be too high for beginners or for quantitative 
+researchers that have limited formal training in probability theory. 
+The rstanarm R package is our latest attempt to make Stan accessible to a wider 
+set of researchers by providing a spectrum of models in the Stan language that 
+are ready to be executed by R functions whose syntax is very familiar to 
+anyone who has fit models in R before.
 
 For example, the rstanarm package currently includes Bayesian versions
 of linear regression and ANOVA models, generalized linear models with
 a variety of likelihood and link functions, so-called generalized
-``mixed'' models possibly with smooth additive terms such as splines,
+''mixed'' models possibly with smooth additive terms such as splines,
 and models for ordinal outcomes. Within two days of rstanarm's first
 release, an R enthusiast named Wayne Folta (who is not part of the
 Stan development team and was until that time unkown to us) \href{http://thinkinator.com/2016/01/12/r-users-will-now-inevitably-become-bayesians/}{blogged}
-that the ``third reason {[}why everyone isn\textquoteright t using
+that the ''third reason {[}why everyone isn\textquoteright t using
 Bayesian methods for regression modeling{]} has recently been shattered
 in the R world by not one but two packages: brms and rstanarm. Interestingly,
 both of these packages are elegant front ends to Stan''. Folta summarized
@@ -244,17 +244,16 @@ R package \href{https://cran.r-project.org/web/packages/rstanarm/vignettes/rstan
 One of the problems faced by medical researchers --- as well as researchers
 in many other fields --- is that some of the data produced by the
 data-generated process does not appear in the data file. In a medical
-context, it is often the case that some data are \emph{uncollected}.
-For example, if a doctor determines that a sick patient is unlikely
-to have a particular medical condition, then the doctor is less likely
-to order an expensive or invasive test that is presumed to turn out
-negative, especially if the patient is uninsured or underinsured.
-Conversely, patients with more extreme symptoms or more comprehensive
-health insurance are more likely to have the additonal test administered
-to them. As a result, the data file has a column for the results of
-this test, but its cells are empty for patients who were not tested
-and who differ systematically from tested patients. Thus, any analysis
-of the complete cases in the data file may produce severely biased
+context, it is often the case that some data are \emph{missing} 
+because they were not collected. For example, if a doctor determines 
+that a sick patient is unlikely to have a particular medical condition, 
+then the doctor is less likely to order an expensive or invasive 
+test that is presumed to turn out negative.
+Conversely, patients with more extreme symptoms are more likely to have the 
+additional test administered to them. As a result, the data file has a 
+column for the results of this test, but its cells are empty for 
+patients who were not tested and who differ systematically from tested patients. 
+Thus, any analysis of the complete cases in the data file may produce severely biased
 estimates for the population as a whole.
 
 The same problem manifests itself in different ways in the social
@@ -267,25 +266,25 @@ cases is known to produce biased results.
 In recent years, the most common pro-active approach to dealing with
 missing data is to impute the missing values multiple times using
 some sort of model. There are two main algorithms for modeling incomplete
-data, one of which is implemented by the mi R package, which has been
+data, one of which is implemented by my \textit{mi} R package, which has been
 in development for about a decade, was rewritten along with collaborators
 as part of my postdoctoral research at Columbia University between
-2010 and 2013, and is still being maintained by me. The mi package
+2010 and 2013, and is still being maintained by me. The \textit{mi} package
 and other implementations of similar imputation algorithms have helped
 a generation of scientists handle incomplete data in a more principled
-fashion. My fellow developers of the mi package have recently published
+fashion. My fellow developers of the \textit{mi} package have recently published
 a paper comparing its performance to the other main algorithm for
-modeling incomplete data and found that mi's approach is preferable
+modeling incomplete data and found that \textit{mi}'s approach is preferable
 for discrete variables with missingness, which are the vast majority
 of the variables collected in the social sciences but are common in
 medical research as well. For example, if a medical test is recorded
 simply as positive or negative when it is administered, the uncollected
 values on this binary variable should be imputed better by the algorithm
-implmented in mi than the other leading imputation algorithm.
+implemented in \textit{mi} than the other leading imputation algorithm.
 
-In the future, we would like to integrate rstanarm and mi by using
-the former to estimate the quantities needed by mi to multiply impute
-the missing values. In addition, we have plans to use Stan to introduce
+In the future, we would like to integrate \textit{rstanarm} and \textit{mi} by using
+the former to estimate the quantities needed by \textit{mi} to multiply impute
+the missing values. In addition, we have plans to use \textit{Stan} to introduce
 a third category of imputation algorithm that builds on the combined
 strengths of the two most popular algorithms today.
 
