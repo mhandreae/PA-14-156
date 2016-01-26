@@ -241,26 +241,23 @@ R package \href{https://cran.r-project.org/web/packages/rstanarm/vignettes/rstan
 
 \subsection*{mi: An R package for multiple imputation of missing data}
 
-One of the problems faced by medical researchers --- as well as researchers
-in many other fields --- is that some of the data produced by the
-data-generated process does not appear in the data file. In a medical
-context, it is often the case that some data are \emph{missing} 
-because they were not collected. For example, if a doctor determines 
-that a sick patient is unlikely to have a particular medical condition, 
-then the doctor is less likely to order an expensive or invasive 
-test that is presumed to turn out negative.
-Conversely, patients with more extreme symptoms are more likely to have the 
-additional test administered to them. As a result, the data file has a 
-column for the results of this test, but its cells are empty for 
-patients who were not tested and who differ systematically from tested patients. 
-Thus, any analysis of the complete cases in the data file may produce severely biased
+Missing and incomplete date are a major problem in survey research 
+and electronic health records alike. In a medical
+context, some data may be \emph{missing} 
+because they were not collected. For example, in the absence of pertinent symptoms, 
+a doctor is less likely to order an expensive or invasive 
+test, likely not to add any relevant information.
+Conversely, symptomatic patients  are more likely to be tested. 
+As a result, data are not missing completely at random, data are 
+collected or missing contingent on disease status. 
+Thus, an analysis limited to only the complete cases only may produce severely biased
 estimates for the population as a whole.
 
 The same problem manifests itself in different ways in the social
 sciences where some data is \emph{missing} because the survey respondents
 (or other units of observation) refuse to provide it. Missing data
-is very common for questions about income, race, medical history,
-and other sensitive topics. Again, any analysis of only the complete
+is very common for sensitive questions like income, race. 
+Again, any analysis of only the complete
 cases is known to produce biased results.
 
 In recent years, the most common pro-active approach to dealing with
@@ -269,23 +266,20 @@ some sort of model. There are two main algorithms for modeling incomplete
 data, one of which is implemented by my \textit{mi} R package, which has been
 in development for about a decade, was rewritten along with collaborators
 as part of my postdoctoral research at Columbia University between
-2010 and 2013, and is still being maintained by me. The \textit{mi} package
+2010 and 2013, and is still being maintained by me. My \textit{mi} package
 and other implementations of similar imputation algorithms have helped
 a generation of scientists handle incomplete data in a more principled
 fashion. My fellow developers of the \textit{mi} package have recently published
 a paper comparing its performance to the other main algorithm for
 modeling incomplete data and found that \textit{mi}'s approach is preferable
 for discrete variables with missingness, which are the vast majority
-of the variables collected in the social sciences but are common in
-medical research as well. For example, if a medical test is recorded
-simply as positive or negative when it is administered, the uncollected
-values on this binary variable should be imputed better by the algorithm
-implemented in \textit{mi} than the other leading imputation algorithm.
+of the variables collected in the social sciences and in clinical outcomes 
+research.
 
-In the future, we would like to integrate \textit{rstanarm} and \textit{mi} by using
+In this project we will integrate \textit{rstanarm} and \textit{mi} by using
 the former to estimate the quantities needed by \textit{mi} to multiply impute
-the missing values. In addition, we have plans to use \textit{Stan} to introduce
-a third category of imputation algorithm that builds on the combined
+the missing values. In addition, we have plans to to introduce
+a third category imputation algorithm building on the combined
 strengths of the two most popular algorithms today.
 
 \vspace{2mm}
@@ -301,53 +295,29 @@ approaches.'' \emph{Political Analysis} 22.4 (2014): 497-519.
 From 2013 to its ultimate demise in 2014, I was a consultant for the
 National Children's Study (NCS), which was being run out of the Eunice
 Kennedy Shriver National Institute of Child Health and Human Development
-at the National Institutes of Health. Although the NCS failed, I nevertheless
-believe that my three fellow consultants and I made an important contribution
+at the National Institutes of Health. Although the NCS was eventually discontinued, 
+I nevertheless believe that my three fellow consultants and I made an 
+important contribution
 to science and were poised to perhaps make a further important contribution
 if the NCS had been allowed to continue.
 
 We were asked to assess a sampling design for the NCS where hospitals
 were sampled from a list in the first stage and delivering mothers
-were sampled from each selected hospital in the second stage. Many
-medical researchers were opposed to this sampling design because they
-wanted to collect prenatal data on expectant mothers. However, we
+were sampled from each selected hospital in the second stage. 
+Regardless of the scientific value of this approach (questioned by some), we
 were merely asked to evaluate the cost-effectiveness of this approach
-using computer simulations. Although I had no previous experience
-with hospital data and only limited experience with survey design,
-I was essential to the team by programming the simulations in R. We
-were given access to the State Inpatient Databases for all participating
-states, which we filtered for baby deliveries, and then I simulated
-the proposed research design on this list of hospitals and mothers.
-We found that this research design was not particularly efficient.
-Due to the high-degree of socio-demographic clustering of mothers
-within a hospital or technically a Primary Sampling Unit (PSU), we
-recommended ``In the absence of cost considerations (as cost data
-are unavailable for this project) we suggest that a sample of at least
-400 PSUs (preferably more) be drawn'' in order to estimate population
-means with conventional levels of precision. Sampling at least 400
-hospitals would be quite expensive and our recommendation --- which
-was never made public --- was misquoted to the National Academy of
-Science's Panel on the Design of the National Children\textquoteright s
-Study and Implications for the Generalizability of Results as a recommendation
-of 200 to 300 PSUs. Nevertheless, Director Collins concluded that
-the design was not feasible for a variety of reasons and discontinued
-the NCS.
+using computer simulations. Devising and programming the simulations in R, 
+my role was essential to the team. 
 
-Although our contribution to science was a negative one, the other
+We found that this research design was 
+not particularly efficient, due to the high-degree of socio-demographic 
+clustering of mothers within a hospital (the Primary Sampling Unit). 
+Misquoted to the National Academy of Science's Panel on the Design of 
+the National Children\textquoteright s Study the other
 three consultants and I agreed that our simulations were the first
-time that a survey design such as this had been rigorously studied.
+time that a survey design such as this had been rigorously studied \textit{a priori}.
 Without them, the NCS might have been flying blind with a design that
-would not have served medical researchers well. In addition, I performed
-some additional simulations of an alternative design that would have
-essentially redefined the primary sampling unit as the intersection
-of a hospital and an income class. The preliminary results suggested
-that the NCS could achieve much better estimates of the population
-means with 200 or perhaps fewer redefined PSUs, but we were not collectively
-confident enough in these preliminary results to raise this alternative
-with Steven Hirschfeld. At the time that the NCS was discontinued,
-we were planning a set of follow-up simulations to better compare
-these survey designs using Stan, Census data, and a list of obstetricians
-that worked in each hospital.
+would not have served medical researchers well. 
 
 \vspace{2mm}
 
