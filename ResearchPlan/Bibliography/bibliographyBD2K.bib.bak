@@ -1833,6 +1833,18 @@ Pregnancy},
   Url                      = {http://dx.doi.org/10.1002/gepi.21600}
 }
 
+@Article{ParkGelman2004bayesian,
+  Title                    = {Bayesian multilevel estimation with poststratification: state-level estimates from national polls},
+  Author                   = {Park, David K and Gelman, Andrew and Bafumi, Joseph},
+  Journal                  = {Political Analysis},
+  Year                     = {2004},
+  Number                   = {4},
+  Pages                    = {375--385},
+  Volume                   = {12},
+
+  Publisher                = {SPM-PMSAPSA}
+}
+
 @Article{Lim_19783532,
   Title                    = {BTS guidelines for the management of community acquired pneumonia in adults: update 2009.},
   Author                   = {{{Pneumonia Guidelines Committee of the B. T. S Standards of Care Committee}}},
@@ -2686,14 +2698,14 @@ J Neuroimmune Pharmacol. 2013 Mar 19.},
   Url                      = {http://dx.doi.org/10.1016/S0140-6736(11)60989-6}
 }
 
-@Conference{,
-  Owner                    = {Micheal},
-  Timestamp                = {2015.11.11}
-}
-
 @Article{,
   Owner                    = {Micheal},
   Timestamp                = {2015.11.24}
+}
+
+@Conference{,
+  Owner                    = {Micheal},
+  Timestamp                = {2015.11.11}
 }
 
 @Article{ASA_25545654,
