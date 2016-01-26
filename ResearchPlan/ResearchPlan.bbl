@@ -68,6 +68,12 @@ B.~Efron and C.~N. Morris.
 \newblock Stein's paradox in statistics.
 \newblock {\em Scientific American}, 263(5):119--127, 1977.
 
+\bibitem{Hall2009a}
+C.~B. Hall, R.~B. Lipton, H.~Tennen, and S.~R. Haut.
+\newblock Early follow-up data from seizure diaries can be used to predict
+  subsequent seizures in same cohort by borrowing strength across participants.
+\newblock {\em Epilepsy Behav}, 14(3):472--475, Mar 2009. PMID: 19138755.
+
 \bibitem{Sackett1996}
 D.~L. Sackett, W.~M. Rosenberg, J.~A. Gray, R.~B. Haynes, and W.~S. Richardson.
 \newblock Evidence based medicine: what it is and what it isn't.
@@ -150,6 +156,11 @@ D.~J. Spiegelhalter, K.~R. Abrams, and J.~P. Myles.
   evaluation}, volume~13.
 \newblock John Wiley \& Sons, 2004.
 
+\bibitem{Gelman2001imputation}
+A.~Gelman and T.~E. Raghunathan.
+\newblock Using conditional distributions for missing-data imputation.
+\newblock {\em Statistical Science}, 3:268--9, 2001.
+
 \bibitem{Kruschke_Book_2014}
 J.~Kruschke.
 \newblock {\em Doing Bayesian data analysis: A tutorial introduction with R}.
@@ -160,17 +171,29 @@ D.~B. Rubin.
 \newblock Inference and missing data.
 \newblock {\em Biometrika}, 63(3):581--592, 1976.
 
+\bibitem{Hall_25389642}
+C.~B. Hall, R.~B. Lipton, M.~J. Katz, and C.~Wang.
+\newblock Correcting Bias Caused by Missing Data in the Estimate of the Effect
+  of Apolipoprotein epsilon 4 on Cognitive Decline.
+\newblock {\em J Int Neuropsychol Soc}, pages 1--6, Nov 2014. PMID: 25389642.
+
 \bibitem{Daniels24571539}
 M.~J. Daniels, C.~Wang, and B.~H. Marcus.
 \newblock Fully Bayesian inference under ignorable missingness in the presence
   of auxiliary covariates.
 \newblock {\em Biometrics}, 70(1):62--72, Mar 2014. PMID: 24571539.
 
-\bibitem{Hall_25389642}
-C.~B. Hall, R.~B. Lipton, M.~J. Katz, and C.~Wang.
-\newblock Correcting Bias Caused by Missing Data in the Estimate of the Effect
-  of Apolipoprotein epsilon 4 on Cognitive Decline.
-\newblock {\em J Int Neuropsychol Soc}, pages 1--6, Nov 2014. PMID: 25389642.
+\bibitem{Ibrahim2001auxilliaryImputaton}
+J.~G. Ibrahim, S.~R. Lipsitz, and N.~Horton.
+\newblock Using auxiliary data for parameter estimation with non-ignorably
+  missing outcomes.
+\newblock {\em Applied statistics}, pages 361--373, 2001.
+
+\bibitem{Schomaker23873614}
+M.~Schomaker, T.~Gsponer, J.~Estill, M.~Fox, and A.~Boulle.
+\newblock Non-ignorable loss to follow-up: correcting mortality estimates based
+  on additional outcome ascertainment.
+\newblock {\em Stat Med}, 33(1):129--142, Jan 2014. PMID: 23873614.
 
 \bibitem{Wang_20029935}
 C.~Wang and C.~B. Hall.
@@ -227,12 +250,6 @@ A.~Gelman and J.~Hill.
 {Stan Development Team}.
 \newblock Stan: A C++ Library for Probability and Sampling, Version 2.5.0,
   2014.
-
-\bibitem{Hall2009a}
-C.~B. Hall, R.~B. Lipton, H.~Tennen, and S.~R. Haut.
-\newblock Early follow-up data from seizure diaries can be used to predict
-  subsequent seizures in same cohort by borrowing strength across participants.
-\newblock {\em Epilepsy Behav}, 14(3):472--475, Mar 2009. PMID: 19138755.
 
 \bibitem{Hall2000}
 C.~B. Hall, R.~B. Lipton, M.~Sliwinski, and W.~F. Stewart.
@@ -328,11 +345,6 @@ A.~Gelman, G.~King, and C.~Liu.
 \newblock Not asked and not answered: Multiple imputation for multiple surveys.
 \newblock {\em Journal of the American Statistical Association},
   93(443):846--857, 1998.
-
-\bibitem{Gelman2001imputation}
-A.~Gelman and T.~E. Raghunathan.
-\newblock Using conditional distributions for missing-data imputation.
-\newblock {\em Statistical Science}, 3:268--9, 2001.
 
 \bibitem{Hoffman2014}
 M.~D. Hoffman and A.~Gelman.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.14)  26 JAN 2016 09:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.14)  26 JAN 2016 11:25
 entering extended mode
 **ResearchPlan.tex
 
@@ -520,7 +520,7 @@ Package pdftex.def Info: Figures/DistrogramMetaAnalysis.pdf used on input line
 (pdftex.def)             Requested size: 211.02483pt x 158.12883pt.
  [4 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPla
 n/Figures/DistrogramMetaAnalysis.pdf>]
-[5] <Figures/Hamiltonian.png, id=152, 177.66376pt x 256.70906pt>
+[5] <Figures/Hamiltonian.png, id=153, 177.66376pt x 256.70906pt>
 File: Figures/Hamiltonian.png Graphic file (type png)
 
 <use Figures/Hamiltonian.png>
@@ -533,7 +533,7 @@ Overfull \hbox (1.62325pt too wide) in paragraph at lines 189--191
 
 [6 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
 /Figures/Hamiltonian.png>]
-<Figures/shinystan.png, id=164, 246.6816pt x 83.1105pt>
+<Figures/shinystan.png, id=166, 246.6816pt x 83.1105pt>
 File: Figures/shinystan.png Graphic file (type png)
 
 <use Figures/shinystan.png>
@@ -544,7 +544,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--206
 [][]
  []
 
-<Figures/Bayesian_imputation.pdf, id=167, 686.565pt x 298.11375pt>
+<Figures/Bayesian_imputation.pdf, id=169, 686.565pt x 298.11375pt>
 File: Figures/Bayesian_imputation.pdf Graphic file (type pdf)
 
 <use Figures/Bayesian_imputation.pdf>
@@ -552,14 +552,15 @@ Package pdftex.def Info: Figures/Bayesian_imputation.pdf used on input line 222
 .
 (pdftex.def)             Requested size: 274.62112pt x 119.24338pt.
  [7 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPla
-n/Figures/shinystan.png> <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/
-PA-14-156/ResearchPlan/Figures/Bayesian_imputation.pdf>]
+n/Figures/shinystan.png>]
 Overfull \hbox (13.81866pt too wide) in paragraph at lines 243--245
 \T1/phv/m/n/10.95 gre-gate and in-di-vid-ual pa-tient data, when pub-lished re-
 sults were in-suf-fi-cient for clas-si-cal meta-analysis$[]$.
  []
 
-[8] <Figures/SoftwareTrajectory.pdf, id=256, 794.97pt x 614.295pt>
+[8 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
+/Figures/Bayesian_imputation.pdf>]
+<Figures/SoftwareTrajectory.pdf, id=257, 794.97pt x 614.295pt>
 File: Figures/SoftwareTrajectory.pdf Graphic file (type pdf)
 
 <use Figures/SoftwareTrajectory.pdf>
@@ -587,12 +588,12 @@ Underfull \hbox (badness 4429) in paragraph at lines 258--259
 \T1/phv/m/n/10.95 the Cen-ter for Dis-ease Con-trol and
  []
 
+[9 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
+/Figures/SoftwareTrajectory.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 271.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 271.
-[9 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
-/Figures/SoftwareTrajectory.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 305.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
@@ -629,7 +630,7 @@ Underfull \hbox (badness 1102) in paragraph at lines 360--361
  pack-
  []
 
-[11] [12] [13] <Figures/Timeline.pdf, id=356, 597.55246pt x 421.09319pt>
+[11] [12] [13] <Figures/Timeline.pdf, id=363, 597.55246pt x 421.09319pt>
 File: Figures/Timeline.pdf Graphic file (type pdf)
 
 <use Figures/Timeline.pdf>
@@ -649,20 +650,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 445.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 445.
 Package rerunfilecheck Info: File `ResearchPlan.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 445.
  ) 
 Here is how much of TeX's memory you used:
- 9381 strings out of 493921
- 136376 string characters out of 3147276
- 327023 words of memory out of 3000000
- 12445 multiletter control sequences out of 15000+200000
+ 9389 strings out of 493921
+ 136622 string characters out of 3147276
+ 325023 words of memory out of 3000000
+ 12451 multiletter control sequences out of 15000+200000
  52255 words of font info for 70 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 41i,8n,38p,1693b,623s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,8n,38p,1693b,629s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/font
@@ -672,9 +669,9 @@ onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on ResearchPlan.pdf (18 pages, 772657 bytes).
+Output written on ResearchPlan.pdf (18 pages, 774540 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 500000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
