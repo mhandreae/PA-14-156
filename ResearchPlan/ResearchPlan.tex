@@ -163,7 +163,7 @@ Multi-level hierarchical models may hence be a useful tool to analyses heterogen
 
 \section*{Integrating incomplete data into clustered EHR modeling}
 
-Too often data scientists either (1) fit complex model but limit the analysis to complete cases, ignoring the missing or incomplete data or (2) impute the missing data, but build overly simplified models of the scientific question of interest, to limit complexity of the overall model. More accessible hierarchical modeling could better integrate the two elements. Missing predictors are imputed on a lower level of the model. The imputed missing data point with its confidence interval (indicating the precision of the imputation) is then fed into the estimation at the next higher level of the model. 
+Too often data scientists either (1) fit complex model but limit the analysis to complete cases, ignoring the missing or incomplete data or (2) impute the missing data, but build overly simplified models of the scientific question of interest, to limit complexity of the overall model. More accessible hierarchical modeling could better integrate the two elements. Missing predictors are imputed on a lower level of the model. The imputed missing data point with its confidence interval (indicating the precision of the imputation) is then fed into the estimation at the next higher level of the model \cite{Gelman2001imputation}. 
 
 \subsection*{EHR data are not missing at random.} Physicians chose which test to get to inform specific therapeutic decisions and different types of data are recorded in different clinical setting, e.g. arterial lines may not be permissible on the floor, vitals are recorded in greater detail and more frequently in high dependency units like the ICU. 
 
