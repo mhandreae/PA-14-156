@@ -1,0 +1,367 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[11pt]{article}
+\usepackage[latin9]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage[unicode=true]
+ {hyperref}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\usepackage{url}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+
+%\pagestyle{empty}
+
+
+\fancyhf{}
+\lfoot{Michael Betancourt Biographical Sketch}
+\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\makeatother
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                 Header                                                      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\textbf{Biographical Sketch}
+\par\end{center}
+
+\noindent \rule{6.75in}{0.25mm} NAME: Benjamin Goodrich
+
+\noindent \rule{6.75in}{0.25mm} eRA COMMONS USER NAME: B\_GOODRICH
+
+\noindent \rule{6.75in}{0.25mm} POSITION TITLE: Lecturer in Discipline
+in Political Science at Columbia University
+
+\noindent \rule{6.75in}{0.25mm} EDUCATION/TRAINING \vspace{3mm}
+
+
+\noindent %
+\begin{tabular*}{6.5in}{@{\extracolsep{\fill}}lll>{\raggedright}p{1.5in}}
+INSTITUTION AND LOCATION  & DEGREE  & COMPLETION  & FIELD\tabularnewline
+ &  & DATE  & OF STUDY \tabularnewline
+Emory University, Atlanta, GA & B.A.  & 05/2001 & Political Science\tabularnewline
+Emory University, Atlanta, GA & M.A.  & 05/2001 & Political Science\tabularnewline
+Harvard University, Cambridga, MA & Ph.D. & 05/2010 & Government and Social Policy\tabularnewline
+Columbia University, New York, NY  & Postdoctoral  & 06/2013  & Applied Statistics \tabularnewline
+\end{tabular*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                         Personal Statement                                           %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{A. Personal Statement}
+
+Although my degrees have been in political science, I am essentially
+a computational statistician with interests in multiple applied fields.
+Since my co-principal investigator, Michael Andreae is an anesthesiologist
+who, along with his colleagues at Mount Sinai and Albert Einstein
+medical schools in New York, has extensive experience in medicine,
+my role in this grant application is almost exclusively to write the
+compute code for our new estimators. 
+
+I have been a core developer of the Bayesian statistical software
+project called Stan almost since its inception in 2011 and am the
+maintainer of two packages for the statistical software known as R
+that provide interfaces to the Stan library. After completing my Ph.D.,
+I was a postdoctoral researcher on an Institute for Education Sciences
+grant to develop an R package for multiple imputation of missing data,
+which is quite prevalent in education research and many other applied
+fields including medicine. Our grant application proposes substantial
+enhancements to the aforementioned software projects, which have been
+developed in collaboration with Andrew Gelman and other researchers
+at and outside Columbia University. I also developed a largely unrelated
+R package as part of my dissertation research that implemented two
+novel estimation algorithms. 
+
+Stan has been well-received in a variety of scientific fields. Between
+the previous two semesters, I traveled to San Francisco to teach a
+two-day workshop on Stan at the headquarters of The Climate Corporation,
+which employs dozens of data scientists who study agriculture in light
+of climate change. In the past five years, Stan has already become
+prominent in applied statistics and the social sciences, and we would
+like to bring these achievements to the field of medicine and expand
+upon them during the next five years. 
+
+If I have published less than other early career researchers, it is
+because research is not an explicit part of my contract as a Lecturer
+at Columbia University where I teach five classes per year on quantitative
+methodology at the graduate level. Although I teach one Ph.D. level
+class in political science, I do most of my teaching in the Quantitative
+Methods in the Social Sciences master's program, which is not a department
+and thus does not have its own faculty or a tenure-track process.
+I would appreciate this grant because it would allow me to balance
+my teaching with research that would be of benefit to medical researchers
+and scholars in other fields. 
+
+\vspace{2mm}
+
+
+\noindent Bob Carpenter et al., ``Stan: A Probabilistic Programming
+Language'', (\textit{accepted to the Journal of Statistical Software})
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                        Positions and Honors                                         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{B. Positions and Honors}
+
+2010 \textendash{} 2013, Postdoc, Applied Statistics Center, Columbia
+University, New York, NY
+
+\noindent 2013 \textendash{} present, Lecturer in Discipline in Political
+Science, Columbia University, New York, NY
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                       Contribution to Science                                       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{C. Contribution to Science}
+
+
+\subsection*{Stan: A probabilistic programming language}
+
+I have been a core developer of Stan since 2011, which is a suite
+of software that enables scientists to analyze their data and make
+Bayesian inferences. It is difficult to estimate how many people use
+Stan because it is available to download for free on a variety of
+sites around the internet that do not directly count the number of
+unique users. We do know that a recent version of the Stan user manual
+has been downloaded over 5000 times and that the Python interface
+to Stan has been downloaded 6000 times in the past month. The R interface
+to Stan, which I am the maintainer of, is more popular than the Python
+interface and probably all other Stan interfaces combined.
+
+My contribution to the Stan project has primarily been coding for
+multivariate probability distributions, maintaining the R packages
+that provide interfaces to Stan, and answering questions on the Stan-users
+email list, which has over 1500 members. I have participated in more
+than 660 threads on Stan-users and an additional 700 threads on the
+email list for Stan developers. Multivariate statistics is much more
+challenging than univariate statistics, but Stan has done more than
+almost any other software to provide attractive options for scientists
+who need to utilize multivariate probability distributions, which
+arise when modeling multiple outcome variables simultaneously, when
+employing hierarchical models, and other research contexts. In particular,
+Stan has done more to popularize modeling with correlation matrices
+than have the original papers whose ideas were incorporated into Stan
+and extended upon by me personally.
+
+Some have said that it is the users of Stan who make novel contributions
+to science. While that is true, Stan is a necessary part of that process,
+even if Stan developers are not among the authors of the paper or
+any mention that Stan was used is relegated to a footnote. Most Stan
+users initially turn to Stan when their research problem is too complicated
+for more widely-known software to handle well. Thus, Stan provides
+the infrastructure for scientists to make well-founded inferences
+from data.
+
+\vspace{2mm}
+
+
+\noindent Bob Carpenter et al., ``Stan: A Probabilistic Programming
+Language'', (\textit{accepted to the Journal of Statistical Software})
+
+
+\subsection*{rstanarm: An R package to democratize Stan}
+
+Part of the power of Stan is that researchers can specify almost any
+model with the Stan language, and Stan's algorithms will, perhaps
+with a few tweaks, likely be able to efficiently produce a set of
+random draws from the posterior distribution of that model. However,
+the hurdle of specifying a model in the Stan language can be too high
+for beginners or for quantitative researchers that have limited formal
+training in probability theory. The rstanarm R package is our latest
+attempt to make Stan accessable to a wider set of researchers by providing
+a handful of models in the Stan language that are ready to be executed
+by R functions whose syntax is very familiar to anyone who has fit
+models in R before.
+
+For example, the rstanarm package currently includes Bayesian versions
+of linear regression and ANOVA models, generalized linear models with
+a variety of likelihood and link functions, so-called generalized
+``mixed'' models possibly with smooth additive terms such as splines,
+and models for ordinal outcomes. Within two days of rstanarm's first
+release, an R enthusiast named Wayne Folta (who is not part of the
+Stan development team and was until that time unkown to us) \href{http://thinkinator.com/2016/01/12/r-users-will-now-inevitably-become-bayesians/}{blogged}
+that the ``third reason {[}why everyone isn\textquoteright t using
+Bayesian methods for regression modeling{]} has recently been shattered
+in the R world by not one but two packages: brms and rstanarm. Interestingly,
+both of these packages are elegant front ends to Stan''. Folta summarized
+by saying 
+\begin{quote}
+Bayesian modeling is a general machine that can model any kind of
+regression you can think of. Until recently, if you wanted to take
+advantage of this general machinery, you\textquoteright d have to
+learn a general tool and its language. If you simply wanted to use
+Bayesian methods, you were often forced to use very-specialized functions
+that weren't flexible. With the advent of brms and rstanarm, R users
+can now use extremely flexible functions from within the familiar
+and powerful R framework. Perhaps we won't all become Bayesians now,
+but we now have significantly fewer excuses for not doing so. This
+is very exciting!
+\end{quote}
+In the future, we would like to add to the collection of models in
+rstanarm and include them in other interfaces to Stan besides R. In
+particular, we would like to add functionality that is essential to
+medical researchers.
+
+\vspace{2mm}
+
+
+Gabry, Jonah and Ben Goodrich. ``How to Use the rstanarm Package.''
+R package \href{https://cran.r-project.org/web/packages/rstanarm/vignettes/rstanarm.html}{vignette}
+(2015).
+
+
+\subsection*{mi: An R package for multiple imputation of missing data}
+
+One of the problems faced by medical researchers --- as well as researchers
+in many other fields --- is that some of the data produced by the
+data-generated process does not appear in the data file. In a medical
+context, it is often the case that some data are \emph{uncollected}.
+For example, if a doctor determines that a sick patient is unlikely
+to have a particular medical condition, then the doctor is less likely
+to order an expensive or invasive test that is presumed to turn out
+negative, especially if the patient is uninsured or underinsured.
+Conversely, patients with more extreme symptoms or more comprehensive
+health insurance are more likely to have the additonal test administered
+to them. As a result, the data file has a column for the results of
+this test, but its cells are empty for patients who were not tested
+and who differ systematically from tested patients. Thus, any analysis
+of the complete cases in the data file may produce severely biased
+estimates for the population as a whole.
+
+The same problem manifests itself in different ways in the social
+sciences where some data is \emph{missing} because the survey respondents
+(or other units of observation) refuse to provide it. Missing data
+is very common for questions about income, race, medical history,
+and other sensitive topics. Again, any analysis of only the complete
+cases is known to produce biased results.
+
+In recent years, the most common pro-active approach to dealing with
+missing data is to impute the missing values multiple times using
+some sort of model. There are two main algorithms for modeling incomplete
+data, one of which is implemented by the mi R package, which has been
+in development for about a decade, was rewritten along with collaborators
+as part of my postdoctoral research at Columbia University between
+2010 and 2013, and is still being maintained by me. The mi package
+and other implementations of similar imputation algorithms have helped
+a generation of scientists handle incomplete data in a more principled
+fashion. My fellow developers of the mi package have recently published
+a paper comparing its performance to the other main algorithm for
+modeling incomplete data and found that mi's approach is preferable
+for discrete variables with missingness, which are the vast majority
+of the variables collected in the social sciences but are common in
+medical research as well. For example, if a medical test is recorded
+simply as positive or negative when it is administered, the uncollected
+values on this binary variable should be imputed better by the algorithm
+implmented in mi than the other leading imputation algorithm.
+
+In the future, we would like to integrate rstanarm and mi by using
+the former to estimate the quantities needed by mi to multiply impute
+the missing values. In addition, we have plans to use Stan to introduce
+a third category of imputation algorithm that builds on the combined
+strengths of the two most popular algorithms today.
+
+\vspace{2mm}
+
+
+Kropko, Jonathan, et al. ``Multiple imputation for continuous and
+categorical data: Comparing joint multivariate normal and conditional
+approaches.'' \emph{Political Analysis} 22.4 (2014): 497-519.
+
+
+\subsection*{National Children's Study consultant}
+
+From 2013 to its ultimate demise in 2014, I was a consultant for the
+National Children's Study (NCS), which was being run out of the Eunice
+Kennedy Shriver National Institute of Child Health and Human Development
+at the National Institutes of Health. Although the NCS failed, I nevertheless
+believe that my three fellow consultants and I made an important contribution
+to science and were poised to perhaps make a further important contribution
+if the NCS had been allowed to continue.
+
+We were asked to assess a sampling design for the NCS where hospitals
+were sampled from a list in the first stage and delivering mothers
+were sampled from each selected hospital in the second stage. Many
+medical researchers were opposed to this sampling design because they
+wanted to collect prenatal data on expectant mothers. However, we
+were merely asked to evaluate the cost-effectiveness of this approach
+using computer simulations. Although I had no previous experience
+with hospital data and only limited experience with survey design,
+I was essential to the team by programming the simulations in R. We
+were given access to the State Inpatient Databases for all participating
+states, which we filtered for baby deliveries, and then I simulated
+the proposed research design on this list of hospitals and mothers.
+We found that this research design was not particularly efficient.
+Due to the high-degree of socio-demographic clustering of mothers
+within a hospital or technically a Primary Sampling Unit (PSU), we
+recommended ``In the absence of cost considerations (as cost data
+are unavailable for this project) we suggest that a sample of at least
+400 PSUs (preferably more) be drawn'' in order to estimate population
+means with conventional levels of precision. Sampling at least 400
+hospitals would be quite expensive and our recommendation --- which
+was never made public --- was misquoted to the National Academy of
+Science's Panel on the Design of the National Children\textquoteright s
+Study and Implications for the Generalizability of Results as a recommendation
+of 200 to 300 PSUs. Nevertheless, Director Collins concluded that
+the design was not feasible for a variety of reasons and discontinued
+the NCS.
+
+Although our contribution to science was a negative one, the other
+three consultants and I agreed that our simulations were the first
+time that a survey design such as this had been rigorously studied.
+Without them, the NCS might have been flying blind with a design that
+would not have served medical researchers well. In addition, I performed
+some additional simulations of an alternative design that would have
+essentially redefined the primary sampling unit as the intersection
+of a hospital and an income class. The preliminary results suggested
+that the NCS could achieve much better estimates of the population
+means with 200 or perhaps fewer redefined PSUs, but we were not collectively
+confident enough in these preliminary results to raise this alternative
+with Steven Hirschfeld. At the time that the NCS was discontinued,
+we were planning a set of follow-up simulations to better compare
+these survey designs using Stan, Census data, and a list of obstetricians
+that worked in each hospital.
+
+\vspace{2mm}
+
+
+Frankel, Martin, et al. Final revision of non-public memorandum submitted
+to Jennifer Kwan at the National Institutes of Health on 4/1/2014.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                          Research Support                                            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{D. Research Support}
+
+Alfred P. Sloan Foundation, G-2015-13987, \emph{Stan Community and
+Continuity}, PI: Andrew Gelman
+
+\noindent Role: Contractor during the Summer of 2015
+
+The overall goal of the Stan project is to make it easier for scientists
+to use Bayesian inference in their research. The Sloan Foundation
+grant is specifically intended to develop the community of Stan users
+and to ensure that it thrives over the long term. My specific role
+in this regard was to develop and maintain the R package that provides
+an interface to Stan, which is by far the most popular way of using
+Stan in the community.
+\end{document}
