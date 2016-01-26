@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.14)  26 JAN 2016 07:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.14)  26 JAN 2016 07:53
 entering extended mode
 **ResearchPlan.tex
 
@@ -499,419 +499,67 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 102.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 102.
-
-
-Package natbib Warning: Citation `AndreaeWhite2015' on page 2 undefined on inpu
-t line 102.
-
-
-Package natbib Warning: Citation `Rust2004' on page 2 undefined on input line 1
-04.
-
-
-Package natbib Warning: Citation `Glance2007' on page 2 undefined on input line
- 104.
-
-
-Package natbib Warning: Citation `Andreae2015' on page 2 undefined on input lin
-e 107.
-
-
-Package natbib Warning: Citation `Andreae2012' on page 2 undefined on input lin
-e 107.
-
-[2 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
-/Figures/DistrogramNACOR.pdf>]
-
-Package natbib Warning: Citation `AndreaeWhite2015' on page 3 undefined on inpu
-t line 110.
-
-
-Package natbib Warning: Citation `Bafumi_Gelman_2007' on page 3 undefined on in
-put line 110.
-
-
-Package natbib Warning: Citation `Efron_1975' on page 3 undefined on input line
- 113.
-
-
-Package natbib Warning: Citation `Gelman-Hill_2014' on page 3 undefined on inpu
-t line 113.
-
+) [2 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPl
+an/Figures/DistrogramNACOR.pdf>]
 LaTeX Font Info:    Try loading font information for OMS+phv on input line 117.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
-
-
-Package natbib Warning: Citation `Gelman2009' on page 3 undefined on input line
- 121.
-
-
-Package natbib Warning: Citation `Stein_paradox_Scientific_American' on page 3 
-undefined on input line 121.
-
-
-Package natbib Warning: Citation `Andreae2015' on page 3 undefined on input lin
-e 124.
-
-
-Package natbib Warning: Citation `Sackett1996' on page 3 undefined on input lin
-e 124.
-
-
-Package natbib Warning: Citation `Ashby2000' on page 3 undefined on input line 
-124.
-
-
-Package natbib Warning: Citation `Cook1997' on page 3 undefined on input line 1
-24.
-
-
-Package natbib Warning: Citation `Andreae2013' on page 3 undefined on input lin
-e 127.
-
-
-Package natbib Warning: Citation `Spiegelhalter_11134920' on page 3 undefined o
-n input line 127.
-
-
-Package natbib Warning: Citation `Deeks2011chapter' on page 3 undefined on inpu
-t line 127.
-
-
-Package natbib Warning: Citation `Song2012' on page 3 undefined on input line 1
-27.
-
-
-Package natbib Warning: Citation `Cornell2014' on page 3 undefined on input lin
-e 127.
-
-
-Package natbib Warning: Citation `Andreae2015' on page 3 undefined on input lin
-e 127.
-
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 127.
-
-Package natbib Warning: Citation `egger2008systematic' on page 3 undefined on i
-nput line 127.
-
-
-Package natbib Warning: Citation `Andreae2015' on page 3 undefined on input lin
-e 127.
-
-
-Package natbib Warning: Citation `Thompson2002' on page 3 undefined on input li
-ne 127.
-
-
-Package natbib Warning: Citation `Abroug2011' on page 3 undefined on input line
- 127.
-
-[3] <Figures/DistrogramMetaAnalysis.pdf, id=49, 796.9775pt x 597.23125pt>
+ [3]
+<Figures/DistrogramMetaAnalysis.pdf, id=89, 796.9775pt x 597.23125pt>
 File: Figures/DistrogramMetaAnalysis.pdf Graphic file (type pdf)
 
 <use Figures/DistrogramMetaAnalysis.pdf>
 Package pdftex.def Info: Figures/DistrogramMetaAnalysis.pdf used on input line 
 132.
 (pdftex.def)             Requested size: 211.02483pt x 158.12883pt.
+ [4 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPla
+n/Figures/DistrogramMetaAnalysis.pdf>]
+[5] <Figures/Hamiltonian.png, id=148, 177.66376pt x 256.70906pt>
+File: Figures/Hamiltonian.png Graphic file (type png)
 
+<use Figures/Hamiltonian.png>
+Package pdftex.def Info: Figures/Hamiltonian.png used on input line 191.
+(pdftex.def)             Requested size: 159.89589pt x 231.03601pt.
 
-Package natbib Warning: Citation `Andreae2013' on page 4 undefined on input lin
-e 137.
+Overfull \hbox (1.62325pt too wide) in paragraph at lines 191--193
+[][]
+ []
 
+[6 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
+/Figures/Hamiltonian.png>]
+<Figures/shinystan.png, id=160, 246.6816pt x 83.1105pt>
+File: Figures/shinystan.png Graphic file (type png)
 
-Package natbib Warning: Citation `Abroug2011' on page 4 undefined on input line
- 137.
+<use Figures/shinystan.png>
+Package pdftex.def Info: Figures/shinystan.png used on input line 206.
+(pdftex.def)             Requested size: 209.68033pt x 70.64423pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 206--208
+[][]
+ []
 
-Package natbib Warning: Citation `Andreae2015' on page 4 undefined on input lin
-e 137.
-
-
-Package natbib Warning: Citation `AndreaeJohnsonAbstract2013' on page 4 undefin
-ed on input line 137.
-
-
-Package natbib Warning: Citation `Deeks2011chapter' on page 4 undefined on inpu
-t line 137.
-
-
-Package natbib Warning: Citation `Andreae2015' on page 4 undefined on input lin
-e 137.
-
-
-Package natbib Warning: Citation `Roth2015CriticalCare' on page 4 undefined on 
-input line 137.
-
-
-Package natbib Warning: Citation `Roth2015CriticalCare' on page 4 undefined on 
-input line 140.
-
-[4 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
-/Figures/DistrogramMetaAnalysis.pdf>]
-
-Package natbib Warning: Citation `Abroug2011' on page 5 undefined on input line
- 153.
-
-
-Package natbib Warning: Citation `Andreae2013' on page 5 undefined on input lin
-e 153.
-
-
-Package natbib Warning: Citation `Andreae2015' on page 5 undefined on input lin
-e 153.
-
-
-Package natbib Warning: Citation `Roth2015CriticalCare' on page 5 undefined on 
-input line 153.
-
-
-Package natbib Warning: Citation `Andreae2013' on page 5 undefined on input lin
-e 153.
-
-
-Package natbib Warning: Citation `Andreae2015' on page 5 undefined on input lin
-e 153.
-
-
-Package natbib Warning: Citation `Roth2015CriticalCare' on page 5 undefined on 
-input line 153.
-
-
-Package natbib Warning: Citation `Andreae2015' on page 5 undefined on input lin
-e 156.
-
-
-Package natbib Warning: Citation `Roth2015CriticalCare' on page 5 undefined on 
-input line 156.
-
-
-Package natbib Warning: Citation `AndreaeJohnsonAbstract2013' on page 5 undefin
-ed on input line 160.
-
-
-Package natbib Warning: Citation `Spiegelhalter2004bayesian' on page 5 undefine
-d on input line 160.
-
-[5]
-
-LaTeX Warning: File `Figures/Hamiltonian.png' not found on input line 191.
-
-
-! Package pdftex.def Error: File `Figures/Hamiltonian.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.191 ...phics[scale=0.9]{Figures/Hamiltonian.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 191.
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-
-Package natbib Warning: Citation `Kruschke_Book_2014' on page 6 undefined on in
-put line 198.
-
-[6]
-
-LaTeX Warning: File `Figures/shinystan.png' not found on input line 206.
-
-
-! Package pdftex.def Error: File `Figures/shinystan.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.206 ...aphics[scale=0.85]{Figures/shinystan.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package natbib Warning: Citation `Rubin1976' on page 7 undefined on input line 
-218.
-
-<Figures/Bayesian_imputation.pdf, id=89, 686.565pt x 298.11375pt>
+<Figures/Bayesian_imputation.pdf, id=163, 686.565pt x 298.11375pt>
 File: Figures/Bayesian_imputation.pdf Graphic file (type pdf)
 
 <use Figures/Bayesian_imputation.pdf>
 Package pdftex.def Info: Figures/Bayesian_imputation.pdf used on input line 224
 .
 (pdftex.def)             Requested size: 274.62112pt x 119.24338pt.
-
-
-Package natbib Warning: Citation `Daniels24571539' on page 7 undefined on input
- line 231.
-
-
-Package natbib Warning: Citation `Hall_25389642' on page 7 undefined on input l
-ine 231.
-
-
-Package natbib Warning: Citation `Wang_20029935' on page 7 undefined on input l
-ine 231.
-
-
-Package natbib Warning: Citation `Meng1994' on page 7 undefined on input line 2
-31.
-
-
-Package natbib Warning: Citation `Collins_11778676' on page 7 undefined on inpu
-t line 231.
-
-
-Package natbib Warning: Citation `Rubin1996' on page 7 undefined on input line 
-231.
-
-
-Package natbib Warning: Citation `Daniels2008' on page 7 undefined on input lin
-e 231.
-
-
-Package natbib Warning: Citation `Schafer1997' on page 7 undefined on input lin
-e 231.
-
-
-Package natbib Warning: Citation `Hall_25389642' on page 7 undefined on input l
-ine 231.
-
-[7 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
-/Figures/Bayesian_imputation.pdf>]
-
-Package natbib Warning: Citation `AndreaeJohnsonAbstract2013' on page 8 undefin
-ed on input line 245.
-
-
-Package natbib Warning: Citation `Andreae2013' on page 8 undefined on input lin
-e 245.
-
-
-Package natbib Warning: Citation `Andreae2015' on page 8 undefined on input lin
-e 245.
-
-
-Package natbib Warning: Citation `Carter2015' on page 8 undefined on input line
- 245.
-
-
-Package natbib Warning: Citation `Atchabahian2015' on page 8 undefined on input
- line 245.
-
-
-Package natbib Warning: Citation `AndreaeWhite2015' on page 8 undefined on inpu
-t line 245.
-
-
-Package natbib Warning: Citation `miCRAN' on page 8 undefined on input line 245
-.
-
-
-Package natbib Warning: Citation `SDT2014' on page 8 undefined on input line 24
-5.
-
-
-Package natbib Warning: Citation `Hall2009a' on page 8 undefined on input line 
-245.
-
-
-Package natbib Warning: Citation `Wang_20029935' on page 8 undefined on input l
-ine 245.
-
-
-Package natbib Warning: Citation `Wang_20029935' on page 8 undefined on input l
-ine 245.
-
-
-Package natbib Warning: Citation `Hall2000' on page 8 undefined on input line 2
-45.
-
-
-Package natbib Warning: Citation `Hall2001' on page 8 undefined on input line 2
-45.
-
-
-Package natbib Warning: Citation `Hall2003bayesian' on page 8 undefined on inpu
-t line 245.
-
-
-Package natbib Warning: Citation `Hall2009' on page 8 undefined on input line 2
-45.
-
-
-Package natbib Warning: Citation `Hall2015' on page 8 undefined on input line 2
-45.
-
-
-Package natbib Warning: Citation `Aldrich2010' on page 8 undefined on input lin
-e 245.
-
-
-Package natbib Warning: Citation `Hall2015' on page 8 undefined on input line 2
-45.
-
-
-Package natbib Warning: Citation `Zeig-Owens2011' on page 8 undefined on input 
-line 245.
-
-
-Package natbib Warning: Citation `Gong2005' on page 8 undefined on input line 2
-46.
-
-
-Package natbib Warning: Citation `Gong2010' on page 8 undefined on input line 2
-46.
-
-
-Package natbib Warning: Citation `Gajic2011' on page 8 undefined on input line 
-246.
-
-
-Package natbib Warning: Citation `Yu_24970344' on page 8 undefined on input lin
-e 246.
-
-
-Package natbib Warning: Citation `Kor2014' on page 8 undefined on input line 24
-6.
-
-
-Overfull \hbox (3.09056pt too wide) in paragraph at lines 245--247
+ [7 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPla
+n/Figures/shinystan.png> <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/
+PA-14-156/ResearchPlan/Figures/Bayesian_imputation.pdf>]
+Overfull \hbox (13.81866pt too wide) in paragraph at lines 245--247
 \T1/phv/m/n/10.95 gre-gate and in-di-vid-ual pa-tient data, when pub-lished re-
 sults were in-suf-fi-cient for clas-si-cal meta-analysis$[]$.
  []
 
-
-Package natbib Warning: Citation `Gelman1998notasked' on page 8 undefined on in
-put line 250.
-
-
-Package natbib Warning: Citation `Gelman2001imputation' on page 8 undefined on 
-input line 250.
-
-
-Package natbib Warning: Citation `Hoffman2014' on page 8 undefined on input lin
-e 250.
-
-
-Package natbib Warning: Citation `Gelman-Hill_2014' on page 8 undefined on inpu
-t line 250.
-
-<Figures/SoftwareTrajectory.pdf, id=116, 794.97pt x 614.295pt>
+<Figures/SoftwareTrajectory.pdf, id=231, 794.97pt x 614.295pt>
 File: Figures/SoftwareTrajectory.pdf Graphic file (type pdf)
 
 <use Figures/SoftwareTrajectory.pdf>
@@ -941,26 +589,11 @@ Underfull \hbox (badness 4429) in paragraph at lines 260--261
 
 [8 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
 /Figures/SoftwareTrajectory.pdf>]
-
-Package natbib Warning: Citation `lme4' on page 9 undefined on input line 268.
-
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 273.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 273.
-
-Package natbib Warning: Citation `rstanarm' on page 9 undefined on input line 2
-74.
-
-
-Package natbib Warning: Citation `shinystan' on page 9 undefined on input line 
-274.
-
-
-Package natbib Warning: Citation `Team2015' on page 9 undefined on input line 2
-74.
-
-[9]
+ [9]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 307.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
@@ -971,23 +604,7 @@ Underfull \hbox (badness 1681) in paragraph at lines 316--317
 v/m/n/10.95 parses
  []
 
-
-Package natbib Warning: Citation `carlin1997bayes' on page 10 undefined on inpu
-t line 322.
-
-
-Package natbib Warning: Citation `gelman2008weakly' on page 10 undefined on inp
-ut line 322.
-
-
-Package natbib Warning: Citation `Gelman-Hill_2014' on page 10 undefined on inp
-ut line 322.
-
 [10]
-
-Package natbib Warning: Citation `Galecki2013linear' on page 11 undefined on in
-put line 328.
-
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 344.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
@@ -1013,29 +630,7 @@ Underfull \hbox (badness 1102) in paragraph at lines 362--363
  pack-
  []
 
-
-Package natbib Warning: Citation `Raymond2003art' on page 11 undefined on input
- line 368.
-
-[11]
-
-Package natbib Warning: Citation `Chambers2014object' on page 12 undefined on i
-nput line 371.
-
-
-Package natbib Warning: Citation `loeliger2012version' on page 12 undefined on 
-input line 374.
-
-[12]
-
-Package natbib Warning: Citation `Gelman-Hill_2014' on page 13 undefined on inp
-ut line 413.
-
-
-Package natbib Warning: Citation `loeliger2012version' on page 13 undefined on 
-input line 419.
-
-[13] <Figures/Timeline.pdf, id=190, 597.55246pt x 421.09319pt>
+[11] [12] [13] <Figures/Timeline.pdf, id=353, 597.55246pt x 421.09319pt>
 File: Figures/Timeline.pdf Graphic file (type pdf)
 
 <use Figures/Timeline.pdf>
@@ -1043,11 +638,10 @@ Package pdftex.def Info: Figures/Timeline.pdf used on input line 426.
 (pdftex.def)             Requested size: 369.29749pt x 260.2462pt.
  [14 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPl
 an/Figures/Timeline.pdf>]
-No file ResearchPlan.bbl.
-
-Package natbib Warning: There were undefined citations.
-
+(C:\Users\Micheal\Dropbox\Professional\KL2\BigDataR01\PA-14-156\ResearchPlan\Re
+searchPlan.bbl [15] [16] [17])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 447.
+ [18]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 447.
 
 (C:\Users\Micheal\Dropbox\Professional\KL2\BigDataR01\PA-14-156\ResearchPlan\Re
@@ -1059,26 +653,25 @@ Package rerunfilecheck Info: File `ResearchPlan.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 447.
  ) 
 Here is how much of TeX's memory you used:
- 9204 strings out of 493921
- 132107 string characters out of 3147276
- 324023 words of memory out of 3000000
- 12334 multiletter control sequences out of 15000+200000
- 54452 words of font info for 73 fonts, out of 3000000 for 9000
+ 9377 strings out of 493921
+ 136259 string characters out of 3147276
+ 325023 words of memory out of 3000000
+ 12442 multiletter control sequences out of 15000+200000
+ 52255 words of font info for 70 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 41i,8n,38p,1693b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,8n,38p,1693b,619s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/urw/helvetic/uhvro8a.pfb>
-Output written on ResearchPlan.pdf (14 pages, 634076 bytes).
+onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on ResearchPlan.pdf (18 pages, 770944 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 446 PDF objects out of 1000 (max. 8388607)
+ 99 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

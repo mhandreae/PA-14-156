@@ -1,0 +1,391 @@
+\begin{thebibliography}{10}
+
+\bibitem{AndreaeWhite2015}
+M.~Andreae, R.~White, J.~Gabry, and C.~Hall.
+\newblock Antiemetic medication as a marker of healthcare disparities in
+  anesthesia: A Bayesian hierarchical model using the National Anesthesia
+  Clinical Outcomes Registry.
+\newblock {\em Clinical and Translational Science}, 8(3):180, 2015.
+
+\bibitem{Rust2004}
+G.~Rust, W.~N. Nembhard, M.~Nichols, F.~Omole, P.~Minor, G.~Barosso, and
+  R.~Mayberry.
+\newblock Racial and ethnic disparities in the provision of epidural analgesia
+  to Georgia Medicaid beneficiaries during labor and delivery.
+\newblock {\em Am J Obstet Gynecol}, 191(2):456--62, 2004.
+
+\bibitem{Glance2007}
+L.~G. Glance, R.~Wissler, C.~Glantz, T.~M. Osler, D.~B. Mukamel, and A.~W.
+  Dick.
+\newblock Racial differences in the use of epidural analgesia for labor.
+\newblock {\em Anesthesiology}, 106(1):19--25; discussion 6--8, 2007.
+
+\bibitem{Andreae2015}
+M.~H. Andreae, G.~M. Carter, N.~Shaparin, K.~Suslov, R.~J. Ellis, M.~A. Ware,
+  D.~I. Abrams, H.~Prasad, B.~Wilsey, D.~Indyk, M.~Johnson, and H.~S. Sacks.
+\newblock Inhaled Cannabis for Chronic Neuropathic Pain: A Meta-analysis of
+  Individual Patient Data.
+\newblock {\em J Pain}, Sep 2015. PMID: 26362106.
+
+\bibitem{Andreae2012}
+M.~H. Andreae and D.~A. Andreae.
+\newblock Local anaesthetics and regional anaesthesia for preventing chronic
+  pain after surgery.
+\newblock {\em Cochrane Database Syst Rev}, 10:CD007105, 2012. PMID: 23076930.
+
+\bibitem{Bafumi_Gelman_2007}
+J.~Bafumi and A.~Gelman.
+\newblock Fitting Multilevel Models When Predictors and Group Effects
+  Correlate.
+\newblock {SSRN} Scholarly Paper {ID} 1010095, Social Science Research Network,
+  Rochester, {NY}, September 2007.
+
+\bibitem{Efron_1975}
+B.~Efron and C.~Morris.
+\newblock Data analysis using Stein's estimator and its generalizations.
+\newblock {\em Journal of the American Statistical Association},
+  70(350):311--319, 1975.
+
+\bibitem{Gelman-Hill_2014}
+A.~Gelman, J.~B. Carlin, H.~S. Stern, and D.~B. Rubin.
+\newblock {\em Bayesian data analysis}, volume~2.
+\newblock Taylor \& Francis, 2014.
+
+\bibitem{Gelman2009}
+A.~Gelman.
+\newblock {\em Red state, blue state, rich state, poor state: why Americans
+  vote the way they do}.
+\newblock Princeton University Press, 2009.
+
+\bibitem{Stein_paradox_Scientific_American}
+B.~Efron and C.~N. Morris.
+\newblock Stein's paradox in statistics.
+\newblock {\em Scientific American}, 263(5):119--127, 1977.
+
+\bibitem{Sackett1996}
+D.~L. Sackett, W.~M. Rosenberg, J.~A. Gray, R.~B. Haynes, and W.~S. Richardson.
+\newblock Evidence based medicine: what it is and what it isn't.
+\newblock {\em BMJ}, 312(7023):71--72, Jan 1996. PMID: 8555924.
+
+\bibitem{Ashby2000}
+D.~Ashby and A.~F. Smith.
+\newblock Evidence-based medicine as Bayesian decision-making.
+\newblock {\em Stat Med}, 19(23):3291--3305, Dec 2000. PMID: 11113960.
+
+\bibitem{Cook1997}
+D.~J. Cook, C.~D. Mulrow, and R.~B. Haynes.
+\newblock Systematic reviews: synthesis of best evidence for clinical
+  decisions.
+\newblock {\em Ann Intern Med}, 126(5):376--380, Mar 1997. PMID: 9054282.
+
+\bibitem{Andreae2013}
+M.~H. Andreae and D.~A. Andreae.
+\newblock Regional anaesthesia to prevent chronic pain after surgery: a
+  Cochrane systematic review and meta-analysis.
+\newblock {\em Br J Anaesth}, 111(5):711--720, Nov 2013. PMCID: PMC3793661.
+
+\bibitem{Spiegelhalter_11134920}
+D.~J. Spiegelhalter, J.~P. Myles, D.~R. Jones, and K.~R. Abrams.
+\newblock Bayesian methods in health technology assessment: a review.
+\newblock {\em Health Technol Assess}, 4(38):1--130, 2000. PMID: 11134920.
+
+\bibitem{Deeks2011chapter}
+J.~Deeks, J.~Higgins, and D.~Altman.
+\newblock Chapter 9--Analysing Data and Undertaking Meta-analyses: Cochrane
+  Handbook for Systematic Reviews of Interventions Version 5.1. 0 [updated
+  March 2011].
+\newblock {\em Cochrane Handbook for Systematic Reviews of Interventions}, 5,
+  2011.
+
+\bibitem{Song2012}
+F.~Song, A.~Clark, M.~O. Bachmann, and J.~Maas.
+\newblock Simulation evaluation of statistical properties of methods for
+  indirect and mixed treatment comparisons.
+\newblock {\em BMC Med Res Methodol}, 12:138, 2012. PMID: 22970794.
+
+\bibitem{Cornell2014}
+J.~E. Cornell, C.~D. Mulrow, R.~Localio, C.~B. Stack, A.~R. Meibohm,
+  E.~Guallar, and S.~N. Goodman.
+\newblock Random-effects meta-analysis of inconsistent effects: a time for
+  change.
+\newblock {\em Ann Intern Med}, 160(4):267--270, Feb 2014. PMID: 24727843.
+
+\bibitem{egger2008systematic}
+M.~Egger, G.~D. Smith, and D.~Altman.
+\newblock {\em Systematic reviews in health care: meta-analysis in context}.
+\newblock John Wiley \& Sons, 2008.
+
+\bibitem{Thompson2002}
+S.~G. Thompson and J.~P.~T. Higgins.
+\newblock How should meta-regression analyses be undertaken and interpreted?
+\newblock {\em Stat Med}, 21(11):1559--1573, Jun 2002. PMID: 12111920.
+
+\bibitem{Abroug2011}
+F.~Abroug, L.~Ouanes-Besbes, F.~Dachraoui, I.~Ouanes, and L.~Brochard.
+\newblock An updated study-level meta-analysis of randomised controlled trials
+  on proning in ARDS and acute lung injury.
+\newblock {\em Crit Care}, 15(1):R6, 2011. PMID: 21211010.
+
+\bibitem{AndreaeJohnsonAbstract2013}
+M.~Andreae, M.~Johnson, and H.~Sacks.
+\newblock Bayesian responder meta-analysis of regional anesthesia to prevent
+  chronic pain after iliac crest bone graft harvesting.
+\newblock {\em Reg. Anesth. Pain Med.}, 38(1):77--88 (A1), 2013.
+
+\bibitem{Roth2015CriticalCare}
+D.~Roth, B.~Heidinger, C.~Havel, and H.~Herkner.
+\newblock Different mortality time-points in critical care trials - Current
+  practice and influence on effect estimates in meta-analyse.
+\newblock {\em Crit Care Med}, 2015 [accepted].
+
+\bibitem{Spiegelhalter2004bayesian}
+D.~J. Spiegelhalter, K.~R. Abrams, and J.~P. Myles.
+\newblock {\em Bayesian approaches to clinical trials and health-care
+  evaluation}, volume~13.
+\newblock John Wiley \& Sons, 2004.
+
+\bibitem{Kruschke_Book_2014}
+J.~Kruschke.
+\newblock {\em Doing Bayesian data analysis: A tutorial introduction with R}.
+\newblock Academic Press, 2014.
+
+\bibitem{Rubin1976}
+D.~B. Rubin.
+\newblock Inference and missing data.
+\newblock {\em Biometrika}, 63(3):581--592, 1976.
+
+\bibitem{Daniels24571539}
+M.~J. Daniels, C.~Wang, and B.~H. Marcus.
+\newblock Fully Bayesian inference under ignorable missingness in the presence
+  of auxiliary covariates.
+\newblock {\em Biometrics}, 70(1):62--72, Mar 2014. PMID: 24571539.
+
+\bibitem{Hall_25389642}
+C.~B. Hall, R.~B. Lipton, M.~J. Katz, and C.~Wang.
+\newblock Correcting Bias Caused by Missing Data in the Estimate of the Effect
+  of Apolipoprotein epsilon 4 on Cognitive Decline.
+\newblock {\em J Int Neuropsychol Soc}, pages 1--6, Nov 2014. PMID: 25389642.
+
+\bibitem{Wang_20029935}
+C.~Wang and C.~B. Hall.
+\newblock Correction of bias from non-random missing longitudinal data using
+  auxiliary information.
+\newblock {\em Stat Med}, 29(6):671--679, Mar 2010. PMID: 20029935.
+
+\bibitem{Meng1994}
+X.-L. Meng.
+\newblock Multiple-Imputation Inferences with Uncongenial Sources of Input.
+\newblock {\em Statist. Sci.}, 9(4):538--558, 11 1994.
+
+\bibitem{Collins_11778676}
+L.~M. Collins, J.~L. Schafer, and C.~M. Kam.
+\newblock A comparison of inclusive and restrictive strategies in modern
+  missing data procedures.
+\newblock {\em Psychol Methods}, 6(4):330--351, Dec 2001. PMID: 11778676.
+
+\bibitem{Rubin1996}
+D.~B. Rubin.
+\newblock Multiple imputation after 18+ years.
+\newblock {\em Journal of the American Statistical Association},
+  91(434):473--489, 1996.
+
+\bibitem{Daniels2008}
+M.~J. Daniels and J.~W. Hogan.
+\newblock {\em Missing data in longitudinal studies: Strategies for Bayesian
+  modeling and sensitivity analysis}.
+\newblock CRC Press, 2008.
+
+\bibitem{Schafer1997}
+J.~L. Schafer.
+\newblock {\em Analysis of incomplete multivariate data}.
+\newblock CRC press, 1997.
+
+\bibitem{Carter2015}
+G.~M. Carter, D.~Indyk, M.~Johnson, M.~Andreae, K.~Suslov, S.~Busani,
+  A.~Esmaeili, and H.~S. Sacks.
+\newblock Micronutrients in HIV: a Bayesian meta-analysis.
+\newblock {\em PLoS One}, 10(4):e0120113, 2015. PMID: 25830916.
+
+\bibitem{Atchabahian2015}
+A.~Atchabahian, G.~Schwartz, C.~B. Hall, C.~M. Lajam, and M.~H. Andreae.
+\newblock Regional analgesia for improvement of long-term functional outcome
+  after elective large joint replacement.
+\newblock {\em Cochrane Database Syst Rev}, 8:CD010278, 2015. PMID: 26269416.
+
+\bibitem{miCRAN}
+A.~Gelman and J.~Hill.
+\newblock Opening Windows to the Black Box.
+\newblock {\em Journal of Statistical Software}, 40, 2011.
+
+\bibitem{SDT2014}
+{Stan Development Team}.
+\newblock Stan: A C++ Library for Probability and Sampling, Version 2.5.0,
+  2014.
+
+\bibitem{Hall2009a}
+C.~B. Hall, R.~B. Lipton, H.~Tennen, and S.~R. Haut.
+\newblock Early follow-up data from seizure diaries can be used to predict
+  subsequent seizures in same cohort by borrowing strength across participants.
+\newblock {\em Epilepsy Behav}, 14(3):472--475, Mar 2009. PMID: 19138755.
+
+\bibitem{Hall2000}
+C.~B. Hall, R.~B. Lipton, M.~Sliwinski, and W.~F. Stewart.
+\newblock A change point model for estimating the onset of cognitive decline in
+  preclinical Alzheimer's disease.
+\newblock {\em Stat Med}, 19(11-12):1555--1566, 2000. PMID: 10844718.
+
+\bibitem{Hall2001}
+C.~B. Hall, J.~Ying, L.~Kuo, M.~Sliwinski, H.~Buschke, M.~Katz, and R.~B.
+  Lipton.
+\newblock Estimation of bivariate measurements having different change points,
+  with application to cognitive ageing.
+\newblock {\em Stat Med}, 20(24):3695--3714, Dec 2001. PMID: 11782027.
+
+\bibitem{Hall2003bayesian}
+C.~B. Hall, J.~Ying, L.~Kuo, and R.~B. Lipton.
+\newblock Bayesian and profile likelihood change point methods for modeling
+  cognitive function over time.
+\newblock {\em Computational Statistics \& Data Analysis}, 42(1):91--109, 2003.
+
+\bibitem{Hall2009}
+C.~B. Hall, R.~B. Lipton, M.~Sliwinski, M.~J. Katz, C.~A. Derby, and
+  J.~Verghese.
+\newblock Cognitive activities delay onset of memory decline in persons who
+  develop dementia.
+\newblock {\em Neurology}, 73(5):356--361, Aug 2009. PMID: 19652139.
+
+\bibitem{Hall2015}
+C.~B. Hall, X.~Liu, R.~Zeig-Owens, M.~P. Webber, T.~K. Aldrich, J.~Weakley,
+  T.~Schwartz, H.~W. Cohen, M.~S. Glaser, B.~L. Olivieri, M.~D. Weiden,
+  A.~Nolan, K.~J. Kelly, and D.~J. Prezant.
+\newblock The Duration of an Exposure Response Gradient between Incident
+  Obstructive Airways Disease and Work at the World Trade Center Site:
+  2001-2011.
+\newblock {\em PLoS Curr}, 7, 2015. PMID: 26064784.
+
+\bibitem{Aldrich2010}
+T.~K. Aldrich, J.~Gustave, C.~B. Hall, H.~W. Cohen, M.~P. Webber,
+  R.~Zeig-Owens, K.~Cosenza, V.~Christodoulou, L.~Glass, F.~Al-Othman, M.~D.
+  Weiden, K.~J. Kelly, and D.~J. Prezant.
+\newblock Lung function in rescue workers at the World Trade Center after 7
+  years.
+\newblock {\em N Engl J Med}, 362(14):1263--1272, Apr 2010. PMID: 20375403.
+
+\bibitem{Zeig-Owens2011}
+R.~Zeig-Owens, M.~P. Webber, C.~B. Hall, T.~Schwartz, N.~Jaber, J.~Weakley,
+  T.~E. Rohan, H.~W. Cohen, O.~Derman, T.~K. Aldrich, K.~Kelly, and D.~J.
+  Prezant.
+\newblock Early assessment of cancer outcomes in New York City firefighters
+  after the 9/11 attacks: an observational cohort study.
+\newblock {\em Lancet}, 378(9794):898--905, Sep 2011. PMID: 21890054.
+
+\bibitem{Gong2005}
+M.~N. Gong, B.~T. Thompson, P.~Williams, L.~Pothier, P.~D. Boyce, and D.~C.
+  Christiani.
+\newblock Clinical predictors of and mortality in acute respiratory distress
+  syndrome: potential role of red cell transfusion.
+\newblock {\em Crit Care Med}, 33(6):1191--1198, Jun 2005. PMID: 15942330.
+
+\bibitem{Gong2010}
+M.~N. Gong, E.~K. Bajwa, B.~T. Thompson, and D.~C. Christiani.
+\newblock Body mass index is associated with the development of acute
+  respiratory distress syndrome.
+\newblock {\em Thorax}, 65(1):44--50, Jan 2010. PMID: 19770169.
+
+\bibitem{Gajic2011}
+O.~Gajic, O.~Dabbagh, P.~K. Park, A.~Adesanya, S.~Y. Chang, P.~Hou,
+  H.~Anderson, 3rd, J.~J. Hoth, M.~E. Mikkelsen, N.~T. Gentile, M.~N. Gong,
+  D.~Talmor, E.~Bajwa, T.~R. Watkins, E.~Festic, M.~Yilmaz, R.~Iscimen, D.~A.
+  Kaufman, A.~M. Esper, R.~Sadikot, I.~Douglas, J.~Sevransky, M.~Malinchoc,
+  U.~C.~I. ~, and I.~T. G. L. I. P. S.~I. (USCIITG-LIPS).
+\newblock Early identification of patients at risk of acute lung injury:
+  evaluation of lung injury prediction score in a multicenter cohort study.
+\newblock {\em Am J Respir Crit Care Med}, 183(4):462--470, Feb 2011. PMID:
+  20802164.
+
+\bibitem{Yu_24970344}
+S.~Yu, S.~Leung, M.~Heo, G.~J. Soto, R.~T. Shah, S.~Gunda, and M.~N. Gong.
+\newblock Comparison of risk prediction scoring systems for ward patients: a
+  retrospective nested case-control study.
+\newblock {\em Crit Care}, 18(3):R132, 2014. PMID: 24970344.
+
+\bibitem{Kor2014}
+D.~J. Kor, R.~K. Lingineni, O.~Gajic, P.~K. Park, J.~M. Blum, P.~C. Hou, J.~J.
+  Hoth, H.~L. Anderson, 3rd, E.~K. Bajwa, R.~R. Bartz, A.~Adesanya, E.~Festic,
+  M.~N. Gong, R.~E. Carter, and D.~S. Talmor.
+\newblock Predicting risk of postoperative lung injury in high-risk surgical
+  patients: a multicenter cohort study.
+\newblock {\em Anesthesiology}, 120(5):1168--1181, May 2014. PMID: 24755786.
+
+\bibitem{Gelman1998notasked}
+A.~Gelman, G.~King, and C.~Liu.
+\newblock Not asked and not answered: Multiple imputation for multiple surveys.
+\newblock {\em Journal of the American Statistical Association},
+  93(443):846--857, 1998.
+
+\bibitem{Gelman2001imputation}
+A.~Gelman and T.~E. Raghunathan.
+\newblock Using conditional distributions for missing-data imputation.
+\newblock {\em Statistical Science}, 3:268--9, 2001.
+
+\bibitem{Hoffman2014}
+M.~D. Hoffman and A.~Gelman.
+\newblock The no-U-turn sampler: Adaptively setting path lengths in Hamiltonian
+  Monte Carlo.
+\newblock {\em The Journal of Machine Learning Research}, 15(1):1593--1623,
+  2014.
+
+\bibitem{lme4}
+D.~Bates, M.~M{\"a}chler, B.~Bolker, and S.~Walker.
+\newblock Fitting Linear Mixed-Effects Models Using {lme4}.
+\newblock {\em Journal of Statistical Software}, 67(1):1--48, 2015.
+
+\bibitem{rstanarm}
+J.~Gabry and B.~Goodrich.
+\newblock {\em rstanarm: Bayesian Applied Regression Modeling via Stan}, 2016.
+\newblock R package version 2.9.0-1.
+
+\bibitem{shinystan}
+J.~Gabry.
+\newblock {\em shinystan: Interactive Visual and Numerical Diagnostics and
+  Posterior Analysis for Bayesian Models}, 2016.
+\newblock R package version 2.1.0.
+
+\bibitem{Team2015}
+{shinyStan Team}.
+\newblock shinyStan: R Package for Interactive Exploration of Markov Chain
+  Monte Carlo Output, Version 0.1, 2015.
+
+\bibitem{carlin1997bayes}
+B.~P. Carlin and T.~A. Louis.
+\newblock Bayes and empirical Bayes methods for data analysis.
+\newblock {\em Statistics and Computing}, 7(2):153--154, 1997.
+
+\bibitem{gelman2008weakly}
+A.~Gelman, A.~Jakulin, M.~G. Pittau, and Y.-S. Su.
+\newblock A weakly informative default prior distribution for logistic and
+  other regression models.
+\newblock {\em The Annals of Applied Statistics}, pages 1360--1383, 2008.
+
+\bibitem{Galecki2013linear}
+A.~Galecki and T.~Burzykowski.
+\newblock {\em Linear mixed-effects models using R: A step-by-step approach}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem{Raymond2003art}
+E.~S. Raymond.
+\newblock {\em The art of Unix programming}.
+\newblock Addison-Wesley Professional, 2003.
+
+\bibitem{Chambers2014object}
+J.~M. Chambers et~al.
+\newblock Object-Oriented Programming, Functional Programming and R.
+\newblock {\em Statistical Science}, 29(2):167--180, 2014.
+
+\bibitem{loeliger2012version}
+J.~Loeliger and M.~McCullough.
+\newblock {\em Version Control with Git: Powerful tools and techniques for
+  collaborative software development}.
+\newblock " O'Reilly Media, Inc.", 2012.
+
+\end{thebibliography}
