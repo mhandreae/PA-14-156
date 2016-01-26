@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.14)  26 JAN 2016 07:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.14)  26 JAN 2016 07:51
 entering extended mode
 **ResearchPlan.tex
 
@@ -380,7 +380,8 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen153
 \titlewidthfirst=\dimen154
 )
-No file ResearchPlan.aux.
+(C:\Users\Micheal\Dropbox\Professional\KL2\BigDataR01\PA-14-156\ResearchPlan\Re
+searchPlan.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
@@ -396,7 +397,7 @@ LaTeX Font Info:    ... okay on input line 62.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 62.
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 \AtBeginShipoutBox=\box30
@@ -413,6 +414,11 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 62.
 LaTeX Info: Redefining \pageref on input line 62.
 LaTeX Info: Redefining \nameref on input line 62.
+
+(C:\Users\Micheal\Dropbox\Professional\KL2\BigDataR01\PA-14-156\ResearchPlan\Re
+searchPlan.out)
+(C:\Users\Micheal\Dropbox\Professional\KL2\BigDataR01\PA-14-156\ResearchPlan\Re
+searchPlan.out)
 \@outlinefile=\write3
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: wrapfig package is loaded.
@@ -478,30 +484,14 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 88.
 
+<Figures/DistrogramNACOR.pdf, id=11, 796.9775pt x 597.23125pt>
+File: Figures/DistrogramNACOR.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `Figures/DistrogramNACOR.pdf' not found on input line 97.
-
-
-! Package pdftex.def Error: File `Figures/DistrogramNACOR.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 ....4\textwidth]{Figures/DistrogramNACOR.pdf}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 97.
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-
-LaTeX Warning: Reference `fig:NACOR' on page 2 undefined on input line 102.
-
+<use Figures/DistrogramNACOR.pdf>
+Package pdftex.def Info: Figures/DistrogramNACOR.pdf used on input line 97.
+(pdftex.def)             Requested size: 211.02483pt x 158.12883pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 102.
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -525,21 +515,19 @@ Package natbib Warning: Citation `Rust2004' on page 2 undefined on input line 1
 Package natbib Warning: Citation `Glance2007' on page 2 undefined on input line
  104.
 
-[2]
 
-Package natbib Warning: Citation `Andreae2015' on page 3 undefined on input lin
+Package natbib Warning: Citation `Andreae2015' on page 2 undefined on input lin
 e 107.
 
 
-Package natbib Warning: Citation `Andreae2012' on page 3 undefined on input lin
+Package natbib Warning: Citation `Andreae2012' on page 2 undefined on input lin
 e 107.
 
+[2 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
+/Figures/DistrogramNACOR.pdf>]
 
 Package natbib Warning: Citation `AndreaeWhite2015' on page 3 undefined on inpu
 t line 110.
-
-
-LaTeX Warning: Reference `fig:NACOR' on page 3 undefined on input line 110.
 
 
 Package natbib Warning: Citation `Bafumi_Gelman_2007' on page 3 undefined on in
@@ -627,24 +615,13 @@ ne 127.
 Package natbib Warning: Citation `Abroug2011' on page 3 undefined on input line
  127.
 
-[3]
+[3] <Figures/DistrogramMetaAnalysis.pdf, id=49, 796.9775pt x 597.23125pt>
+File: Figures/DistrogramMetaAnalysis.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `Figures/DistrogramMetaAnalysis.pdf' not found on input lin
-e 132.
-
-
-! Package pdftex.def Error: File `Figures/DistrogramMetaAnalysis.pdf' not found
-.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.132 ...idth]{Figures/DistrogramMetaAnalysis.pdf}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use Figures/DistrogramMetaAnalysis.pdf>
+Package pdftex.def Info: Figures/DistrogramMetaAnalysis.pdf used on input line 
+132.
+(pdftex.def)             Requested size: 211.02483pt x 158.12883pt.
 
 
 Package natbib Warning: Citation `Andreae2013' on page 4 undefined on input lin
@@ -653,10 +630,6 @@ e 137.
 
 Package natbib Warning: Citation `Abroug2011' on page 4 undefined on input line
  137.
-
-
-LaTeX Warning: Reference `fig:MetaAnalysis' on page 4 undefined on input line 1
-37.
 
 
 Package natbib Warning: Citation `Andreae2015' on page 4 undefined on input lin
@@ -682,7 +655,8 @@ input line 137.
 Package natbib Warning: Citation `Roth2015CriticalCare' on page 4 undefined on 
 input line 140.
 
-[4]
+[4 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
+/Figures/DistrogramMetaAnalysis.pdf>]
 
 Package natbib Warning: Citation `Abroug2011' on page 5 undefined on input line
  153.
@@ -744,10 +718,10 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-LaTeX Warning: Reference `fig:Hamiltonian' on page 6 undefined on input line 19
-8.
-
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 191.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
 
 Package natbib Warning: Citation `Kruschke_Book_2014' on page 6 undefined on in
 put line 198.
@@ -770,37 +744,20 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: Reference `fig:shinystan' on page 7 undefined on input line 213.
-
-
-
 Package natbib Warning: Citation `Rubin1976' on page 7 undefined on input line 
 218.
 
+<Figures/Bayesian_imputation.pdf, id=89, 686.565pt x 298.11375pt>
+File: Figures/Bayesian_imputation.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `Figures/Bayesian_imputation.pdf' not found on input line 2
-24.
-
-
-! Package pdftex.def Error: File `Figures/Bayesian_imputation.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.224 ...ale=0.4]{Figures/Bayesian_imputation.pdf}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use Figures/Bayesian_imputation.pdf>
+Package pdftex.def Info: Figures/Bayesian_imputation.pdf used on input line 224
+.
+(pdftex.def)             Requested size: 274.62112pt x 119.24338pt.
 
 
 Package natbib Warning: Citation `Daniels24571539' on page 7 undefined on input
  line 231.
-
-
-LaTeX Warning: Reference `fig:Imputation_fig' on page 7 undefined on input line
- 231.
 
 
 Package natbib Warning: Citation `Hall_25389642' on page 7 undefined on input l
@@ -834,7 +791,8 @@ e 231.
 Package natbib Warning: Citation `Hall_25389642' on page 7 undefined on input l
 ine 231.
 
-[7]
+[7 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
+/Figures/Bayesian_imputation.pdf>]
 
 Package natbib Warning: Citation `AndreaeJohnsonAbstract2013' on page 8 undefin
 ed on input line 245.
@@ -953,23 +911,13 @@ e 250.
 Package natbib Warning: Citation `Gelman-Hill_2014' on page 8 undefined on inpu
 t line 250.
 
+<Figures/SoftwareTrajectory.pdf, id=116, 794.97pt x 614.295pt>
+File: Figures/SoftwareTrajectory.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `Figures/SoftwareTrajectory.pdf' not found on input line 25
-7.
+<use Figures/SoftwareTrajectory.pdf>
+Package pdftex.def Info: Figures/SoftwareTrajectory.pdf used on input line 257.
 
-
-! Package pdftex.def Error: File `Figures/SoftwareTrajectory.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.257 ...extwidth]{Figures/SoftwareTrajectory.pdf}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+(pdftex.def)             Requested size: 316.5453pt x 244.60757pt.
 
 Underfull \hbox (badness 1377) in paragraph at lines 260--261
 \T1/phv/m/n/10.95 vel-op-ments based on the \T1/phv/m/sl/10.95 rstan \T1/phv/m/
@@ -991,7 +939,8 @@ Underfull \hbox (badness 4429) in paragraph at lines 260--261
 \T1/phv/m/n/10.95 the Cen-ter for Dis-ease Con-trol and
  []
 
-[8]
+[8 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
+/Figures/SoftwareTrajectory.pdf>]
 
 Package natbib Warning: Citation `lme4' on page 9 undefined on input line 268.
 
@@ -1044,10 +993,6 @@ LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 344.
 
-LaTeX Warning: Reference `ObjectCharactersitics' on page 11 undefined on input 
-line 345.
-
-
 Underfull \hbox (badness 6316) in paragraph at lines 362--363
 [][]\T1/phv/m/n/10.95 As we move from the
  []
@@ -1090,39 +1035,14 @@ ut line 413.
 Package natbib Warning: Citation `loeliger2012version' on page 13 undefined on 
 input line 419.
 
-[13]
+[13] <Figures/Timeline.pdf, id=190, 597.55246pt x 421.09319pt>
+File: Figures/Timeline.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `Figures/Timeline.pdf' not found on input line 426.
-
-
-! Package pdftex.def Error: File `Figures/Timeline.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.426 ...idth=0.7\textwidth]{Figures/Timeline.pdf}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 2237) in paragraph at lines 431--432
-\T1/phv/m/n/10.95 con-tribute to the ease with
- []
-
-
-Underfull \hbox (badness 2856) in paragraph at lines 431--432
-\T1/phv/m/n/10.95 which ad-vanced hi-er-ar-chi-cal
- []
-
-
-Underfull \hbox (badness 1648) in paragraph at lines 431--432
-\T1/phv/m/n/10.95 be shared, ques-tioned, dis-
- []
-
-[14]
+<use Figures/Timeline.pdf>
+Package pdftex.def Info: Figures/Timeline.pdf used on input line 426.
+(pdftex.def)             Requested size: 369.29749pt x 260.2462pt.
+ [14 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPl
+an/Figures/Timeline.pdf>]
 No file ResearchPlan.bbl.
 
 Package natbib Warning: There were undefined citations.
@@ -1134,28 +1054,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 447.
 searchPlan.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 447.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 447.
-
-
-Package rerunfilecheck Warning: File `ResearchPlan.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ResearchPlan.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `ResearchPlan.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 447.
  ) 
 Here is how much of TeX's memory you used:
- 9178 strings out of 493921
- 130872 string characters out of 3147276
- 325023 words of memory out of 3000000
- 12314 multiletter control sequences out of 15000+200000
+ 9204 strings out of 493921
+ 132107 string characters out of 3147276
+ 324023 words of memory out of 3000000
+ 12334 multiletter control sequences out of 15000+200000
  54452 words of font info for 73 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  41i,8n,38p,1693b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1169,9 +1076,9 @@ pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/helvetic/uhvro8a.pfb>
-Output written on ResearchPlan.pdf (14 pages, 155923 bytes).
+Output written on ResearchPlan.pdf (14 pages, 634076 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
+ 256 PDF objects out of 1000 (max. 8388607)
  31 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
