@@ -1658,6 +1658,13 @@ Pregnancy},
   Url                      = {http://dx.doi.org/10.1213/ANE.0b013e3181e329f1}
 }
 
+@Book{loeliger2012version,
+  Title                    = {Version Control with Git: Powerful tools and techniques for collaborative software development},
+  Author                   = {Loeliger, Jon and McCullough, Matthew},
+  Publisher                = {" O'Reilly Media, Inc."},
+  Year                     = {2012}
+}
+
 @Article{Man_23272239,
   Title                    = {Antiepileptic drugs during pregnancy in primary care: a UK population based study.},
   Author                   = {Man, Shuk-Li and Petersen, Irene and Thompson, Mary and Nazareth, Irwin},
@@ -2679,14 +2686,14 @@ J Neuroimmune Pharmacol. 2013 Mar 19.},
   Url                      = {http://dx.doi.org/10.1016/S0140-6736(11)60989-6}
 }
 
-@Article{,
-  Owner                    = {Micheal},
-  Timestamp                = {2015.11.24}
-}
-
 @Conference{,
   Owner                    = {Micheal},
   Timestamp                = {2015.11.11}
+}
+
+@Article{,
+  Owner                    = {Micheal},
+  Timestamp                = {2015.11.24}
 }
 
 @Article{ASA_25545654,

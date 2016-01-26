@@ -40,6 +40,12 @@ J.~Bafumi and A.~Gelman.
 \newblock {SSRN} Scholarly Paper {ID} 1010095, Social Science Research Network,
   Rochester, {NY}, September 2007.
 
+\bibitem{ParkGelman2004bayesian}
+D.~K. Park, A.~Gelman, and J.~Bafumi.
+\newblock Bayesian multilevel estimation with poststratification: state-level
+  estimates from national polls.
+\newblock {\em Political Analysis}, 12(4):375--385, 2004.
+
 \bibitem{Efron_1975}
 B.~Efron and C.~Morris.
 \newblock Data analysis using Stein's estimator and its generalizations.
