@@ -401,11 +401,23 @@ the R interface to the Stan C++ library for Bayesian estimation. Users specify m
 \section*{Software Specification}
 
 \subsection*{rstanarm}
-The software package \href{https://github.com/stan-dev/rstanarm}{\textit{rstanarm}}will enable the estimation of advanced applied general linear regression models using the existing probabilistic programming language \textit{Stan}. \textit{rstanarm} implements full Bayesian statistical inference;  however, \textit{rstanarm} will allow users to specify their complex hierarchical models relying on the simplified syntax already commonly used in standard software packages like \textit{lme4} in the statistical software environment \textit{R}. 
+The software package \href{https://github.com/stan-dev/rstanarm}{\textit{rstanarm}}
+will enable the estimation of advanced applied general linear regression models using 
+the existing probabilistic programming language \textit{Stan}. 
+\textit{rstanarm} implements full Bayesian statistical inference;  
+however, \textit{rstanarm} will allow users to specify their complex 
+hierarchical models relying on the simplified syntax already commonly 
+used in standard software packages like \textit{lme4} in the statistical 
+software environment \textit{R}. 
 
 \subsubsection*{rstanarm allows simple specification for complex hierarchical models}
 
-Data scientists familiar with the widely used statistical software environment R will find \textit{rstanarm} intuitive, because models are specified using the familiar standard R modeling syntax to describe the mean structure of even complex models. For example, analogously to \textit{lme4}, \textit{rstanarm} uses a two-sided linear formula syntax describing both the fixed-effects and random-effects of a model, e.g.:
+Data scientists familiar with the widely used statistical software environment R will 
+find \textit{rstanarm} intuitive, because models are specified using the familiar 
+standard R modeling syntax to describe the mean structure of even complex models. 
+For example, analogously to \textit{lme4}, \textit{rstanarm} uses a two-sided 
+linear formula syntax describing both the fixed-effects and random-effects of 
+a model, e.g.:
 
 \begin{wrapfigure}{l}{.2\textwidth}
 \vspace{-20pt}
@@ -415,15 +427,22 @@ y \sim x1 +(x2|x3)
 \vspace{-30pt}
 \end{wrapfigure}
 
-where the dependent response variable $y$ is on the left of a Tilde ($\sim$) operator; the independent terms, $x_1, x_2...$ are on the right and separated by the $+$ operator. Random-effects terms are distinguished by vertical bars $|$ separating expressions for design matrices from grouping factors. Clinical data scientist can therefore take advantage of the  more efficient inference of the cutting edge HMC algorithms implemented in \textit{Stan}, without knowledge of the underlying programming language or the auxiliary reparametrizations useful to achieve faster model convergence, which we discuss further below.
+where the dependent response variable $y$ is on the left of a Tilde ($\sim$) operator; 
+the independent terms, $x_1, x_2...$ are on the right and separated by the $+$ 
+operator. Random-effects terms are distinguished by vertical bars $|$ 
+separating expressions for design matrices from grouping factors. Clinical data 
+scientist can therefore take advantage of the  more efficient inference of the 
+cutting edge HMC algorithms implemented in \textit{Stan}, without knowledge of 
+the underlying programming language or the auxiliary reparametrizations useful to 
+achieve faster model convergence, which we discuss further below.
 
 \subsubsection*{A suite of pre-compiled Stan models allows for a simple call to complex modeling functions}
 
-The prototype of \textit{rstanarm} already implements many generalized linear 
+Our prototype of \textit{rstanarm} already implements many generalized linear 
 models with and without group-specific terms. We wrote many optimized models 
 in the probabilistic programming language \textit{Stan}, which have been 
 pre-compiled, saving time during function calls for recurrent sequential 
-complex model building. Users build complex models via simple top level 
+complex model building. Users therefore can now build complex models via simple top level 
 functions, interfacing only with a wrapper function as detailed below.
 
 \begin{wraptable}{l}{0.6\textwidth}
@@ -453,17 +472,17 @@ more advanced user) are similar in syntax to the R software functions $glm$
 and $glmer$ as used in the R package $lme4$, respectively, but rather than 
 maximum likelihood estimation of classical generalized linear models, full 
 Bayesian estimation is performed via Hamiltonian Markov chain Monte Carlo 
-simulations. If neutral "minimally informative" priors are chosen (AKA an 
-empirical Bayesian approach), this yields results very similar, if not 
-identical to classical frequentist inference.
+simulations. If neutral "minimally informative" priors are chosen (AKA 
+"empirical Bayesian"), this yields results very similar, if not 
+identical to classical frequentist inference \cite{Gelman-Hill_2014}, making \textit{rstanarm} a very universal user-friendly software suite to estimate complex hierarchical models.
 
 \subsubsection*{Prior specification for regularization or to incorporate external information}
 
-Priors can incorporate subjective beliefs or existing information about a parameter, 
-which we discussed in more detail under significance \cite{carlin1997bayes}. 
-Additionally priors can be used to regularize classical models 
-\cite{gelman2008weakly}. Bayesian models require priors and the 
-prototype of \textit{rstanarm} automatically adds independent weakly 
+Priors \textit{can} incorporate subjective beliefs or existing information 
+about a parameter,  which we discussed in more detail under significance \cite{carlin1997bayes}. 
+Priors can be used to regularize classical models \cite{gelman2008weakly}. 
+Bayesian models require priors and the prototype of \textit{rstanarm} 
+automatically adds independent weakly 
 informative priors on the coefficients of the generalized linear model, 
 leading to inferences similar to classical statistics,  but more informative 
 prior can be specified by the user. Especially in hierarchical modeling, 
@@ -480,8 +499,10 @@ priors to allow for outliers to achieve more robust inference.
 \subsection*{shinystan}
 We propose to develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
 {\textit{shinystan}} as a the graphical user interface for interactively 
-exploring virtually any Bayesian model fit using a Markov chain Monte Carlo algorithm. 
+exploring virtually any Bayesian model fit using a Markov chain Monte Carlo algorithm, 
+but optimized for \textit{rstanarm} and \textit{Stan}. 
 
+\subsubsection*{Goal: interactive intuitive graphical exploration of MCMC output} 
 To extract the results from objects representing model fits, data scientist can 
 use generic extractor functions such as print(), coef(), but often lack a suitable 
 method for extracting an interesting result of the model fit and have to resort to 
@@ -529,7 +550,7 @@ shinystan & detailed user-friendly model meta-data, posterior predictive draws..
 As we move from the Markov chain Monte Carlo simulations (raw draws from posterior distributions) to the probabilistic programming language \textit{rstan}, object structures become richer with deeply embedded model specific information (e.g. \textit{Stan} code); the user friendly \textit{rstanarm} package contains even more accessible statistics, compiled from the raw data and retained from the function call; finally the interactive web based tool box \textit{shinystan} compiles, extracts and handles many more meta-data to facilitate interactive and intuitive visual exploration and trouble shooting.
 
 
-\section*{Development, implementation and computer resources}
+\section*{Collaborative software development and computer resources}
 
 \subsection*{Best practices and proven methods for software design, construction, and implementation}
 We will follow accepted best practices, proven methods and industry standards for software design, construction and implementation, for example the rules of clarity, composition, separation, simplicity, parsimony, transparency, etc... as detailed by Raymond \cite{Raymond2003art}, as we did in building \textit{Rstan} and \textit{Stan}, our  prototype is build around. We will pay special attention to modularity and function routines in the design of our software packages and on the integration with existing subroutines already written in the parent software suites \textit{Stan} and \textit{Rstan} or existing C++ libraries. 
