@@ -340,6 +340,11 @@ D.~J. Kor, R.~K. Lingineni, O.~Gajic, P.~K. Park, J.~M. Blum, P.~C. Hou, J.~J.
   patients: a multicenter cohort study.
 \newblock {\em Anesthesiology}, 120(5):1168--1181, May 2014. PMID: 24755786.
 
+\bibitem{BetancourtGeometry2016}
+M.~J. Betancourt, S.~Byrne, S.~Livingstone, and M.~Girolami.
+\newblock The Geometric Foundations of Hamiltonian Monte Carlo.
+\newblock {\em Bernoulli}, 2016 (accepted).
+
 \bibitem{Gelman1998notasked}
 A.~Gelman, G.~King, and C.~Liu.
 \newblock Not asked and not answered: Multiple imputation for multiple surveys.

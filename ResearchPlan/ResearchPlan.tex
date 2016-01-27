@@ -61,9 +61,31 @@
 
 \begin{document}
 \part*{Specific Aims}
-National health databases and electronic health records (EHR) are inherently clustered by procedure, provider, service, institution and geography. Often neglected, this rich spatial and temporal organization is most realistically captured in multilevel hierarchical statistical models, but efficient computational implementation is still difficult. We propose to further develop \textit{Stan}, a novel, probabilistic programming language, to make advanced hierarchical modeling more readily accessible to data scientists for outcome and health services research. 
+National health databases and electronic health records (EHR) are inherently 
+clustered by procedure, provider, service, institution and geography. Often 
+neglected, this rich spatial and temporal organization is most realistically 
+captured in multilevel hierarchical statistical models, but efficient 
+computational implementation is still difficult. We propose to further 
+develop\textit{Stan}, a novel, probabilistic programming language, to make 
+advanced hierarchical modeling more readily accessible to data scientists 
+for outcome and health services research. 
 
-\paragraph*{Flexibility and robustness of hierarchical modeling could transform EHR based outcomes research.} We consider surgery as an illustrative example. Patients in the same hospital undergoing the same surgical intervention by the same team will show similar clinical trajectories and responses. Typically we are interested to investigate differences in therapeutic effects or to predict poor outcomes to prevent them. (1) By estimating individual effects for each provider or procedure, random effects can help to control for potentially confounding differences in quality of care by different teams. (2) Spatial clustering of adherence behavior , e.g by different services, can be represented by multilevel modeling. (3) Especially in subgroups with sparse data, partial pooling can improve parameter estimates; for example prediction of poor health outcomes can be improved by exploiting the implied correlations using information from different but related subsets. Failure to account for the highly structured and correlated nature of health care delivery may lead to incorrect statistical inferences.
+\paragraph*{Flexibility and robustness of hierarchical modeling could 
+transform EHR based outcomes research.} We consider surgery as an 
+illustrative example. Patients in the same hospital undergoing the 
+same surgical intervention by the same team will show similar clinical 
+trajectories and responses. Typically we are interested to investigate 
+differences in therapeutic effects or to predict poor outcomes to prevent 
+them. (1) By estimating individual effects for each provider or procedure, 
+random effects can help to control for potentially confounding differences 
+in quality of care by different teams. (2) Spatial clustering of adherence 
+behavior , e.g by different services, can be represented by multilevel modeling. 
+(3) Especially in subgroups with sparse data, partial pooling can improve 
+parameter estimates; for example prediction of poor health outcomes can be 
+improved by exploiting the implied correlations using information from 
+different but related subsets. Failure to account for the highly 
+structured and correlated nature of health care delivery may lead 
+to incorrect statistical inferences.
 
 \paragraph*{Hierarchical modeling and related diagnostics should be readily accessible to clinical data scientists.} At present, it still takes a computationally sophisticated statisticians to write complex hierarchical models, transform the data or parameters to facilitate model convergence and index the group indicators in a multilevel hierarchical model error free. We lack intuitive diagnostic, visual and exploratory tools to address convergence and model fit. Model convergence diagnostics and troubleshooting algorithms are still underdeveloped. 
 
@@ -186,7 +208,7 @@ For \textit{basic} hierarchical models, there are simple and accessible software
 
 \begin{wrapfigure}{l}{.3\textwidth}
   \vspace{-15pt}
- \includegraphics[scale=0.9]{Figures/Hamiltonian.png}
+ \includegraphics[scale=0.85]{Figures/Hamiltonian.png}
   \vspace{-20pt}
   \caption{Hamiltonian MCMC}
     \label{fig:Hamiltonian}
@@ -199,21 +221,52 @@ This matters as the sequential process of fitting complex multilevel models for 
 
 \subsection*{Improve tools for graphical exploration of hierarchical models and MCMC output}
 
-\begin{wrapfigure}{l}{.4\textwidth}
+\begin{wrapfigure}{l}{.6\textwidth}
   \vspace{-10pt}
- \includegraphics[scale=0.85]{Figures/shinystan.png}
+ \includegraphics[scale=1.2]{Figures/shinystan.png}
   \vspace{-10pt}
   \caption{\textit{shinystan} interface}
     \label{fig:shinystan}
  \vspace{- 10pt}
 \end{wrapfigure}
 
-Accessible tools and utilities, new visual methods to explore sophisticated model and their output would accelerate the model development, reduce modeling errors and fascinates inferential reasoning. \textit{shinystan} will fill in the void where there is currently a dearth of conceptual approaches, tools and utilities to analyze the very large data generated with Marcov Monte Carlo simulations themselves. The interactive user interface \ref{fig:shinystan} of \textit{shinystan} will provide powerful and easily accessible tools for posterior predictive checks to improve congruence of the fitted model with observed data. Advanced, refined and accessible model convergence diagnostics enhance model building. If a complex model fails to converge, knowing why is crucial to troubleshooting. \textit{shinystan} is already unmatched in combining ease of interactive graphical exploration with sophisticated graphical rendering to explore visually and parameter specific co-linearity, auto correlation, tree depth of Hamiltonian Monte Carlo algorithms and many other convergence diagnostics. We will not only further develop \textit{shinystan} to make it more robust, scale it to work faster also for larger data sets; beyond, we will develop novel graphical methods to assess model convergence and define and refined algorithms to troubleshoot model convergence with a special focus on multilevel hierarchical modeling. 
+Accessible tools and utilities, new visual methods to explore sophisticated model and
+their output would accelerate the model development, reduce modeling errors and 
+fascinates inferential reasoning. \textit{shinystan} will fill in the void where 
+there is currently a dearth of conceptual approaches, tools and utilities to 
+analyze the very large data generated with Marcov Monte Carlo simulations 
+themselves. The interactive user interface \ref{fig:shinystan} of \textit{shinystan} 
+will provide powerful and easily accessible tools for posterior predictive checks 
+to improve congruence of the fitted model with observed data. Advanced, refined 
+and accessible model convergence diagnostics enhance model building. If a complex 
+model fails to converge, knowing why is crucial to troubleshooting. \textit{shinystan} 
+is already unmatched in combining ease of interactive graphical exploration 
+with sophisticated graphical rendering to explore visually and parameter 
+specific co-linearity, auto correlation, tree depth of Hamiltonian Monte 
+Carlo algorithms and many other convergence diagnostics. We will not only 
+further develop \textit{shinystan} to make it more robust, scale it to work 
+faster also for larger data sets; beyond, we will develop novel graphical 
+methods to assess model convergence and define and refined algorithms to 
+troubleshoot model convergence with a special focus on multilevel hierarchical 
+modeling. 
 
  
 
 \subsection*{Heterogeneous and incomplete clinical data may limit prediction and implementation.}
-Variables with strong predictive power in our model may not be recorded in all patients or may be missing for the time window needed for prediction, a critical limitation in the development of prediction algorithms and implementation of the therapeutic interventions. yet, incomplete data are the hallmark of EMRs. Likelihood-based mixed effects models for incomplete data give valid estimates \textit{if and only if } the data are ignorably missing; that is, the parameters for the missing data process are distinct from those of the main model for the outcome, and the data are missing at random (MAR) or Missing Completely At Random (MCAR), a rare condition \cite{Rubin1976}. Indeed, this is an unreasonable assumption for EMRs; in our example, only significant patients respiratory co-morbidity and symptoms will prompt physicians to request arterial blood gases (ABG). Trying to impute missing ABG data using multiple imputation would  hence lead to biased imputations as the ABG data will not be missing at random. Imputation using auxiliary data can overcome this limitation, as outlined below.
+Variables with strong predictive power in our model may not be recorded in all patients 
+or may be missing for the time window needed for prediction, a critical limitation 
+in the development of prediction algorithms and implementation of the 
+therapeutic interventions. yet, incomplete data are the hallmark of EMRs. 
+Likelihood-based mixed effects models for incomplete data give valid estimates 
+\textit{if and only if } the data are ignorably missing; that is, the parameters 
+for the missing data process are distinct from those of the main model for the 
+outcome, and the data are missing at random (MAR) or Missing Completely At Random 
+(MCAR), a rare condition \cite{Rubin1976}. Indeed, this is an unreasonable assumption 
+for EMRs; in our example, only significant patients respiratory co-morbidity and 
+symptoms will prompt physicians to request arterial blood gases (ABG). Trying to 
+impute missing ABG data using multiple imputation would  hence lead to biased 
+imputations as the ABG data will not be missing at random. Imputation using 
+auxiliary data can overcome this limitation, as outlined below.
 
 \subsection*{Auxiliary data can be used to impute incomplete medical records.} 
 
@@ -226,29 +279,100 @@ Variables with strong predictive power in our model may not be recorded in all p
    \label{fig:Imputation_fig}
 \end{wrapfigure}
 
-Auxiliary data are additional information available in the form of variables known to be correlated with the missing data of interest \cite{Hall_25389642,Daniels24571539}. Figure \ref{fig:Imputation_fig} illustrates how we can impute incomplete data from auxiliary information \cite{Ibrahim2001auxilliaryImputaton,Schomaker23873614}. We know pneumonia impairs oxygenation, by causing respiratory failure, for example. If arterial $PaO_2$ (oxygen tension) is missing because arterial blood gases (ABG) have not been obtained, we can impute the incomplete data from oxygen therapy and/or peripheral oxygen saturation\cite{Hall_25389642}. This approach avoids the perils associated with missing at random (MAR) assumptions, when fitting a non-ignorable missingness model \cite{Wang_20029935}. Adding auxiliary variables not included in the main model for multiple imputation, in other words using additional information that is correlated with the missing outcome is an emerging approach to help correct bias \cite{Meng1994, Collins_11778676, Rubin1996}, often relying on Bayesian methods \cite{Daniels2008, Schafer1997}; joint hierarchical modeling, including auxiliary data to impute incomplete patient records, will improve the prediction model and facilitate the implementation of the prediction algorithm \cite{Hall_25389642}. Using auxilliary data to complete missing information is novel in data driven outcomes research and our software \textit{rstanarm} will disseminate this promising approach by facilitation its implementing. 
+Auxiliary data are additional information available in the form of variables known 
+to be correlated with the missing data of interest 
+\cite{Hall_25389642,Daniels24571539}. Figure \ref{fig:Imputation_fig} 
+illustrates how we can impute incomplete data from auxiliary information 
+\cite{Ibrahim2001auxilliaryImputaton,Schomaker23873614}. We know pneumonia 
+impairs oxygenation, by causing respiratory failure, for example. If 
+arterial $PaO_2$ (oxygen tension) is missing because arterial blood 
+gases (ABG) have not been obtained, we can impute the incomplete data 
+from oxygen therapy and/or peripheral oxygen saturation\cite{Hall_25389642}. 
+This approach avoids the perils associated with missing at random (MAR) 
+assumptions, when fitting a non-ignorable missingness model \cite{Wang_20029935}. 
+Adding auxiliary variables not included in the main model for multiple imputation, 
+in other words using additional information that is correlated with the missing 
+outcome is an emerging approach to help correct bias 
+\cite{Meng1994, Collins_11778676, Rubin1996}, often relying on 
+Bayesian methods \cite{Daniels2008, Schafer1997}; joint hierarchical 
+modeling, including auxiliary data to impute incomplete patient records, 
+will improve the prediction model and facilitate the implementation of the 
+prediction algorithm \cite{Hall_25389642}. Using auxilliary data to complete 
+missing information is novel in data driven outcomes research and our 
+software \textit{rstanarm} will disseminate this promising approach by 
+facilitation its implementing. 
 
 \part*{Approach}
 
-We propose to develop two accessible software packages, (\textit{rstanarm} and \textit{shinystan}), for the programming language and software environment \textit{R} to integrate incomplete information with hierarchical modeling for data driven outcomes research. These software products will make multidimensional statistical and computational methods for analyzing, inspecting, displaying, representing, parsing, and searching high-dimensional data more accessible to data scientists. We will also promote and disseminate these more complex hierarchical modeling approaches through presentations, graduate teaching, workshops, online tutorials, books, YouTube videos and other publications.
+We propose to develop two accessible software packages, (\textit{rstanarm} 
+and \textit{shinystan}), for the programming language and software environment 
+\textit{R} to integrate incomplete information with hierarchical modeling for 
+data driven outcomes research. These software products will make multidimensional statistical and computational methods for analyzing, inspecting, displaying, 
+representing, parsing, and searching high-dimensional data more accessible to 
+data scientists. We will also promote and disseminate these more complex 
+hierarchical modeling approaches through presentations, graduate teaching, 
+workshops, online tutorials, books, YouTube videos and other publications.
 
-We will develop our two prototypes (1) \textit{rstanarm} and (2) \textit{shinystan} further into solid, reliable, tested software packages. Both packages will serve as appendage to the $rstan$ package (we developed), which enables the most common applied regression models to be estimated using novel Hamiltonian Monte Carlo algorithms. We will makes our new two packages \textit{rstanarm} and \textit{shinystan} available to researchers and the general public via the free software repository CRAN. 
+We will develop our two prototypes (1) \textit{rstanarm} and (2) 
+\textit{shinystan} further into solid, reliable, tested software packages. 
+Both packages will serve as appendage to the $rstan$ package (we developed), 
+which enables the most common applied regression models to be estimated using 
+novel Hamiltonian Monte Carlo algorithms. We will makes our new two 
+packages \textit{rstanarm} and \textit{shinystan} available to researchers 
+and the general public via the free software repository CRAN. 
 
-This project (software development and dissemination) will be guided by our multidisciplinary project team. The team will conduct its work through regularly scheduled weekly meetings, and continued online collaboration via Github, Google hangout and email. 
+This project (software development and dissemination) will be guided by 
+our multidisciplinary project team. The team will conduct its work through 
+regularly scheduled weekly meetings, and continued online collaboration via 
+Github, Google hangout and email. 
 
 
 
 \section*{Preliminary work}
 
-\subsection*{Prior work in statistical software development and data driven outcomes research} Dr. Andreae published several meta-analyses and synthesized the evidence from clinical trials by pooling aggregate and individual patient data, when published results were insufficient for classical meta-analysis \cite{AndreaeJohnsonAbstract2013, Andreae2013, Andreae2015, Carter2015, Atchabahian2015}. Dr. Andreae, Hall, Goodrich and collaborators used the software prototype \textit{rstanarm} and \textit{shinystan} to build a multilevel hierarchical model to investigate health care disparities and quality of anesthesia delivery in the large National Clinical Outcomes Registry maintained by the American Society of Anesthesiology \cite{AndreaeWhite2015}. Dr. Goodrich build \textit{mi}, a software package for the programming language and software environment R to impute missing data \cite{miCRAN}. Drs. Goodrich and Gelman together developed other several widely cited and used software packages including the probabilistic programming language Stan\cite{SDT2014}, the basis for the proposed work. Dr. Hall also published on missing data imputation \cite{Hall2009a, Wang_20029935, Wang_20029935} and is nationally recognized for the development and application of change point models in epidemiology and surveillance \cite{Hall2000, Hall2001, Hall2003bayesian, Hall2009, Hall2015}. More recently, Dr. Hall played a major role as the lead statistician for the World Trade Center (WTC) Health Program at the Fire Department of the City of New York, supervising data analyses based on medical records \cite{Aldrich2010, Hall2015, Zeig-Owens2011}.  
-Dr. Gong's ongoing NIH funded trial to predict and improve respiratory outcomes after intubation based on real time electronic medical records is just one of many examples of her leading role in applied data driven outcomes research \cite{Gong2005, Gong2010, Gajic2011, Yu_24970344, Kor2014}. 
-
-\textbf{Michael Betancourt}
-
-Dr. Gelman is internationally recognized as a leader in Bayesian and hierarchical modeling and data imputation \cite{Gelman1998notasked, Gelman2001imputation, Hoffman2014, Gelman-Hill_2014}.
+\subsection*{Prior work in statistical software development and data driven outcomes research} Dr. Andreae published several meta-analyses and synthesized the evidence 
+from clinical trials by pooling aggregate and individual patient data, when 
+published results were insufficient for classical meta-analysis 
+\cite{AndreaeJohnsonAbstract2013, Andreae2013, Andreae2015, Carter2015, Atchabahian2015}. Dr. Andreae, Hall, Goodrich and collaborators used the software 
+prototype \textit{rstanarm} and \textit{shinystan} to build a multilevel 
+hierarchical model to investigate health care disparities and quality of 
+anesthesia delivery in the large National Clinical Outcomes Registry maintained 
+by the American Society of Anesthesiology \cite{AndreaeWhite2015}. Dr. Goodrich 
+build \textit{mi}, a software package for the programming language and 
+software environment R to impute missing data \cite{miCRAN}. Drs. Goodrich 
+and Gelman together developed other several widely cited and used software packages including the probabilistic programming language Stan\cite{Stan_Software_2014}, 
+the basis for the proposed work. Dr. Hall also published on missing data 
+imputation \cite{Hall2009a, Wang_20029935, Wang_20029935} and is nationally 
+recognized for the development and application of change point models in 
+epidemiology and surveillance 
+\cite{Hall2000, Hall2001, Hall2003bayesian, Hall2009, Hall2015}. 
+More recently, Dr. Hall played a major role as the lead statistician 
+for the World Trade Center (WTC) Health Program at the Fire Department 
+of the City of New York, supervising data analyses based on medical 
+records \cite{Aldrich2010, Hall2015, Zeig-Owens2011}.  
+Dr. Gong's ongoing NIH funded trial to predict and improve 
+respiratory outcomes after intubation based on real time 
+electronic medical records is just one of many examples of her 
+leading role in applied data driven outcomes research 
+\cite{Gong2005, Gong2010, Gajic2011, Yu_24970344, Kor2014}. 
+Dr. Gelman is internationally recognized as a leader in Bayesian and hierarchical 
+modeling and data imputation 
+\cite{Gelman1998notasked, Gelman2001imputation, Hoffman2014, Gelman-Hill_2014}. 
+Dr. Gelman, co-investigator on this grant, and his collaborators has been laying the 
+theoretical ground work for the development of the ultra-fast Hamiltonian 
+Monte Carlo algorithms \cite{Hoffman2014,Stan_Software_2014} 
+that are at the basis of \textit{Stan}, the engine 
+under the hood of our user oriented software package \textit{rstanarm}, 
+this project proposes to develop. His team includes Dr. Betancourt, 
+consultant on this grant with his special expertise on the differential 
+geometry of the underlying Hamiltonian Monte Carlo algorithm
+motivating automated tuning heuristics and certain optimality criteria 
+\cite{BetancourtGeometry2016}, which will play a 
+critical part in our programming of the \textit{Stan} model library 
+which \textit{rstanarm} will call on and in the tools for graphical exploration
+we propose to implement in \textit{shinystan}.
 
 \subsection*{The trajectory leading to the development of the prototype software} 
-
 
 \begin{wrapfigure}{l}{0.6\textwidth} %this figure will be at the right
     \centering
@@ -277,11 +401,23 @@ the R interface to the Stan C++ library for Bayesian estimation. Users specify m
 \section*{Software Specification}
 
 \subsection*{rstanarm}
-The software package \href{https://github.com/stan-dev/rstanarm}{\textit{rstanarm}}will enable the estimation of advanced applied general linear regression models using the existing probabilistic programming language \textit{Stan}. \textit{rstanarm} implements full Bayesian statistical inference;  however, \textit{rstanarm} will allow users to specify their complex hierarchical models relying on the simplified syntax already commonly used in standard software packages like \textit{lme4} in the statistical software environment \textit{R}. 
+The software package \href{https://github.com/stan-dev/rstanarm}{\textit{rstanarm}}
+will enable the estimation of advanced applied general linear regression models using 
+the existing probabilistic programming language \textit{Stan}. 
+\textit{rstanarm} implements full Bayesian statistical inference;  
+however, \textit{rstanarm} will allow users to specify their complex 
+hierarchical models relying on the simplified syntax already commonly 
+used in standard software packages like \textit{lme4} in the statistical 
+software environment \textit{R}. 
 
 \subsubsection*{rstanarm allows simple specification for complex hierarchical models}
 
-Data scientists familiar with the widely used statistical software environment R will find \textit{rstanarm} intuitive, because models are specified using the familiar standard R modeling syntax to describe the mean structure of even complex models. For example, analogously to \textit{lme4}, \textit{rstanarm} uses a two-sided linear formula syntax describing both the fixed-effects and random-effects of a model, e.g.:
+Data scientists familiar with the widely used statistical software environment R will 
+find \textit{rstanarm} intuitive, because models are specified using the familiar 
+standard R modeling syntax to describe the mean structure of even complex models. 
+For example, analogously to \textit{lme4}, \textit{rstanarm} uses a two-sided 
+linear formula syntax describing both the fixed-effects and random-effects of 
+a model, e.g.:
 
 \begin{wrapfigure}{l}{.2\textwidth}
 \vspace{-20pt}
@@ -291,11 +427,23 @@ y \sim x1 +(x2|x3)
 \vspace{-30pt}
 \end{wrapfigure}
 
-where the dependent response variable $y$ is on the left of a Tilde ($\sim$) operator; the independent terms, $x_1, x_2...$ are on the right and separated by the $+$ operator. Random-effects terms are distinguished by vertical bars $|$ separating expressions for design matrices from grouping factors. Clinical data scientist can therefore take advantage of the  more efficient inference of the cutting edge HMC algorithms implemented in \textit{Stan}, without knowledge of the underlying programming language or the auxiliary reparametrizations useful to achieve faster model convergence, which we discuss further below.
+where the dependent response variable $y$ is on the left of a Tilde ($\sim$) operator; 
+the independent terms, $x_1, x_2...$ are on the right and separated by the $+$ 
+operator. Random-effects terms are distinguished by vertical bars $|$ 
+separating expressions for design matrices from grouping factors. Clinical data 
+scientist can therefore take advantage of the  more efficient inference of the 
+cutting edge HMC algorithms implemented in \textit{Stan}, without knowledge of 
+the underlying programming language or the auxiliary reparametrizations useful to 
+achieve faster model convergence, which we discuss further below.
 
 \subsubsection*{A suite of pre-compiled Stan models allows for a simple call to complex modeling functions}
 
-The prototype of \textit{rstanarm} already implements many generalized linear models with and without group-specific terms. We wrote many optimized models in the probabilistic programming language \textit{Stan}, which have been pre-compiled, saving time during function calls for recurrent sequential complex model building. Users build complex models via simple top level functions, interfacing only with a wrapper function as detailed below.
+Our prototype of \textit{rstanarm} already implements many generalized linear 
+models with and without group-specific terms. We wrote many optimized models 
+in the probabilistic programming language \textit{Stan}, which have been 
+pre-compiled, saving time during function calls for recurrent sequential 
+complex model building. Users therefore can now build complex models via simple top level 
+functions, interfacing only with a wrapper function as detailed below.
 
 \begin{wraptable}{l}{0.6\textwidth}
 \footnotesize
@@ -311,28 +459,70 @@ lm.stan                & Pre-compiled optimized model written in \textit{Stan}  
 \label{ProcessTable}
 \end{wraptable}
 
-For an ANOVA model for example, the wrapper function $stan\_aov$ parses the model specification and hands the data and user specification via a linear model functions, in this case $stan\_lm$ to a lower level workhorse function, here $stan\_lm.fit$, which in turn creates model frame and design matrix and calls the specific pre-compiled and optimized \textit{Stan} model function $lm.stan$. The latter formats and returns the Hamiltonian Markov chain Monte Carlo output back via the user interface function $stan\_aov$ to the data scientist.
+For an ANOVA model for example, the wrapper function $stan\_aov$ parses the 
+model specification and hands the data and user specification via a linear 
+model functions, in this case $stan\_lm$ to a lower level workhorse function, 
+here $stan\_lm.fit$, which in turn creates model frame and design matrix and 
+calls the specific pre-compiled and optimized \textit{Stan} model function 
+$lm.stan$. The latter formats and returns the Hamiltonian Markov chain Monte 
+Carlo output back via the user interface function $stan\_aov$ to the data scientist.
 
-The $stan\_lm$, $stan\_glm$ and $stan\_glmer$ functions, (accessible to the more advanced user) are similar in syntax to the R software functions $glm$ and $glmer$ as used in the R package $lme4$, respectively, but rather than maximum likelihood estimation of classical generalized linear models, full Bayesian estimation is performed via Hamiltonian Markov chain Monte Carlo simulations. If neutral "minimally informative" priors are chosen (AKA an empirical Bayesian approach), this yields results very similar, if not identical to classical frequentist inference.
+The $stan\_lm$, $stan\_glm$ and $stan\_glmer$ functions, (accessible to the 
+more advanced user) are similar in syntax to the R software functions $glm$ 
+and $glmer$ as used in the R package $lme4$, respectively, but rather than 
+maximum likelihood estimation of classical generalized linear models, full 
+Bayesian estimation is performed via Hamiltonian Markov chain Monte Carlo 
+simulations. If neutral "minimally informative" priors are chosen (AKA 
+"empirical Bayesian"), this yields results very similar, if not 
+identical to classical frequentist inference \cite{Gelman-Hill_2014}, making \textit{rstanarm} a very universal user-friendly software suite to estimate complex hierarchical models.
 
 \subsubsection*{Prior specification for regularization or to incorporate external information}
 
-Priors can incorporate subjective beliefs or existing information about a parameter, which we discussed in more detail under significance \cite{carlin1997bayes}. Additionally priors can be used to regularize classical models \cite{gelman2008weakly}. Bayesian models require priors and the prototype of \textit{rstanarm} automatically adds independent weakly informative priors on the coefficients of the generalized linear model, leading to inferences similar to classical statistics,  but more informative prior can be specified by the user. Especially in hierarchical modeling, regularization with priors can help convergence and improve inferences \cite{Gelman-Hill_2014}. In \textit{rstanarm}, specification of the prior can such be left to the default implementation or the user can choose from a broad array of distribution, e.g. for the intercept one might choose the Student t distribution, which approaches the normal distribution as the degrees of freedom approach infinity and as the degrees of freedom are one, the Cauchy distribution, leaving the user the option of robust priors to allow for outliers to achieve more robust inference. 
+Priors \textit{can} incorporate subjective beliefs or existing information 
+about a parameter,  which we discussed in more detail under significance \cite{carlin1997bayes}. 
+Priors can be used to regularize classical models \cite{gelman2008weakly}. 
+Bayesian models require priors and the prototype of \textit{rstanarm} 
+automatically adds independent weakly 
+informative priors on the coefficients of the generalized linear model, 
+leading to inferences similar to classical statistics,  but more informative 
+prior can be specified by the user. Especially in hierarchical modeling, 
+regularization with priors can help convergence and improve inferences 
+\cite{Gelman-Hill_2014}. In \textit{rstanarm}, specification of the prior 
+can such be left to the default implementation or the user can choose from 
+a broad array of distribution, e.g. for the intercept one might choose the 
+Student t distribution, which approaches the normal distribution as the 
+degrees of freedom approach infinity and as the degrees of freedom are 
+one, the Cauchy distribution, leaving the user the option of robust 
+priors to allow for outliers to achieve more robust inference. 
 
 
 \subsection*{shinystan}
-We propose to develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}{\textit{shinystan}} as a the graphical user interface for interactively exploring virtually any Bayesian model fit using a Markov chain Monte Carlo algorithm. 
+We propose to develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
+{\textit{shinystan}} as a the graphical user interface for interactively 
+exploring virtually any Bayesian model fit using a Markov chain Monte Carlo algorithm, 
+but optimized for \textit{rstanarm} and \textit{Stan}. 
 
-To extract the results from objects representing model fits, data scientist can use generic extractor functions such as print(), coef(), but often lack a suitable method for extracting an interesting result of the model fit and have to resort to wirting tidious code to customize their own. Important model diagnostics (e.g. influence() to assess  homoscedastic residual errors) are not developed even for classical multi-level models \cite{Galecki2013linear}, and data scientists certainly lack tools for interactive intuitive graphical exploration of MCMC simulations.
+\subsubsection*{Goal: interactive intuitive graphical exploration of MCMC output} 
+To extract the results from objects representing model fits, data scientist can 
+use generic extractor functions such as print(), coef(), but often lack a suitable 
+method for extracting an interesting result of the model fit and have to resort to 
+writing tedious code to customize their own. Important model diagnostics 
+(e.g. influence() to assess  homoscedastic residual errors) are not 
+developed even for classical multi-level models \cite{Galecki2013linear}, 
+and data scientists certainly lack tools for interactive intuitive graphical 
+exploration of MCMC simulations.
 
 \subsubsection*{Implementation}
-We will implement \textit{shinystan} in \textit{Shiny}, an R package for interactive web applications. The graphical rendering of our proposed package \textit{shinystan} is building on the superb graphical package ggplot by Hackley Wickham. Many graphical functions of \textit{shinystan} will eventually be ported directly into $rstan$ to allow users to integrate the graphical and numerical output of \textit{shinystan} directly into reports generated with the markdown in R.
-
-Our motivation for \textit{shinystan} was the dearth of 
-
+We will implement \textit{shinystan} in \textit{Shiny}, an R package for interactive 
+web applications. The graphical rendering of our proposed package \textit{shinystan} 
+is building on the superb graphical package \textit{ggplot} by Hackley Wickham. 
+Many of our new graphical functions of \textit{shinystan} will eventually be 
+integrated directly into \textit{Rstan} to allow users to integrate the graphical 
+and numerical output of \textit{shinystan} directly into reports generated with 
+markdown in R through the \textit{knitr} package.
 
 \subsubsection*{Model checking}
-
+shinystan will facilitate many diagnostics to optimize model convergence, explore unexpected parameter correlations and asses the correctness of the model specification. Here we will delineate two examples.
 \begin{itemize}
 \item (a) residual diagnostics, e.g. for continuous covariates, a scatterplot of the residuals against the values of the covariate can also be used. Q-Q plot
  
@@ -347,7 +537,7 @@ The automation of many data exploration processes saves time, but implies the ex
 \begin{tabular}{@{}
 >{\columncolor[HTML]{EFEFEF}}l l@{}}
 \toprule
-\textbf{Object} & \textbf{Increasingly complex object characterstics} \\ \midrule
+\textbf{Object} & \textbf{Increasingly complex object characteristics} \\ \midrule
 MCMC & raw data from Markov chain Monte Carlo chains \\ \midrule
 rstan & structured embedded model information (Stan code, parameter names...) \\ \midrule
 rstanarm & accessible aggregate derived statistics (coefficients, SE, fitted, residuals) \\ \midrule
@@ -360,7 +550,7 @@ shinystan & detailed user-friendly model meta-data, posterior predictive draws..
 As we move from the Markov chain Monte Carlo simulations (raw draws from posterior distributions) to the probabilistic programming language \textit{rstan}, object structures become richer with deeply embedded model specific information (e.g. \textit{Stan} code); the user friendly \textit{rstanarm} package contains even more accessible statistics, compiled from the raw data and retained from the function call; finally the interactive web based tool box \textit{shinystan} compiles, extracts and handles many more meta-data to facilitate interactive and intuitive visual exploration and trouble shooting.
 
 
-\section*{Development, implementation and computer resources}
+\section*{Collaborative software development and computer resources}
 
 \subsection*{Best practices and proven methods for software design, construction, and implementation}
 We will follow accepted best practices, proven methods and industry standards for software design, construction and implementation, for example the rules of clarity, composition, separation, simplicity, parsimony, transparency, etc... as detailed by Raymond \cite{Raymond2003art}, as we did in building \textit{Rstan} and \textit{Stan}, our  prototype is build around. We will pay special attention to modularity and function routines in the design of our software packages and on the integration with existing subroutines already written in the parent software suites \textit{Stan} and \textit{Rstan} or existing C++ libraries. 
