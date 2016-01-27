@@ -179,13 +179,13 @@ The principle  of clustered and hierarchical modeling for evidence synthesis is 
 
 \subsection*{Hierarchical modeling improves data driven outcomes research in our contemporary hierarchically structured health care system}
  
-Multi-level hierarchical models may hence be a useful tool to analyses heterogeneous perioperative outcome data. This is true for meta-analysis of long-term studies with varied design to better inform clinical decisions\cite{AndreaeJohnsonAbstract2013,Spiegelhalter2004bayesian} and for data driven outcomes research  in our hierarchically structured contemporary health care delivery system. Complex multilevel models can be difficult to fit with standard software and should be more accessible.
+Multi-level hierarchical models may hence be a useful tool to analyses heterogeneous perioperative outcome data. This is true for meta-analysis of long-term studies with varied design to better inform clinical decisions\cite{AndreaeJohnsonAbstract2013,Spiegelhalter2004bayesian} and for data driven outcomes research  in our hierarchically structured contemporary health care delivery system. Complex multilevel models can be difficult to fit with standard software and should be more accessible, (see letter of support by Drs. OMalley).
 
 \subsection*{Clustering can bias estimation of confidence intervals.} To correctly estimate confidence intervals even in a simple Student t-test, we have to take into account if the data are observed in the same patient repeatedly, i.e. if they are clustered and correlated. Failure to take into account correlations in clustered observation may lead to incorrect inferences. Based on the empirical (robust) (weighted jackknife) methods, the confidence intervals are correct, but such approaches are often ignored in EHR research and they depend on convergence characteristics that may not hold in faceted EHR data. 
 
 \section*{Integrating incomplete data into clustered EHR modeling}
 
-Too often data scientists either (1) fit complex model but limit the analysis to complete cases, ignoring the missing or incomplete data or (2) impute the missing data, but build overly simplified models of the scientific question of interest, to limit complexity of the overall model. More accessible hierarchical modeling could better integrate the two elements. Missing predictors are imputed on a lower level of the model. The imputed missing data point with its confidence interval (indicating the precision of the imputation) is then fed into the estimation at the next higher level of the model \cite{Gelman2001imputation}. 
+Too often data scientists either (1) fit complex model but limit the analysis to complete cases, ignoring the missing or incomplete data or (2) impute the missing data, but build overly simplified models of the scientific question of interest, to limit complexity of the overall model, (see letter of support by Dr. Mirhaji). More accessible hierarchical modeling could better integrate the two elements. Missing predictors are imputed on a lower level of the model. The imputed missing data point with its confidence interval (indicating the precision of the imputation) is then fed into the estimation at the next higher level of the model \cite{Gelman2001imputation}. 
 
 \subsection*{EHR data are not missing at random.} Physicians chose which test to get to inform specific therapeutic decisions and different types of data are recorded in different clinical setting, e.g. arterial lines may not be permissible on the floor, vitals are recorded in greater detail and more frequently in high dependency units like the ICU. 
 
@@ -256,7 +256,8 @@ modeling.
 Variables with strong predictive power in our model may not be recorded in all patients 
 or may be missing for the time window needed for prediction, a critical limitation 
 in the development of prediction algorithms and implementation of the 
-therapeutic interventions. yet, incomplete data are the hallmark of EMRs. 
+therapeutic interventions (see letter of support by Dr. Mirhaji). 
+Yet, incomplete data are the hallmark of EMRs. 
 Likelihood-based mixed effects models for incomplete data give valid estimates 
 \textit{if and only if } the data are ignorably missing; that is, the parameters 
 for the missing data process are distinct from those of the main model for the 
