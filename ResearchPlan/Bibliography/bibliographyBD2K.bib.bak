@@ -318,6 +318,18 @@
   Publisher                = {JSTOR}
 }
 
+@Article{BetancourtGeometry2016,
+  Title                    = {The Geometric Foundations of Hamiltonian Monte Carlo},
+  Author                   = {Betancourt, M. J. and Byrne, Simon and Livingstone, Samuel and Girolami, Mark},
+  Journal                  = {Bernoulli},
+  Year                     = {2016 (accepted)},
+
+  __markedentry            = {[Micheal:1]},
+  Owner                    = {Micheal},
+  Timestamp                = {2016.01.27},
+  Url                      = {arXiv:1410.5110}
+}
+
 @InProceedings{Buja1999inference,
   Title                    = {Inference for data visualization},
   Author                   = {Buja, Andreas and Cook, Dianne and Swayne, D},
@@ -1494,6 +1506,16 @@ Pregnancy},
   Pmid                     = {16311133},
   Timestamp                = {2015.02.11},
   Url                      = {http://dx.doi.org/10.1016/j.currproblcancer.2005.09.006}
+}
+
+@Article{Ibrahim2001auxilliaryImputaton,
+  Title                    = {Using auxiliary data for parameter estimation with non-ignorably missing outcomes},
+  Author                   = {Ibrahim, Joseph G and Lipsitz, Stuart R and Horton, Nick},
+  Journal                  = {Applied statistics},
+  Year                     = {2001},
+  Pages                    = {361--373},
+
+  Publisher                = {JSTOR}
 }
 
 @Article{Kaushal_24821739,
