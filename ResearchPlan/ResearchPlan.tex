@@ -66,9 +66,8 @@ clustered by procedure, provider, service, institution and geography. Often
 neglected, this rich spatial and temporal organization is most realistically 
 captured in multilevel hierarchical statistical models, but efficient 
 computational implementation is still difficult. We propose to further 
-develop\textit{Stan}, a novel, probabilistic programming language, to make 
-advanced hierarchical modeling more readily accessible to data scientists 
-for outcome and health services research. 
+develop capabilities around \textit{Stan}, a novel, probabilistic programming language, to make advanced hierarchical modeling more readily accessible to data scientists 
+for outcomes research. 
 
 \paragraph*{Flexibility and robustness of hierarchical modeling could 
 transform EHR based outcomes research.} We consider surgery as an 
@@ -89,16 +88,16 @@ to incorrect statistical inferences.
 
 \paragraph*{Hierarchical modeling and related diagnostics should be readily accessible to clinical data scientists.} At present, it still takes a computationally sophisticated statisticians to write complex hierarchical models, transform the data or parameters to facilitate model convergence and index the group indicators in a multilevel hierarchical model error free. We lack intuitive diagnostic, visual and exploratory tools to address convergence and model fit. Model convergence diagnostics and troubleshooting algorithms are still underdeveloped. 
 
-\paragraph*{Classical approaches and software packages often lack flexibility for multilevel hierarchical modeling.} Available algorithms are slow to converge even on advanced workstations, if they converge at all. \textit{Stan}, our flexible general-purpose modeling language facilitated much more widespread multilevel modeling statistics in biostatistics, epidemiology, public health and political science and pharmacokinetic modeling. \textit{Stan's} novel Hamiltonian Monte Carlo algorithm converges faster by orders of magnitude and is ideally suited to fit even advanced and unorthodox statistical models. \textit{Stan's} development was funded through the NSF; therefore \textit{Stan} and its algorithms are open source; they are implemented on multiple platforms (Python, Julia, R/Rstudio). 
+\paragraph*{Classical approaches and software packages often lack flexibility for multilevel hierarchical modeling.} Available algorithms are slow to converge even on advanced workstations, if they converge at all. \textit{Stan}, our flexible general-purpose modeling language facilitated much more widespread multilevel modeling statistics in biostatistics, epidemiology, public health and political science and pharmacokinetic modeling. \textit{Stan's} novel Hamiltonian Monte Carlo algorithm converges faster by orders of magnitude and is ideally suited to fit even advanced and unorthodox statistical models. \textit{Stan's} development was funded through the NSF and DoD; \textit{Stan} and its algorithms are open source; they are implemented on multiple platforms (\textit{Python, Julia, R}). 
 
-\paragraph*{Robust, efficient, expressive and accessible software promotes Big Data outcomes research.} We propose to further simplify complex multilevel model building for clinical and health services research by developing additional and more user friendly open source software packages around Stan, incorporating interactive, intuitive visual and novel statistical tools to facilitate principled model optimization and checking. 
+\paragraph*{Robust, efficient, expressive and accessible software promotes Big Data outcomes research.} We propose to further simplify complex multilevel model building for clinical and health services research by developing and expanding more user friendly open source software package prototypes around \textit{Stan}, incorporating interactive, intuitive visual and novel statistical tools to facilitate principled model optimization and checking. 
 
 \subparagraph{Specific aims}
-\paragraph*{Aim 1:} To develop simple and user-friendly software packages around Stan in the open-source statistical computing environment R/Rstudio in collaboration with applied clinical data scientists and biostatisticians. To make complex hierarchical modeling of EMR computationally efficient and readily accessible to average clinical data scientists with a simple standardized function call to a representative class of multilevel models.
+\paragraph*{Aim 1:} To advance and expand our simple and user-friendly software prototype \textit{rstanarm} in the open-source statistical environment \textit{R} in collaboration with applied clinical data scientists and biostatisticians. To make complex hierarchical modeling of EMR computationally efficient and readily accessible to average clinical data scientists with a simple standardized function call to a representative class of multilevel models.
 
-\paragraph*{Aim 2:} To develop an interactive diagnostic software package to analyze and visually explore the convergence and output of complex hierarchical models and to develop novel principled diagnostic algorithms and utilities to diagnose and troubleshoot non-convergence, to detect multidimensional co-linearity and to accelerate computational implementation of advance hierarchical models.
+\paragraph*{Aim 2:} To harden and further develop \textit{shinystan}, our interactive diagnostic prototype package to analyze and visually explore the convergence and output of complex hierarchical models and to develop novel principled diagnostic algorithms and utilities to diagnose and troubleshoot non-convergence, to detect multidimensional co-linearity and to accelerate computational implementation of advance hierarchical models.
 
-\paragraph*{Aim 3:} To explicate, document and disseminate complex hierarchical modeling and its advanced computational implementation in collaboration with the clinical Big Data science community with hands on workshops, e-books, online tutorials and electronic resources. To solicit the Big Data community feedback, engage new software developers and to incorporate corrections into our software through online user and developer groups.
+\paragraph*{Aim 3:} To explicate, document and disseminate complex hierarchical modeling and its advanced computational implementation in collaboration with the clinical data science community with hands on use cases, workshops, e-books and online tutorials. To solicit the data scientist community feedback, engage new software developers and to incorporate corrections into our prototypes through online user and developer groups.
 
 \part*{Research Strategy}
 
@@ -518,7 +517,7 @@ We will implement \textit{shinystan} in \textit{Shiny}, an R package for interac
 web applications. The graphical rendering of our proposed package \textit{shinystan} 
 is building on the superb graphical package \textit{ggplot} by Hackley Wickham. 
 Many of our new graphical functions of \textit{shinystan} will eventually be 
-integrated directly into \textit{Rstan} to allow users to integrate the graphical 
+integrated directly into \textit{rstan} to allow users to integrate the graphical 
 and numerical output of \textit{shinystan} directly into reports generated with 
 markdown in R through the \textit{knitr} package.
 
@@ -554,7 +553,7 @@ As we move from the Markov chain Monte Carlo simulations (raw draws from posteri
 \section*{Collaborative software development and computer resources}
 
 \subsection*{Best practices and proven methods for software design, construction, and implementation}
-We will follow accepted best practices, proven methods and industry standards for software design, construction and implementation, for example the rules of clarity, composition, separation, simplicity, parsimony, transparency, etc... as detailed by Raymond \cite{Raymond2003art}, as we did in building \textit{Rstan} and \textit{Stan}, our  prototype is build around. We will pay special attention to modularity and function routines in the design of our software packages and on the integration with existing subroutines already written in the parent software suites \textit{Stan} and \textit{Rstan} or existing C++ libraries. 
+We will follow accepted best practices, proven methods and industry standards for software design, construction and implementation, for example the rules of clarity, composition, separation, simplicity, parsimony, transparency, etc... as detailed by Raymond \cite{Raymond2003art}, as we did in building \textit{rstan} and \textit{Stan}, our  prototype is build around. We will pay special attention to modularity and function routines in the design of our software packages and on the integration with existing subroutines already written in the parent software suites \textit{Stan} and \textit{rstan} or existing C++ libraries. 
 
 \subsubsection*{Taking full advantage of contemporary object oriented programming}
 The software packages will be written in the probabilistic programming environment \textit{R}, arguably the most widely used software in bioinformatics. \textit{R} is an object-oriented programming (OOP) language and we will rely mostly on the recently introduced S4 system, the preferred OOP method for \textit{R}. S4 is more formal, supports multiple inheritance, multiple dispatch and introspection \cite{Chambers2014object}. By implementing generic functions whenever possible, our object-oriented approach capitalizes on the striking similarities of syntax for extracting object information from class glmer and our \textit{rstanarm} objects. 
@@ -604,7 +603,7 @@ Throughout the duration of the project we will disseminate the software packages
 
 
 
-We already have very active \href{https://groups.google.com/forum/#!forum/stan-users} {user groups} around \textit{Stan} and \textit{Rstan}, the software we propose to further develop with the \textit{rstanarm} and \textit{shinystan} packages); they are coupled with frequent online and face to face \href{http://www.meetup.com/bda-group/}{meetings}. We will branch these out to have \textit{rstanarm} and \textit{shinystan} specific user forums to discuss implementation issues, engage advanced users in the development of our packages and/or in designing courses around our models and software, but in particular to solicit their feedback. However, the user forums have served also to assist novices in implementing their models in our software.
+We already have very active \href{https://groups.google.com/forum/#!forum/stan-users} {user groups} around \textit{Stan} and \textit{rstan}, the software we propose to further develop with the \textit{rstanarm} and \textit{shinystan} packages); they are coupled with frequent online and face to face \href{http://www.meetup.com/bda-group/}{meetings}. We will branch these out to have \textit{rstanarm} and \textit{shinystan} specific user forums to discuss implementation issues, engage advanced users in the development of our packages and/or in designing courses around our models and software, but in particular to solicit their feedback. However, the user forums have served also to assist novices in implementing their models in our software.
 Analogous to our existing \href{https://github.com/stan-dev/example-models/wiki}{Wiki} on Github for \textit{Stan} with examples models and vignettes, we will further develop our \textit{rstanarm} and \textit{shinystan} \href{https://github.com/stan-dev/rstanarm/wiki}{Wikis}, including an interface to submit and discuss \href{https://github.com/stan-dev/rstanarm/issues}{issues}, taking full advantage of the functionality of GitHub for engaging users in collaborative software development \cite{loeliger2012version}. 
 
 \section*{Timeline and potential problems}
