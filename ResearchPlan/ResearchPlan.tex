@@ -66,7 +66,8 @@ clustered by procedure, provider, service, institution and geography. Often
 neglected, this rich spatial and temporal organization is most realistically 
 captured in multilevel hierarchical statistical models, but efficient 
 computational implementation is still difficult. We propose to further 
-develop capabilities around \textit{Stan}, a novel, probabilistic programming language, to make advanced hierarchical modeling more readily accessible to data scientists 
+develop capabilities around \textit{Stan}, a novel, probabilistic programming language, 
+to make advanced hierarchical modeling more readily accessible to data scientists 
 for outcomes research. 
 
 \paragraph*{Flexibility and robustness of hierarchical modeling could 
@@ -86,31 +87,91 @@ different but related subsets. Failure to account for the highly
 structured and correlated nature of health care delivery may lead 
 to incorrect statistical inferences.
 
-\paragraph*{Hierarchical modeling and related diagnostics should be readily accessible to clinical data scientists.} At present, it still takes a computationally sophisticated statisticians to write complex hierarchical models, transform the data or parameters to facilitate model convergence and index the group indicators in a multilevel hierarchical model error free. We lack intuitive diagnostic, visual and exploratory tools to address convergence and model fit. Model convergence diagnostics and troubleshooting algorithms are still underdeveloped. 
+\paragraph*{Hierarchical modeling and related diagnostics should be readily accessible 
+to clinical data scientists.} At present, it still takes a computationally 
+sophisticated statisticians to write complex hierarchical models, transform 
+the data or parameters to facilitate model convergence and index the group 
+indicators in a multilevel hierarchical model error free. We lack intuitive 
+diagnostic, visual and exploratory tools to address convergence and model fit. 
+Model convergence diagnostics and troubleshooting algorithms are still underdeveloped. 
 
-\paragraph*{Classical approaches and software packages often lack flexibility for multilevel hierarchical modeling.} Available algorithms are slow to converge even on advanced workstations, if they converge at all. \textit{Stan}, our flexible general-purpose modeling language facilitated much more widespread multilevel modeling statistics in biostatistics, epidemiology, public health and political science and pharmacokinetic modeling. \textit{Stan's} novel Hamiltonian Monte Carlo algorithm converges faster by orders of magnitude and is ideally suited to fit even advanced and unorthodox statistical models. \textit{Stan's} development was funded through the NSF and DoD; \textit{Stan} and its algorithms are open source; they are implemented on multiple platforms (\textit{Python, Julia, R}). 
+\paragraph*{Classical approaches and software packages often lack flexibility 
+for multilevel hierarchical modeling.} Available algorithms are slow to converge 
+even on advanced workstations, if they converge at all. \textit{Stan}, our 
+flexible general-purpose modeling language facilitated much more widespread 
+multilevel modeling statistics in biostatistics, epidemiology, public health 
+and political science and pharmacokinetic modeling. \textit{Stan's} novel 
+Hamiltonian Monte Carlo algorithm converges faster by orders of magnitude 
+and is ideally suited to fit even advanced and unorthodox statistical 
+models. \textit{Stan's} development was funded through the NSF and DoD; 
+\textit{Stan} and its algorithms are open source; they are implemented on 
+multiple platforms (\textit{Python, Julia, R}). 
 
-\paragraph*{Robust, efficient, expressive and accessible software promotes Big Data outcomes research.} We propose to further simplify complex multilevel model building for clinical and health services research by developing and expanding more user friendly open source software package prototypes around \textit{Stan}, incorporating interactive, intuitive visual and novel statistical tools to facilitate principled model optimization and checking. 
+\paragraph*{Robust, efficient, expressive and accessible software promotes Big 
+Data outcomes research.} We propose to further simplify complex multilevel model 
+building for clinical and health services research by developing and expanding 
+more user friendly open source software package prototypes around \textit{Stan}, 
+incorporating interactive, intuitive visual and novel statistical tools to 
+facilitate principled model optimization and checking. 
 
 \subparagraph{Specific aims}
-\paragraph*{Aim 1:} To advance and expand our simple and user-friendly software prototype \textit{rstanarm} in the open-source statistical environment \textit{R} in collaboration with applied clinical data scientists and biostatisticians. To make complex hierarchical modeling of EMR computationally efficient and readily accessible to average clinical data scientists with a simple standardized function call to a representative class of multilevel models.
+\paragraph*{Aim 1:} To advance and expand our simple and user-friendly software 
+prototype \textit{rstanarm} in the open-source statistical environment \textit{R} 
+in collaboration with applied clinical data scientists and biostatisticians. To 
+make complex hierarchical modeling of EMR computationally efficient and readily 
+accessible to average clinical data scientists with a simple standardized function 
+call to a representative class of multilevel models.
 
-\paragraph*{Aim 2:} To harden and further develop \textit{shinystan}, our interactive diagnostic prototype package to analyze and visually explore the convergence and output of complex hierarchical models and to develop novel principled diagnostic algorithms and utilities to diagnose and troubleshoot non-convergence, to detect multidimensional co-linearity and to accelerate computational implementation of advance hierarchical models.
+\paragraph*{Aim 2:} To harden and further develop \textit{shinystan}, our 
+interactive diagnostic prototype package to analyze and visually explore 
+the convergence and output of complex hierarchical models and to develop novel 
+principled diagnostic algorithms and utilities to diagnose and troubleshoot 
+non-convergence, to detect multidimensional co-linearity and to accelerate 
+computational implementation of advance hierarchical models.
 
-\paragraph*{Aim 3:} To explicate, document and disseminate complex hierarchical modeling and its advanced computational implementation in collaboration with the clinical data science community with hands on use cases, workshops, e-books and online tutorials. To solicit the data scientist community feedback, engage new software developers and to incorporate corrections into our prototypes through online user and developer groups.
+\paragraph*{Aim 3:} To explicate, document and disseminate complex hierarchical 
+modeling and its advanced computational implementation in collaboration with the 
+clinical data science community with hands on use cases, workshops, e-books and 
+online tutorials. To solicit the data scientist community feedback, engage new 
+software developers and to incorporate corrections into our prototypes through 
+online user and developer groups.
 
 \part*{Research Strategy}
 
 \part*{Significance}
 
 \section*{The nested structure of health care delivery and electronic health data}
-Clinical data scientists are faced with an abundance of useful electronic health data, but limitations of existing statistical inference tools constrain the scientific hypotheses they can be explore and evaluate. Electronic health related data sets are not only growing exponentially in number of units of observations or variables observed, but this growth implies increasingly complex interactions and correlations.  
+Clinical data scientists are faced with an abundance of useful electronic health data, 
+but limitations of existing statistical inference tools constrain the scientific 
+hypotheses they can be explore and evaluate. Electronic health related data sets 
+are not only growing exponentially in number of units of observations or 
+variables observed, but this growth implies increasingly complex interactions 
+and correlations.  
 
 \subsection*{The National Anesthesia Clinical Outcomes Registry}
-Below we illustrate the clustered, nested data structure of contemporary health care delivery and electronic health data capture with the example of the National Anesthesia Clinical Outcomes Registry (NACOR), maintained by the Anesthesia Quality Institute and funded by the American Society of Anesthesiologists, which we will utilize as a use case for dissemination in workshops for perioperative data scientists.
+Below we illustrate the clustered, nested data structure of contemporary health 
+care delivery and electronic health data capture with the example of the 
+National Anesthesia Clinical Outcomes Registry (NACOR), maintained by the 
+Anesthesia Quality Institute and funded by the American Society of 
+Anesthesiologists, which we will utilize as a use case for dissemination in 
+workshops for perioperative data scientists.
 
 \subsection*{Perioperative health care delivery and data capture are nested and clustered.}
-Anesthesia is an illustrative case of the how health care is increasingly electronically documented, facilitating the continuous registration of multiple simultaneous physiological data and therapeutic interventions during critical interventions. To support billing, this electronically captured data set is jointed with surgical and anesthesia procedure codes, International Classification of Disease (ICD) codes, provider identifiers, patient perioperative risk, outcome and provider compliance assessment. Participating institutions upload this comprehensive file from their anesthesia information management systems (AIMS) directly to NACOR. NACOR contains at present over 30 million individual electronic records of anesthesia care provided; like similar databases, NACOR is growing exponentially. This data mine invites health services and outcomes research, but (as pointed out in the letter of support by Dr. Dutton, last director or NACOR and Dr. Kheterpal director of MPOG, the other large perioperative EHR database) their exploitation is limited by the lack of accessible software for complex hierarchical modeling.
+Anesthesia is an illustrative case of the how health care is increasingly 
+electronically documented, facilitating the continuous registration of 
+multiple simultaneous physiological data and therapeutic interventions during 
+critical interventions. To support billing, this electronically captured data 
+set is jointed with surgical and anesthesia procedure codes, International 
+Classification of Disease (ICD) codes, provider identifiers, patient perioperative 
+risk, outcome and provider compliance assessment. Participating institutions upload 
+this comprehensive file from their anesthesia information management systems 
+(AIMS) directly to NACOR. NACOR contains at present over 30 million individual 
+electronic records of anesthesia care provided; like similar databases, NACOR is 
+growing exponentially. This data mine invites health services and outcomes research, 
+but (as pointed out in the letter of support by Dr. Dutton, last director or 
+NACOR and Dr. Kheterpal director of MPOG, the other large perioperative EHR 
+database) their exploitation is limited by the lack of accessible software 
+for complex hierarchical modeling.
 
 \subsection*{Outcomes and care delivered depend on procedure, providers and patient characteristics.} 
 
@@ -140,6 +201,9 @@ Inference based on partial pooling outperforms (a) the No-pooling and (b) the co
 \end{itemize}
 
 We choose the middle ground: for our richly organized NACOR data set, inference using partial pooling or hierarchical modeling is especially effective , because the estimate of each individual parameter is simultaneously informed by data from all the other patients in our cohort, improving inferences in particular for subgroups with sparse data. \cite{Gelman2009}. Efron explained this apparent paradox well to non-statisticians in the \href{http://www.nature.com/scientificamerican/journal/v236/n5/pdf/scientificamerican0577-119.pdf}{Scientific American} \cite{Stein_paradox_Scientific_American}. Our co-investigator Dr. Hall applied this recently to seizure prediction \cite{Hall2009a}. 
+
+\subsubsection*{Borrowing strength is beneficial even in very large data sets}
+In summary, the geographic, spatial and other above outlined heterogeneities in actual health care provided can undermine precision or accuracy even for extremely large clinical data sets and inferences can be improved by partial pooling by borrowing strength from different but related instances\cite{Tukey1963borrowing,Jones1986collected}. 
 
 \section*{Meta-analysis: hierarchical modeling for data driven outcomes research}
 Meta-analysis, the synthesis of clinical outcome data to support evidence based decision making, is another example of hierarchical modeling, where current software and classical modeling approaches limit progress in data driven outcomes research \cite{Andreae2015} Clinicians are familiar with systematic reviews and meta-analysis\cite{Sackett1996}. Evidence synthesis (a more accurate term than meta-analysis) is a powerful tool to pool clinical trials to guide evidence based clinical care \cite{Ashby2000}. Rigorous evidence synthesis is considered the highest level of evidence to support clinical decision making \cite{Cook1997}. 
@@ -387,10 +451,10 @@ Dr. Goodrich and Andreae and their collaborators worked together on the prelimin
 The project proposes to develop two accessible software packages for the programming language and software environment \textit{R} to integrate incomplete information with hierarchical modeling for data driven outcomes research. We propose to develop two applications.
 
 \subsection*{rstanarm for accessible multilevel hierarchical modeling}
-The first proposed software package \textit{rstanarm} should allow data scientists to build the most common applied regression models and multi-level hierarchical models based on the ultra-fast Hamiltonian Monte Carlo (HMC) algorithm implemented in \textit{Stan} without (a) the need to understand the underlying complexities (e.g. auxiliary parameterization) normally required to optimize convergence and without (b) the need to build complex contrast matrices  or keep track of level indexing. Using the same familiar notation for model formulation as other popular software packages for linear and mixed modeling in R/Rstudio like \textit{lme4} \cite{lme4}, will make model building easy for novice \textit{rstanarm} users. 
+The first proposed software package \textit{rstanarm} should allow data scientists to build the most common applied regression models and multi-level hierarchical models based on the ultra-fast Hamiltonian Monte Carlo (HMC) algorithm implemented in \textit{Stan} without (a) the need to understand the underlying complexities (e.g. auxiliary parameterization) normally required to optimize convergence and without (b) the need to build complex contrast matrices  or keep track of level indexing. Using the same familiar notation for model formulation as other popular software packages for linear and mixed modeling in \textit{R} like \textit{lme4} \cite{lme4}, will make model building easy for novice \textit{rstanarm} users. 
 
 \subsection*{shinystan for interactive graphical exploration and diagnosis of MCMC simulations}  
-The second package, \textit{shinystan}, is a graphical user interface for interactively exploring virtually any model fit using any Markov chain Monte Carlo (MCMC) algorithm. As a package for R/Rstudio, shinystan  provides multidimensional statistical, graphical and computational tools for any analyzing, inspecting, displaying, representing, parsing, and searching high-dimensional MCMC output, but is optimized for HMC. By using a web-based interactive intuitive user interface \textit{shinystan} is user-friendly and requires minimal training for novices.
+The second package, \textit{shinystan}, is a graphical user interface for interactively exploring virtually any model fit using any Markov chain Monte Carlo (MCMC) algorithm. As a package for \textit{R}, \textit{shinystan}  provides multidimensional statistical, graphical and computational tools for any analyzing, inspecting, displaying, representing, parsing, and searching high-dimensional MCMC output, but is optimized for HMC. By using a web-based interactive intuitive user interface \textit{shinystan} is user-friendly and requires minimal training for novices.
 
 \subsection*{rstanarm and shinystan prototypes are available on the \textit{R} software repository CRAN}
 We build prototypes for both software packages \textit{rstanarm} \cite{rstanarm} and \textit{shinystan} \cite{shinystan, Team2015}, available on the \textit{R} software repository CRAN. The project proposes to further develop these two prototypes \textit{rstanarm} and \textit{shinystan} into solid, reliable, tested R packages and to disseminate their use. Both packages will serve as appendage to the \textit{rstan} package (we developed), which enables the most common applied regression models to be estimated using novel Hamiltonian Monte Carlo algorithms. The final product packages will be available to researchers and the general public via the free software repository CRAN. 
@@ -547,8 +611,17 @@ shinystan & detailed user-friendly model meta-data, posterior predictive draws..
 \label{ObjectCharactersitics}
 \end{wraptable}
 
-As we move from the Markov chain Monte Carlo simulations (raw draws from posterior distributions) to the probabilistic programming language \textit{rstan}, object structures become richer with deeply embedded model specific information (e.g. \textit{Stan} code); the user friendly \textit{rstanarm} package contains even more accessible statistics, compiled from the raw data and retained from the function call; finally the interactive web based tool box \textit{shinystan} compiles, extracts and handles many more meta-data to facilitate interactive and intuitive visual exploration and trouble shooting.
+As we move from the Markov chain Monte Carlo simulations (raw draws from posterior
+distributions) to the probabilistic programming language \textit{rstan}, 
+object structures become richer with deeply embedded model specific 
+information (e.g. \textit{Stan} code); the user friendly \textit{rstanarm} 
+package contains even more accessible statistics, compiled from the raw data 
+and retained from the function call; finally the interactive web based tool 
+box \textit{shinystan} compiles, extracts and handles many more meta-data to 
+facilitate interactive and intuitive visual exploration and trouble shooting.
 
+\subsubsection*{Affordances: designing intuitive user interfaces}
+We will place special emphasis on the concept of affordance in our "intuitive" design of the \textit{shinystan} graphical user interfaces, e.g. in employing strong visual clues, provide clickable buttons and tabs, sliders, and other hands on interactive controls \cite{NormanAffordances1999}. Active exploration by \textit{shinystan} users will reveal nested and sequential affordances, for example, print options appear only in context, e.g. when the cursor moves over the output button of a graphic, avoiding visual clutter on the screen with irrelevant information \cite{Mcgrenere2000affordances}. We will rely on user feedback to optimize the practical utility of \textit{shinystan's} implementation and user interface. 
 
 \section*{Collaborative software development and computer resources}
 
