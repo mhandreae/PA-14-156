@@ -240,6 +240,11 @@ J.~L. Schafer.
 \newblock {\em Analysis of incomplete multivariate data}.
 \newblock CRC press, 1997.
 
+\bibitem{Chacon2009ProGit}
+S.~Chacon.
+\newblock {\em Pro git}.
+\newblock Apress, 2009.
+
 \bibitem{Carter2015}
 G.~M. Carter, D.~Indyk, M.~Johnson, M.~Andreae, K.~Suslov, S.~Busani,
   A.~Esmaeili, and H.~S. Sacks.
@@ -369,6 +374,10 @@ M.~J. Betancourt, S.~Byrne, S.~Livingstone, and M.~Girolami.
 \newblock The Geometric Foundations of Hamiltonian Monte Carlo.
 \newblock {\em Bernoulli}, 2016 (accepted).
 
+\bibitem{Stan-manual:2015}
+{\em Stan Modeling Language Users Guide and Reference Manual, Version 2.9.0},
+  2015.
+
 \bibitem{lme4}
 D.~Bates, M.~M{\"a}chler, B.~Bolker, and S.~Walker.
 \newblock Fitting Linear Mixed-Effects Models Using {lme4}.
@@ -431,5 +440,11 @@ J.~Loeliger and M.~McCullough.
 \newblock {\em Version Control with Git: Powerful tools and techniques for
   collaborative software development}.
 \newblock " O'Reilly Media, Inc.", 2012.
+
+\bibitem{Driessen2010successful}
+V.~Driessen.
+\newblock A successful Git branching model.
+\newblock {\em URL http://nvie. com/posts/a-successful-git-branching-model},
+  2010.
 
 \end{thebibliography}
