@@ -1518,6 +1518,15 @@ Pregnancy},
   Publisher                = {JSTOR}
 }
 
+@Misc{Jones1986collected,
+  Title                    = {The Collected Works of John W. Tukey: Philosophy and Principles of Data Analysis 1949--1964, vol. III \& IV},
+
+  Author                   = {Jones, LVE},
+  Year                     = {1986},
+
+  Publisher                = {Chapman \& Hall}
+}
+
 @Article{Kaushal_24821739,
   Title                    = {Changing the research landscape: the New York City Clinical Data Research Network.},
   Author                   = {Kaushal, Rainu and Hripcsak, George and Ascheim, Deborah D. and Bloom, Toby and Campion, Jr, Thomas R and Caplan, Arthur L. and Currie, Brian P. and Check, Thomas and Deland, Emme Levin and Gourevitch, Marc N. and Hart, Raffaella and Horowitz, Carol R. and Kastenbaum, Isaac and Levin, Arthur Aaron and Low, Alexander F H. and Meissner, Paul and Mirhaji, Parsa and Pincus, Harold A. and Scaglione, Charles and Shelley, Donna and Tobin, Jonathan N. and , N. Y. C-C. D. R. N.},
@@ -1709,6 +1718,15 @@ Pregnancy},
   Url                      = {http://dx.doi.org/10.1371/journal.pone.0052339}
 }
 
+@InProceedings{Mcgrenere2000affordances,
+  Title                    = {Affordances: Clarifying and evolving a concept},
+  Author                   = {McGrenere, Joanna and Ho, Wayne},
+  Booktitle                = {Graphics Interface},
+  Year                     = {2000},
+  Pages                    = {179--186},
+  Volume                   = {2000}
+}
+
 @Article{McQuillan_9632403,
   Title                    = {Confidential inquiry into quality of care before admission to intensive care.},
   Author                   = {McQuillan, P. and Pilkington, S. and Allan, A. and Taylor, B. and Short, A. and Morgan, G. and Nielsen, M. and Barrett, D. and Smith, G. and Collins, C. H.},
@@ -1853,6 +1871,27 @@ Pregnancy},
   Pmid                     = {22890972},
   Timestamp                = {2015.03.11},
   Url                      = {http://dx.doi.org/10.1002/gepi.21600}
+}
+
+@Article{NormanAffordances1999,
+  Title                    = {Affordance, Conventions, and Design},
+  Author                   = {Norman, Donald A.},
+  Journal                  = {interactions},
+  Year                     = {1999},
+
+  Month                    = may,
+  Number                   = {3},
+  Pages                    = {38--43},
+  Volume                   = {6},
+
+  Acmid                    = {301168},
+  Address                  = {New York, NY, USA},
+  Doi                      = {10.1145/301153.301168},
+  ISSN                     = {1072-5520},
+  Issue_date               = {May/June 1999},
+  Numpages                 = {6},
+  Publisher                = {ACM},
+  Url                      = {http://doi.acm.org/10.1145/301153.301168}
 }
 
 @Article{ParkGelman2004bayesian,
@@ -2351,16 +2390,6 @@ Pregnancy},
   Url                      = {http://dx.doi.org/10.1186/s13012-014-0152-6}
 }
 
-@Misc{SDT2014,
-  Title                    = {Stan: A C++ Library for Probability and Sampling,
- Version 2.5.0},
-
-  Author                   = {{Stan Development Team}},
-  Year                     = {2014},
-
-  Url                      = {http://mc-stan.org/}
-}
-
 @Misc{Stan_Software_2014,
   Title                    = {Stan: A C++ Library for Probability and Sampling,
  Version 2.5.0},
@@ -2450,6 +2479,13 @@ J Neuroimmune Pharmacol. 2013 Mar 19.},
   Owner                    = {Michael Andreae},
   Pmid                     = {21842618},
   Timestamp                = {2015.02.26}
+}
+
+@TechReport{Tukey1963borrowing,
+  Title                    = {Borrowing strength in a diversified situation},
+  Author                   = {Tukey, John W},
+  Institution              = {Princeton University Working Paper. Statistical Techniques Research Group. Princeton. New Jersey},
+  Year                     = {1963}
 }
 
 @Article{Vehtari_12396570,
@@ -2720,14 +2756,14 @@ J Neuroimmune Pharmacol. 2013 Mar 19.},
   Url                      = {http://dx.doi.org/10.1016/S0140-6736(11)60989-6}
 }
 
-@Article{,
-  Owner                    = {Micheal},
-  Timestamp                = {2015.11.24}
-}
-
 @Conference{,
   Owner                    = {Micheal},
   Timestamp                = {2015.11.11}
+}
+
+@Article{,
+  Owner                    = {Micheal},
+  Timestamp                = {2015.11.24}
 }
 
 @Article{ASA_25545654,
