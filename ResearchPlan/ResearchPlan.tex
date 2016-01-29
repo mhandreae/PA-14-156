@@ -34,7 +34,17 @@
 
   % to reduce white space between SECTIONS
 \usepackage[compact]{titlesec}
-%\titlespacing{\part}{-200pt}{-50pt}{-40pt}
+\titlespacing{\part}{0pt}{*0pt}{*0pt}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+% Reduce whitespace arount lists
+\usepackage{mdwlist}
+
+%\usepackage[compact]{titlesec}
+%\titlespacing{\part}{-200pt}{-100pt}{-200pt}
+%\titlespacing{\section}{0pt}{0pt}{0pt}
 %\titlespacing{\subsection}{0pt}{*0}{*0}
 %\titlespacing{\subsubsection}{-2pt}{*0}{*0}
 %\titlespacing{\subparagraph}{-5pt}{*0}{*0}
@@ -46,11 +56,11 @@
 % \setlength{\parsep}{-2pt}
 
   % additional parameters
-%\setlength{\headsep}{0pt}
+\setlength{\headsep}{20pt}
 %\setlength{\topskip}{0pt}
 %\setlength{\topmargin}{0pt}
 %\setlength{\topsep}{0pt}
-%\setlength{\partopsep}{-2pt}
+\setlength{\partopsep}{-2pt}
 %\setlength{\parindent}{1cm}
 
 % to reduce white space around figures
@@ -187,21 +197,57 @@ We seek to further illustrate the nested structure of outcome data in health car
 Hierarchical modeling could transform electronic health records based outcomes research, because the evident rich spatial and temporal organization of electronic health records is most realistically captured in multilevel hierarchical statistical models. However, efficient model fit and computational implementation are still difficult.  Additional depth of data (simply more units of observation) would increase power and make our clinical data analysis easier. Rather, there is more breadth to the data: more subgroups, locations, provider or time granularity than is currently being modeled, more partial, incomplete and noisy measurements that cannot easily be incorporated into standard models, more related studies available for meta-analysis\cite{Andreae2015,Andreae2012}.
 
 \subsection*{Modeling the multifaceted correlations in EHR is reflecting actual clinical practice}
-To realistically model the multifaceted correlations seen in actual clinical practice, when we fitted a regression model to investigate predictors of anesthesia quality in the NACOR database, we wanted regression coefficients to vary by provider, providers again nested by service or by hospital\cite{AndreaeWhite2015}. We needed to control for the surgical procedure type as a random effect as well, with thousands of different surgical procedures performed in the NACOR population. The number of parameters to estimate grows very quickly and so do the potential interactions. Even with very large data sets, the sample size in each subgroup will shrink rapidly; estimates using least squares or maximum likelihood will become noisy and thus often become essentially useless. One solution lies in hierarchical modeling, where we estimate hyper-parameters and hyper-hyper-parameters (Figure~ \ref{fig:NACOR}), to represent how lower level parameters vary across different groupings \cite{Bafumi_Gelman_2007}. In hierarchical models, we take advantage of shrinkage, in other words we can borrow strength from larger samples to improve estimates for smaller subgroups as explained below \cite{ParkGelman2004bayesian}.
+To realistically model the multifaceted correlations seen in actual clinical 
+practice, when we fitted a regression model to investigate predictors of 
+anesthesia quality in the NACOR database, we wanted regression coefficients 
+to vary by provider, providers again nested by service or by hospital\cite{AndreaeWhite2015}. We needed to control for the surgical procedure type as a 
+random effect as well, with thousands of different surgical procedures performed 
+in the NACOR population. The number of parameters to estimate grows very quickly 
+and so do the potential interactions. Even with very large data sets, the sample 
+size in each subgroup will shrink rapidly; estimates using least squares or 
+maximum likelihood will become noisy and thus often become essentially useless. 
+One solution lies in hierarchical modeling, where we estimate hyper-parameters 
+and hyper-hyper-parameters (Figure~ \ref{fig:NACOR}), to represent how lower 
+level parameters vary across different groupings \cite{Bafumi_Gelman_2007}. 
+In hierarchical models, we take advantage of shrinkage, in other words we 
+can borrow strength from larger samples to improve estimates for smaller 
+subgroups as explained below \cite{ParkGelman2004bayesian}.
 
 \subsection*{Hierarchical models provide efficient inferences with partial pooling}
-Inference based on partial pooling outperforms (a) the No-pooling and (b) the complete-pooling approaches, as can be shown mathematically \cite{Efron_1975} or via cross-validation \cite{Gelman-Hill_2014}: By trading an increase in bias for a reduction in variance, hierarchical modeling can reducing the mean square error.  
+Inference based on partial pooling outperforms (a) the No-pooling and (b) the 
+complete-pooling approaches, as can be shown mathematically \cite{Efron_1975} 
+or via cross-validation \cite{Gelman-Hill_2014}: By trading an increase in bias 
+for a reduction in variance, hierarchical modeling can reducing the mean square error.  
 
-\begin{itemize}
+(a) Using the No-pooling approach, we would estimate the model for each specific 
+subset of interest separately. But this leads to far too many sub-classifications, 
+(e.g., one model for each type of surgery), thus too small samples in any given 
+subgroup for useful inferences, if we fully explore the fine granularity, the 
+richness of the EMR data. 
 
-\item (a) Using the No-pooling approach, we would estimate the model for each specific subset of interest separately. But this leads to far too many sub-classifications, (e.g., one model for each type of surgery), thus too small samples in any given subgroup for useful inferences, if we fully explore the fine granularity, the richness of the EMR data. 
-\item (b) Employing complete pooling or structural modeling constitutes the other extreme of the spectrum, but the implied hard constraints on the coefficients in different groups may lead to bias, negating the obvious known differences in the data, for example between patients undergoing tracheotomy versus cesarean section: we gloss over such detail and lose granularity. 
-\end{itemize}
+(b) Employing complete pooling or structural modeling constitutes the other extreme 
+of the spectrum, but the implied hard constraints on the coefficients in different 
+groups may lead to bias, negating the obvious known differences in the data, for 
+example between patients undergoing tracheotomy versus cesarean section: we gloss 
+over such detail and lose granularity. 
 
-We choose the middle ground: for our richly organized NACOR data set, inference using partial pooling or hierarchical modeling is especially effective , because the estimate of each individual parameter is simultaneously informed by data from all the other patients in our cohort, improving inferences in particular for subgroups with sparse data. \cite{Gelman2009}. Efron explained this apparent paradox well to non-statisticians in the \href{http://www.nature.com/scientificamerican/journal/v236/n5/pdf/scientificamerican0577-119.pdf}{Scientific American} \cite{Stein_paradox_Scientific_American}. Our co-investigator Dr. Hall applied this recently to seizure prediction \cite{Hall2009a}. 
+We choose the middle ground: for our richly organized NACOR data set, inference 
+using partial pooling or hierarchical modeling is especially effective , because 
+the estimate of each individual parameter is simultaneously informed by data from 
+all the other patients in our cohort, improving inferences in particular for 
+subgroups with sparse data. \cite{Gelman2009}. Efron explained this apparent 
+paradox well to non-statisticians in the 
+\href{http://www.nature.com/scientificamerican/journal/v236/n5/pdf/
+scientificamerican0577-119.pdf}{Scientific American}
+\cite{Stein_paradox_Scientific_American}. 
+Our co-investigator Dr. Hall applied this recently to seizure prediction \cite{Hall2009a}. 
 
 \subsubsection*{Borrowing strength is beneficial even in very large data sets}
-In summary, the geographic, spatial and other above outlined heterogeneities in actual health care provided can undermine precision or accuracy even for extremely large clinical data sets and inferences can be improved by partial pooling by borrowing strength from different but related instances\cite{Tukey1963borrowing,Jones1986collected}. 
+In summary, the geographic, spatial and other above outlined heterogeneities 
+in actual health care provided can undermine precision or accuracy even for 
+extremely large clinical data sets and inferences can be improved by partial 
+pooling by borrowing strength from different but related instances
+\cite{Tukey1963borrowing,Jones1986collected}. 
 
 \section*{Meta-analysis: hierarchical modeling for data driven outcomes research}
 Meta-analysis, the synthesis of clinical outcome data to support evidence based decision making, is another example of hierarchical modeling, where current software and classical modeling approaches limit progress in data driven outcomes research \cite{Andreae2015} Clinicians are familiar with systematic reviews and meta-analysis\cite{Sackett1996}. Evidence synthesis (a more accurate term than meta-analysis) is a powerful tool to pool clinical trials to guide evidence based clinical care \cite{Ashby2000}. Rigorous evidence synthesis is considered the highest level of evidence to support clinical decision making \cite{Cook1997}. 
@@ -222,15 +268,33 @@ Trial or population characteristics may introduce another level of grouping, for
 \subsection*{The antithesis of complete versus no-pooling limits meta-analysis of perioperative outcomes}
 To illuminate how the antimony between complete versus non-pooling also limits evidence synthesis, we consider meta-analysis of trials with repeated observations of the outcome of interest. The follow-up intervals at which perioperative outcomes are reported often vary in different studies. What is more, some studies report repeated measures, others only a single terminal observation; This leads to the same issue of (a) complete pooling versus (b) No-pooling also in evidence synthesis \cite{Roth2015CriticalCare}.
 
-\begin{itemize}
-\item (b) No-pooling: 
-Conducting meta-analyses at each time point, i.e. performing separate meta-analysis for each follow-up visit separately, would drastically reduce sample size and hence power and precision, undermining the main strength of meta-analysis.
-\item (a) Complete pooling:
-Evidence synthesis irrespective of follow-up-time, i.e. of all effect estimates at different time points, fails to consider the correlation of repeated measure and is only appropriate if the effect estimates does not depend on how long after the intervention the outcome was observed. This is obviously often an untenable assumption.
-\end{itemize}
+(a) Complete pooling:
+Evidence synthesis irrespective of follow-up-time, i.e. of all effect estimates 
+at different time points, fails to consider the correlation of repeated measure 
+and is only appropriate if the effect estimates does not depend on how long after 
+the intervention the outcome was observed. This is obviously often an untenable
+assumption.
+
+(b) No-pooling: 
+Conducting meta-analyses at each time point, i.e. performing separate meta-analysis 
+for each follow-up visit separately, would drastically reduce sample size and hence 
+power and precision, undermining the main strength of meta-analysis.
 
 \subsubsection*{Clustering and correlations can bias clinical inferences in meta-analysis }
-In addition to a possible influence on the point estimate of the measure of effect, an even more concerning bias results from failing to consider correlations between outcomes. A significant effect can be transformed into a non-significant effect (or vice versa), changing the confidence interval of the pooled effect estimate, be over- or underestimating the variability of correlated outcomes. For example assume an estimated overall relative risk (RR) of 0.8 for an intervention across all studies pooled. The estimation of a 95\% confidence interval of 0.55-1.15 would lead to the inference of "no statistically significant effect" and thwart further attempt to study this intervention, while a 95\% confidence interval of 0.7-0.9 for the effect estimate may lead to widespread adoption of this therapeutic approach. Interpretation of meta-analyses, and especially Cochrane Reviews, in clinical practice are unfortunately often reduced to "shows a significant effect" vs. "shows no significant effect". Incorrect inferences can have huge clinical impact.
+In addition to a possible influence on the point estimate of the measure of effect, 
+an even more concerning bias results from failing to consider correlations 
+between outcomes. A significant effect can be transformed into a non-significant 
+effect (or vice versa), changing the confidence interval of the pooled effect 
+estimate, be over- or underestimating the variability of correlated outcomes. 
+For example assume an estimated overall relative risk (RR) of 0.8 for an 
+intervention across all studies pooled. The estimation of a 95\% confidence 
+interval of 0.55-1.15 would lead to the inference of "no statistically 
+significant effect" and thwart further attempt to study this intervention, 
+while a 95\% confidence interval of 0.7-0.9 for the effect estimate may 
+lead to widespread adoption of this therapeutic approach. Interpretation 
+of meta-analyses, and especially Cochrane Reviews, in clinical practice 
+are unfortunately often reduced to "shows a significant effect" vs. "shows 
+no significant effect". Incorrect inferences can have huge clinical impact.
 
 \subsubsection*{Ecological, disease and geographic study level characteristics can influence inferences}
 Besides clustering by reported time endpoint, there are other forms of ecological bias or clusters to be considered in meta-analysis; certain geographical or historical settings, similar surgical procedures or diseases will lead to correlated outcomes in patient cohorts \cite{Abroug2011,Andreae2013,Andreae2015,Roth2015CriticalCare}. Therefore, the same antimony of complete pooling versus no-pooling limits meta-analysis for perioperative outcomes and hinders evidence based medicine. Besides the effects estimates themselves, their precision, inter and within study variability may differ considerably contingent on disease, procedure or other study level characteristics \cite{Andreae2013,Andreae2015,Roth2015CriticalCare}.
@@ -584,11 +648,11 @@ markdown in R through the \textit{knitr} package.
 
 \subsubsection*{Model checking}
 shinystan will facilitate many diagnostics to optimize model convergence, explore unexpected parameter correlations and asses the correctness of the model specification. Here we will delineate two examples.
-\begin{itemize}
+\begin{enumerate}
 \item (a) residual diagnostics, e.g., for continuous covariates, a scatterplot of the residuals against the values of the covariate can also be used. Q-Q plot
  
 \item (b) influence diagnostics
-\end{itemize}
+\end{enumerate}
 
 \subsubsection*{Automation of meta-data extraction and management in \textit{shinystan}}
 The automation of many data exploration processes saves time, but implies the extraction of the meta-information about the model and its parameters as detailed in Table \ref{ObjectCharactersitics}. Data scientist working with the raw draws from the MCMC simulations have to extract, manage and program a plethora of details to explore higher level structure and statistics of their MCMC simulations. 
@@ -645,19 +709,17 @@ As also discussed under human subject protection and in resources and in the let
 The goal of this project is to encourage widespread adoption of cutting edge multi-level hierarchical modeling for data driven outcomes research by clinical scientists and to support the use and re-purposing of our open-source applications. 
 
 \subsubsection*{Software and data sharing plan}
-As also detailed in the data sharing plan, to facilitate the widest possible uninhibited unimpeded utilization, our software will be licensed under the General Public License and will be available on the online repository CRAN. The benefits  are that our products \textit{rstanarm} and \textit{shinystan} 
+As also detailed in the data sharing plan, to facilitate the widest possible uninhibited unimpeded utilization, our software will be licensed under the General Public License and will be available on the online repository CRAN. The benefits  are that our products \textit{rstanarm} and \textit{shinystan}: 
  
-\begin{itemize}
-\item 
- will be freely available to researchers and the general public, including for commercial use; 
-\item
-shall remain in the public domain and may be freely extended, customized, and incorporated into the other tools; 
-\item 
-can be maintained in the event of the original developers not being willing
-or able to; 
-\item 
-can be enhanced based on user-provided feedback for bug-fixes, examples, and enhancements; using GitHub pull requests with integration testing
-\end{itemize}
+1) will be freely available to researchers and the general public, including for commercial use; 
+
+2) shall remain in the public domain for ubiquitous free use;
+
+3) may be freely extended, customized, and incorporated into the other tools; 
+
+4) can be maintained if the original developers are no longer able to; 
+
+5) can be enhanced based on user-provided feedback for bug-fixes, examples, and enhancements.
 
 The software developed for this grant will hence all be incorporated into the public repository CRAN, the Comprehensive R Archive Network of the open-source R Project for Statistical Computing. Our source code and documentation will be distributed under the least restrictive open-source licensing terms possible: R's licensing is \textit{copyleft} under the GNU General Public License. \textit{Copyleft} refers to licensing arrangement that allow for the software can be used, modified and/or distributed freely on condition that anything derived is bound by the same condition. 
 
