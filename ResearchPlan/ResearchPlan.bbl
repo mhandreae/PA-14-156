@@ -74,6 +74,17 @@ C.~B. Hall, R.~B. Lipton, H.~Tennen, and S.~R. Haut.
   subsequent seizures in same cohort by borrowing strength across participants.
 \newblock {\em Epilepsy Behav}, 14(3):472--475, Mar 2009. PMID: 19138755.
 
+\bibitem{Tukey1963borrowing}
+J.~W. Tukey.
+\newblock Borrowing strength in a diversified situation.
+\newblock Technical report, Princeton University Working Paper. Statistical
+  Techniques Research Group. Princeton. New Jersey, 1963.
+
+\bibitem{Jones1986collected}
+L.~Jones.
+\newblock The Collected Works of John W. Tukey: Philosophy and Principles of
+  Data Analysis 1949--1964, vol. III \& IV, 1986.
+
 \bibitem{Sackett1996}
 D.~L. Sackett, W.~M. Rosenberg, J.~A. Gray, R.~B. Haynes, and W.~S. Richardson.
 \newblock Evidence based medicine: what it is and what it isn't.
@@ -246,7 +257,7 @@ A.~Gelman and J.~Hill.
 \newblock Opening Windows to the Black Box.
 \newblock {\em Journal of Statistical Software}, 40, 2011.
 
-\bibitem{SDT2014}
+\bibitem{Stan_Software_2014}
 {Stan Development Team}.
 \newblock Stan: A C++ Library for Probability and Sampling, Version 2.5.0,
   2014.
@@ -340,11 +351,6 @@ D.~J. Kor, R.~K. Lingineni, O.~Gajic, P.~K. Park, J.~M. Blum, P.~C. Hou, J.~J.
   patients: a multicenter cohort study.
 \newblock {\em Anesthesiology}, 120(5):1168--1181, May 2014. PMID: 24755786.
 
-\bibitem{BetancourtGeometry2016}
-M.~J. Betancourt, S.~Byrne, S.~Livingstone, and M.~Girolami.
-\newblock The Geometric Foundations of Hamiltonian Monte Carlo.
-\newblock {\em Bernoulli}, 2016 (accepted).
-
 \bibitem{Gelman1998notasked}
 A.~Gelman, G.~King, and C.~Liu.
 \newblock Not asked and not answered: Multiple imputation for multiple surveys.
@@ -357,6 +363,11 @@ M.~D. Hoffman and A.~Gelman.
   Monte Carlo.
 \newblock {\em The Journal of Machine Learning Research}, 15(1):1593--1623,
   2014.
+
+\bibitem{BetancourtGeometry2016}
+M.~J. Betancourt, S.~Byrne, S.~Livingstone, and M.~Girolami.
+\newblock The Geometric Foundations of Hamiltonian Monte Carlo.
+\newblock {\em Bernoulli}, 2016 (accepted).
 
 \bibitem{lme4}
 D.~Bates, M.~M{\"a}chler, B.~Bolker, and S.~Walker.
@@ -394,6 +405,16 @@ A.~Gelman, A.~Jakulin, M.~G. Pittau, and Y.-S. Su.
 A.~Galecki and T.~Burzykowski.
 \newblock {\em Linear mixed-effects models using R: A step-by-step approach}.
 \newblock Springer Science \& Business Media, 2013.
+
+\bibitem{NormanAffordances1999}
+D.~A. Norman.
+\newblock Affordance, Conventions, and Design.
+\newblock {\em interactions}, 6(3):38--43, May 1999.
+
+\bibitem{Mcgrenere2000affordances}
+J.~McGrenere and W.~Ho.
+\newblock Affordances: Clarifying and evolving a concept.
+\newblock In {\em Graphics Interface}, volume 2000, pages 179--186, 2000.
 
 \bibitem{Raymond2003art}
 E.~S. Raymond.

@@ -1,10 +1,8 @@
-ResearchPlan/ResearchPlan.synctex.gz
 *.log
-ResearchPlan/ResearchPlan.aux
 *.pdf
 *.gz
-ResearchPlan/ResearchPlan.aux
 *.aux
 *.bak
-ResearchPlan/Bibliography/bibliographyBD2K.bib.bak
-ResearchPlan/ResearchPlan.aux
+*.bbl
+*.bak
+*.log
