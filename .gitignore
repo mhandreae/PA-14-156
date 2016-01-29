@@ -3,3 +3,6 @@
 *.gz
 *.aux
 *.bak
+*.bbl
+*.bak
+*.log
