@@ -153,7 +153,7 @@ online user and developer groups.
 \section*{The nested structure of health care delivery and electronic health data}
 Clinical data scientists are faced with an abundance of useful electronic health data, 
 but limitations of existing statistical inference tools constrain the scientific 
-hypotheses they can be explore and evaluate. Electronic health related data sets 
+hypotheses they can be explore. Electronic health related data sets 
 are not only growing exponentially in number of units of observations or 
 variables observed, but this growth implies that we can investigate increasingly fine-grained interactions and correlations. Before we were limited to model the mean structure and effect, we now want to reflect the clinical heterogeneity.  
 
@@ -334,25 +334,25 @@ For \textit{basic} hierarchical models, there are simple and accessible software
 \begin{wrapfigure}{l}{.3\textwidth}
   \vspace{-15pt}
  \includegraphics[scale=0.85]{Figures/Hamiltonian.png}
-  \vspace{-20pt}
+  \vspace{-14pt}
   \caption{Hamiltonian MCMC}
     \label{fig:Hamiltonian}
- \vspace{- 30 pt}
+ \vspace{-16 pt}
 \end{wrapfigure}
 
 Our \textit{rstanarm} is based on the Hamiltonian Monte Carlo algorithm implemented in \textit{Stan}, which is orders of magnitude faster than existing MCMC algorithms. Figure \ref{fig:Hamiltonian} reproduces Fig 14 in Kruschke \cite{Kruschke_Book_2014} to illustrate how \textit{Stan's} Hamiltonian algorithm achieves faster convergence by using momentum to optimize the next proposal. The current proposal's higher momentum (black dot) is indicated in the top panel. The middle panel illustrates how their momentum steers random samples to the mode of the posterior distribution (shown in lower panel), accelerating convergence. 
 
-This matters as the sequential process of fitting intricate multilevel models for Big Data  and testing them can be cumbersome and slow even for the initiated and sophisticated data scientists who are able to writing elaborate code to implement them. Multilevel hierarchical models can compromise transparency with lengthy complicated programming code, making the process error prone (see letter of support by Dr. Pace). Typically scientists have to explore and compare different angles and approaches to modeling large electronic data sets. Typically researchers need to update and tweak the model to make more realistic, to incorporate knowledge about the subject matter, to fit the data better or to facilitate convergence of the algorithm. With existing software, like OpenBugs or \textit{JAGS} building and updating hierarchical models sequentially for large data sets becomes prohibitively expensive in computer resources or too slow to be feasible. The challenges of fast and flexible computational implementation such limit the model sophistication (see letter by Dr. Kheterpal and Dutton). Researchers cannot fit multilevel models which reflect the actual hierarchical structure of clinical care delivered, (see letter by Dr. Sacks). \textit{rstanarm's} simple yet flexible function calls facilitate dynamic model building and updating, and allows the fitting and testing of advanced models even for larger datasets. \textit{rstanarm} allows researchers to fit the model they believe to best reflect the clinical question they are investigating with EHR.
+This matters as the sequential process of fitting intricate multilevel models for Big Data  and testing them can be cumbersome and slow even for the initiated and sophisticated data scientists who are able to writing elaborate code to implement them. Typically scientists have to explore and compare different angles and approaches to modeling large electronic data sets. Typically researchers need to update and tweak the model to make more realistic, to incorporate knowledge about the subject matter, to fit the data better or to facilitate convergence of the algorithm. With existing software, like OpenBugs or \textit{JAGS} building and updating hierarchical models sequentially for large data sets becomes prohibitively expensive in computer resources or too slow to be feasible. The challenges of fast and flexible computational implementation such limit the model sophistication (see letter by Dr. Kheterpal and Dutton). Researchers cannot fit multilevel models which reflect the actual hierarchical structure of clinical care delivered, (see letter by Dr. Sacks). Multilevel hierarchical models can compromise transparency with lengthy complicated programming code, making the process error prone (see letter of support by Dr. Pace). \textit{rstanarm's} simple yet flexible function calls facilitate dynamic model building and updating, and allows the fitting and testing of advanced models even for larger datasets. \textit{rstanarm} allows researchers to fit the model they believe to best reflect the clinical question they are investigating with EHR.
 
 \subsection*{Improve tools for graphical exploration of hierarchical models and MCMC output}
 
 \begin{wrapfigure}{l}{.6\textwidth}
   \vspace{-10pt}
  \includegraphics[scale=1.2]{Figures/shinystan.png}
-  \vspace{-10pt}
+  \vspace{-12pt}
   \caption{\textit{shinystan} interface}
     \label{fig:shinystan}
- \vspace{- 10pt}
+ \vspace{- 14pt}
 \end{wrapfigure}
 
 Accessible tools and utilities, new visual methods to explore sophisticated model and
@@ -397,11 +397,11 @@ auxiliary data can overcome this limitation, as outlined below.
 \subsection*{Auxiliary data can be used to impute incomplete medical records.} 
 
 \begin{wrapfigure}{l}{10cm} 
- \vspace{-10pt}
+ \vspace{-25pt}
  \includegraphics[scale=0.4]{Figures/Bayesian_imputation.pdf}
-    \vspace{-15pt}
+    \vspace{-20pt}
   \caption{Auxilliary data to impute missing information}
-   \vspace{-5pt}
+   \vspace{-15pt}
    \label{fig:Imputation_fig}
 \end{wrapfigure}
 
@@ -546,11 +546,11 @@ linear formula syntax describing both the fixed-effects and random-effects of
 a model, e.g.:
 
 \begin{wrapfigure}{l}{.2\textwidth}
-\vspace{-20pt}
+\vspace{-30pt}
 \begin{equation}
 y \sim x1 +(x2|x3)
 \end{equation}
-\vspace{-30pt}
+\vspace{-40pt}
 \end{wrapfigure}
 
 where the dependent response variable $y$ is on the left of a Tilde ($\sim$) operator; 
