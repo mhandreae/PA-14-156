@@ -697,7 +697,7 @@ one or the Cauchy distribution, leaving the user the option of robust
 priors to allow for outliers to achieve more robust inference). 
 
 \subsubsection*{Further hardening, expansion and integration of \textit{rstanarm}}
-While our prototype of \textit{rstanarm} delivers some functionality for data scientist already and is already available for \href{https://cran.rstudio.com/web/packages/rstanarm/}{download from CRAN}, much of this project is devoted to the hardening, expansion and the integration of additional functionality. We need to incorporate user feedback, weed out possible bugs and expand to include many more functions and advanced models (specifically change point models) \cite{Hall2000}. Specifically, we want to  work on a more seamless integration with our missing data imputation \textit{R} package \href{https://cran.r-project.org/web/packages/mi/index.html}{\textit{mi}}
+While our prototype of \textit{rstanarm} delivers some functionality for data scientist already and is already available for \href{https://cran.rstudio.com/web/packages/rstanarm/}{download from CRAN}, much of this project will be devoted to the hardening, expansion and the integration of additional functionality. We need to incorporate user feedback, weed out possible bugs and expand to include many more functions and advanced models (specifically change point models) \cite{Hall2000}. Specifically, we want to  work on a more seamless integration with our missing data imputation \textit{R} package \href{https://cran.r-project.org/web/packages/mi/index.html}{\textit{mi}}
 
 \subsection*{shinystan}
 We propose to develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
@@ -761,6 +761,9 @@ facilitate interactive and intuitive visual exploration and trouble shooting.
 
 \subsubsection*{Affordances: designing intuitive user interfaces}
 We will place special emphasis on the concept of affordance in our "intuitive" design of the \textit{shinystan} graphical user interfaces, e.g., in employing strong visual clues, provide clickable buttons and tabs, sliders, and other hands on interactive controls \cite{NormanAffordances1999}. Active exploration by \textit{shinystan} users will reveal nested and sequential affordances, for example, print options appear only in context, say when the cursor moves over the output button of a graphic, avoiding visual clutter on the screen with irrelevant information \cite{Mcgrenere2000affordances}. We will rely on user feedback to optimize the practical utility of \textit{shinystan's} implementation and user interface. 
+
+\subsubsection*{Improving and hardening \textit{shinystan}}
+Although already available on \href{https://cran.r-project.org/web/packages/shinystan/index.html}{CRAN} as a functional prototype,  \textit{shinystan} will need to undergo considerable improvements of the interface and under the hood during this project periods. Posterior predictive checking is one area where the need for additional options and functionality will be obvious to the sophisticated data scientists \cite{shinystan}. We also want to expand  the existing collaborative model sharing via the internet in the project period.
 
 \section*{Collaborative software development and computer resources}
 
