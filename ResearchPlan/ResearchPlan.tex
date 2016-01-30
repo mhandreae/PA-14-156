@@ -257,9 +257,9 @@ However, studies on perioperative outcomes tend to vary in design and reported o
 
 \subsubsection*{Hierarchical models to integrate all available data for evidence synthesis}
 
-\begin{wrapfigure}{l}{0.4\textwidth} 
-\includegraphics[width=0.4\textwidth]{Figures/DistrogramMetaAnalysis.pdf} 
-\caption{\footnotesize Simplified distrogram to illustrate multi-level meta-analysis.}
+\begin{wrapfigure}{l}{0.35\textwidth} 
+\includegraphics[width=0.35\textwidth]{Figures/DistrogramMultiLevelMetaAnalysis.pdf} 
+\caption{Multi-level meta-analysis.}
 \label{fig:MetaAnalysis}
 \end{wrapfigure}
 
@@ -302,32 +302,76 @@ Besides clustering by reported time endpoint, there are other forms of ecologica
 \subsubsection*{Partial pooling across distinct, but similar populations}
 The principle  of clustered and hierarchical modeling for evidence synthesis is analogous to outcome research in general, when we consider effects more prominent in one trial or subgroup of the populations and not as strong in another similar but distinct trial or subgroup. An example of this would be the meta-analyses of a treatment effect in conditions with different but related etiologies, for example the spectrum of HIV-related, idiopathic, diabetic, and traumatic chronic painful neuropathy \cite{Andreae2015}. Information in one subset or study population can and should inform estimates in other similar populations at least to some extend in a hierarchical meta-analysis. The principle applies in other fields of medicine, (e.g., critical care as well) \cite{Roth2015CriticalCare}, and becomes more relevant if average effect sizes, precision of effect estimates, inter- and within-subgroup variability differ considerably from the subgroups used to obtain aforementioned findings.
 
-\subsection*{Hierarchical modeling improves data driven outcomes research in our contemporary hierarchically structured health care system}
+\subsection*{Hierarchical modeling to improve data driven outcomes research}
  
-Multi-level hierarchical models may hence be a useful tool to analyses heterogeneous perioperative outcome data. This is true for meta-analysis of long-term studies with varied design to better inform clinical decisions\cite{AndreaeJohnsonAbstract2013,Spiegelhalter2004bayesian} and for data driven outcomes research  in our hierarchically structured contemporary health care delivery system. More advanced multilevel models can be difficult to fit with standard software and should be more accessible, (see letter of support by Drs. OMalley).
+Multi-level hierarchical models may hence be a useful tool to analyses 
+heterogeneous perioperative outcome data. This is true for meta-analysis 
+of long-term studies with varied design to better inform clinical 
+decisions\cite{AndreaeJohnsonAbstract2013,Spiegelhalter2004bayesian} and 
+for data driven outcomes research  in our hierarchically structured 
+contemporary health care delivery system. More advanced multilevel 
+models can be difficult to fit with standard software and should be 
+more accessible, (see letter of support by Drs. OMalley, Sacks and DiMaggio).
 
-\subsection*{Clustering can bias estimation of confidence intervals.} To correctly estimate confidence intervals even in a simple Student t-test, we have to take into account if the data are observed in the same patient repeatedly, i.e. if they are clustered and correlated. Failure to take into account correlations in clustered observation may lead to incorrect inferences. Based on the empirical (robust) (weighted jackknife) methods, the confidence intervals are correct, but such approaches are often ignored in EHR research and they depend on convergence characteristics that may not hold in faceted EHR data. 
+\subsection*{Clustering can bias estimation of confidence intervals.} To 
+correctly estimate confidence intervals even in a simple Student t-test, 
+we have to consider if the data are observed in the same patient 
+repeatedly, i.e. if they are clustered and correlated. Failure to take into 
+account correlations in clustered observation may lead to incorrect inferences. 
+Based on the empirical (robust) (weighted jackknife) methods, the confidence 
+intervals are correct, but such approaches are often ignored in EHR research 
+and they depend on convergence characteristics that may not hold in faceted EHR data. 
 
 \section*{Integrating incomplete data into clustered EHR modeling}
+Too often data scientists either (1) fit sophisticated models, but limit the analysis 
+to complete cases, ignoring the missing or incomplete data or (2) impute the missing 
+data, but build overly simplified models of the scientific question of interest, 
+to limit complexity of the overall model, (see letter of support by Dr. Mirhaji). 
+More accessible hierarchical modeling could better integrate the two elements. 
+Missing predictors are imputed on a lower level of the model. The imputed missing 
+data point with its confidence interval (indicating the precision of the imputation) 
+is then fed into the estimation at the next higher level of the model
+ \cite{Gelman2001imputation}. 
 
-Too often data scientists either (1) fit sophisticated models, but limit the analysis to complete cases, ignoring the missing or incomplete data or (2) impute the missing data, but build overly simplified models of the scientific question of interest, to limit complexity of the overall model, (see letter of support by Dr. Mirhaji). More accessible hierarchical modeling could better integrate the two elements. Missing predictors are imputed on a lower level of the model. The imputed missing data point with its confidence interval (indicating the precision of the imputation) is then fed into the estimation at the next higher level of the model \cite{Gelman2001imputation}. 
+\subsection*{EHR data are not missing at random.} Physicians chose which test to get 
+to inform specific therapeutic decisions and different types of data are recorded 
+in different clinical setting, (e.g., arterial lines may not be permissible on the 
+floor, vitals are recorded in greater detail and more frequently in high dependency 
+units like the ICU). Under Innovation, we explain  how taking both missing data 
+imputation and clustering can be integrated into a single model, including 
+the incorporation of auxiliary data.  
 
-\subsection*{EHR data are not missing at random.} Physicians chose which test to get to inform specific therapeutic decisions and different types of data are recorded in different clinical setting, (e.g., arterial lines may not be permissible on the floor, vitals are recorded in greater detail and more frequently in high dependency units like the ICU). 
-
-\section*{Difficulty to fit and explore multi-level hierarchical models}
-In approach we explain  how taking both missing data imputation and clustering can be integrated into a single model. This challenge is currently compounded the dearth of tools to explore the enormous data stream generated in Markov chain Monte Carlo (MCMC) simulations to explore and trouble shoot fitted hierarchical models.  
-
-\subsection*{Punchline: Hierarchical models  are best suited to reflect the clustered structure of contemporary health care delivery realistically.}
+\subsection*{Punchline: Hierarchical models reflect the clustered structure of contemporary health care delivery most realistically, and can be used to address incomplete records, but how can we fit them efficiently?}
 
 \part*{Innovation}
 
-We propose to build two software packages. \textit{rstanarm} to make multi-level hierarchical modeling more accessible and \textit{shinystan} for graphical exploration and confirmation. \textit{rstanarm} and \textit{shinystan} will address the dearth of accessible software to build more realistic multilevel hierarchical models, assess and troubleshoot model convergence, confirm congruence of model and data and improve statistical inference, (see letter of support by Dr. DiMaggio). In the process, we will advance statistical methods and algorithms for convergence diagnostics and integrate missing data imputation with advanced hierarchical modeling in a single software package.  
+We propose to build two software packages. \textit{rstanarm} to make 
+multi-level hierarchical modeling more accessible and \textit{shinystan} 
+for graphical exploration and confirmation. \textit{rstanarm} and 
+\textit{shinystan} will address the dearth of accessible software 
+to build more realistic multilevel hierarchical models, assess and 
+troubleshoot model convergence, confirm congruence of model and data 
+and improve statistical inference, (see letter of support by Dr. DiMaggio). 
+In the process, we will advance statistical methods and algorithms for 
+convergence diagnostics and integrate missing data imputation with 
+advanced hierarchical modeling in a single software package.  
 
 \subsection*{Accessible advanced hierarchical modeling for EHR}
 
-For \textit{basic} hierarchical models, there are simple and accessible software package both in the frequentistist and the Bayesian paradigm, but multilevel hierarchical modeling is currently restricted to data scientists and statisticians with advanced computational and statistical expertise. Even for these specialists, the step learning curve of advanced probabilistic programming languages like \textit{Stan} constitutes a significant barrier to harness the full potential of hierarchical modeling for data driven outcomes research (see letter of support by Drs. Sacks and OMalley).
+For \textit{basic} hierarchical models, there are simple and accessible software 
+package both in the frequentistist and the Bayesian paradigm, but multilevel 
+hierarchical modeling is currently restricted to data scientists and statisticians 
+with advanced computational and statistical expertise. Even for these specialists, 
+the step learning curve of advanced probabilistic programming languages like 
+\textit{Stan} constitutes a significant barrier to harness the full potential 
+of hierarchical modeling for data driven outcomes research (see letter of support 
+by Drs. Sacks and OMalley).
 
-\textit{rstanarm} is the first accessible, yet ultra-fast and flexible package to allow even very advanced hierarchical modeling for large data sets based on very simple familiar model specification. It is open source, and free to the public. The tranparent modeling approach in \textit{rstanarm} will make analysis more reproducible and reliable enough even for federal regulatory processes. 
+\textit{rstanarm} is the first accessible, yet ultra-fast and flexible package to 
+allow even very advanced hierarchical modeling for large data sets based on very 
+simple familiar model specification. It is open source, and free to the public. 
+The tranparent modeling approach in \textit{rstanarm} will make analysis more 
+reproducible and reliable enough even for federal regulatory processes. 
 
 \subsection*{Fast and flexible hierarchical modeling for realistic data driven outcomes research }
 
@@ -340,9 +384,37 @@ For \textit{basic} hierarchical models, there are simple and accessible software
  \vspace{-16 pt}
 \end{wrapfigure}
 
-Our \textit{rstanarm} is based on the Hamiltonian Monte Carlo algorithm implemented in \textit{Stan}, which is orders of magnitude faster than existing MCMC algorithms. Figure \ref{fig:Hamiltonian} reproduces Fig 14 in Kruschke \cite{Kruschke_Book_2014} to illustrate how \textit{Stan's} Hamiltonian algorithm achieves faster convergence by using momentum to optimize the next proposal. The current proposal's higher momentum (black dot) is indicated in the top panel. The middle panel illustrates how their momentum steers random samples to the mode of the posterior distribution (shown in lower panel), accelerating convergence. 
+Our \textit{rstanarm} is based on the Hamiltonian Monte Carlo algorithm 
+implemented in \textit{Stan}, which is orders of magnitude faster than existing 
+MCMC algorithms. Figure \ref{fig:Hamiltonian} reproduces Fig 14 in 
+Kruschke \cite{Kruschke_Book_2014} to illustrate how \textit{Stan's} 
+Hamiltonian algorithm achieves faster convergence by using momentum to 
+optimize the next proposal. The current proposal's higher momentum (black dot) 
+is indicated in the top panel. The middle panel illustrates how their momentum 
+steers random samples to the mode of the posterior distribution (shown in lower 
+panel), accelerating convergence. 
 
-This matters as the sequential process of fitting intricate multilevel models for Big Data  and testing them can be cumbersome and slow even for the initiated and sophisticated data scientists who are able to writing elaborate code to implement them. Typically scientists have to explore and compare different angles and approaches to modeling large electronic data sets. Typically researchers need to update and tweak the model to make more realistic, to incorporate knowledge about the subject matter, to fit the data better or to facilitate convergence of the algorithm. With existing software, like OpenBugs or \textit{JAGS} building and updating hierarchical models sequentially for large data sets becomes prohibitively expensive in computer resources or too slow to be feasible. The challenges of fast and flexible computational implementation such limit the model sophistication (see letter by Dr. Kheterpal and Dutton). Researchers cannot fit multilevel models which reflect the actual hierarchical structure of clinical care delivered, (see letter by Dr. Sacks). Multilevel hierarchical models can compromise transparency with lengthy complicated programming code, making the process error prone (see letter of support by Dr. Pace). \textit{rstanarm's} simple yet flexible function calls facilitate dynamic model building and updating, and allows the fitting and testing of advanced models even for larger datasets. \textit{rstanarm} allows researchers to fit the model they believe to best reflect the clinical question they are investigating with EHR.
+This matters as the sequential process of fitting intricate multilevel models for 
+Big Data  and testing them can be cumbersome and slow even for the initiated 
+and sophisticated data scientists who are able to writing elaborate code to 
+implement them. Typically scientists have to explore and compare different 
+angles and approaches to modeling large electronic data sets. Typically 
+researchers need to update and tweak the model to make more realistic, to 
+incorporate knowledge about the subject matter, to fit the data better or 
+to facilitate convergence of the algorithm. With existing software, like 
+OpenBugs or \textit{JAGS} building and updating hierarchical models 
+sequentially for large data sets becomes prohibitively expensive in 
+computer resources or too slow to be feasible. The challenges of fast 
+and flexible computational implementation such limit the model sophistication 
+(see letter by Dr. Kheterpal and Dutton). Researchers cannot fit multilevel 
+models which reflect the actual hierarchical structure of clinical care delivered, 
+(see letter by Dr. Sacks). Multilevel hierarchical models can compromise 
+transparency with lengthy complicated programming code, making the process 
+error prone (see letter of support by Dr. Pace). \textit{rstanarm's} simple 
+yet flexible function calls facilitate dynamic model building and updating, 
+and allows the fitting and testing of advanced models even for larger 
+datasets. \textit{rstanarm} allows researchers to fit the model they 
+believe to best reflect the clinical question they are investigating with EHR.
 
 \subsection*{Improve tools for graphical exploration of hierarchical models and MCMC output}
 
@@ -355,6 +427,9 @@ This matters as the sequential process of fitting intricate multilevel models fo
  \vspace{- 14pt}
 \end{wrapfigure}
 
+There is currently a the dearth of tools to explore the enormous data stream 
+generated in Markov chain Monte Carlo (MCMC) simulations to explore and 
+trouble shoot fitted hierarchical models. 
 Accessible tools and utilities, new visual methods to explore sophisticated model and
 their output would accelerate the model development, reduce modeling errors and 
 fascinates inferential reasoning. \textit{shinystan} will fill in the void where 
@@ -374,8 +449,6 @@ faster also for larger data sets; beyond, we will develop novel graphical
 methods to assess model convergence and define and refined algorithms to 
 troubleshoot model convergence with a special focus on multilevel hierarchical 
 modeling. 
-
- 
 
 \subsection*{Heterogeneous and incomplete clinical data may limit prediction and implementation.}
 Variables with strong predictive power in our model may not be recorded in all patients 
@@ -433,8 +506,10 @@ facilitation its implementing.
 We propose to develop two accessible software packages, (\textit{rstanarm} 
 and \textit{shinystan}), for the programming language and software environment 
 \textit{R} to integrate incomplete information with hierarchical modeling for 
-data driven outcomes research. These software products will make multidimensional statistical and computational methods for analyzing, inspecting, displaying, 
-representing, parsing, and searching high-dimensional data more accessible to 
+data driven outcomes research. These software products will make 
+multidimensional statistical and computational methods for 
+analyzing, inspecting, displaying, representing, parsing, and 
+searching high-dimensional data more accessible to 
 data scientists. We will also promote and disseminate these more realistic 
 hierarchical modeling approaches through presentations, graduate teaching, 
 workshops, online tutorials, books, YouTube videos and other publications.
@@ -604,7 +679,8 @@ identical to classical frequentist inference \cite{Gelman-Hill_2014}, making \te
 \subsubsection*{Prior specification for regularization or to incorporate external information}
 
 Priors \textit{can} incorporate subjective beliefs or existing information 
-about a parameter,  which we discussed in more detail under significance \cite{carlin1997bayes}. 
+about a parameter,  which we discussed in more detail under significance \
+\cite{carlin1997bayes}. 
 Priors can be used to regularize classical models \cite{gelman2008weakly}. 
 Bayesian models require priors and the prototype of \textit{rstanarm} 
 automatically adds independent weakly 
@@ -620,10 +696,13 @@ degrees of freedom approach infinity and as the degrees of freedom are
 one or the Cauchy distribution, leaving the user the option of robust 
 priors to allow for outliers to achieve more robust inference). 
 
+\subsubsection*{Further hardening, expansion and integration of \textit{rstanarm}}
+While our prototype of \textit{rstanarm} delivers some functionality for data scientist already and is already available for \href{https://cran.rstudio.com/web/packages/rstanarm/}{download from CRAN}, much of this project will be devoted to the hardening, expansion and the integration of additional functionality. We need to incorporate user feedback, weed out possible bugs and expand to include many more functions and advanced models (specifically change point models) \cite{Hall2000}. Specifically, we want to  work on a more seamless integration with our missing data imputation \textit{R} package \href{https://cran.r-project.org/web/packages/mi/index.html}{\textit{mi}}
 
 \subsection*{shinystan}
 We propose to develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
-{\textit{shinystan}} as a the graphical user interface for interactively 
+{\textit{shinystan}} \cite{GabryISCB2015,shinystan} as a the 
+graphical user interface for interactively 
 exploring virtually any Bayesian model fit using a Markov chain Monte Carlo algorithm, 
 but optimized for \textit{rstanarm} and \textit{Stan}. 
 
@@ -638,7 +717,8 @@ and data scientists certainly lack tools for interactive intuitive graphical
 exploration of MCMC simulations.
 
 \subsubsection*{Implementation}
-We will implement \textit{shinystan} in \textit{Shiny}, an R package for interactive 
+We will implement \textit{shinystan}
+in \textit{Shiny}, an R package for interactive 
 web applications. The graphical rendering of our proposed package \textit{shinystan} 
 is building on the superb graphical package \textit{ggplot} by Hackley Wickham. 
 Many of our new graphical functions of \textit{shinystan} will eventually be 
@@ -682,10 +762,28 @@ box \textit{shinystan} compiles, extracts and handles many more meta-data to
 facilitate interactive and intuitive visual exploration and trouble shooting.
 
 \subsubsection*{Affordances: designing intuitive user interfaces}
-We will place special emphasis on the concept of affordance in our "intuitive" design of the \textit{shinystan} graphical user interfaces, e.g., in employing strong visual clues, provide clickable buttons and tabs, sliders, and other hands on interactive controls \cite{NormanAffordances1999}. Active exploration by \textit{shinystan} users will reveal nested and sequential affordances, for example, print options appear only in context, say when the cursor moves over the output button of a graphic, avoiding visual clutter on the screen with irrelevant information \cite{Mcgrenere2000affordances}. We will rely on user feedback to optimize the practical utility of \textit{shinystan's} implementation and user interface. 
+We will place special emphasis on the concept of affordance in our "intuitive" 
+design of the \textit{shinystan} graphical user interfaces, e.g., in employing 
+strong visual clues, provide clickable buttons and tabs, sliders, and other 
+hands on interactive controls \cite{NormanAffordances1999}. Active exploration 
+by \textit{shinystan} users will reveal nested and sequential affordances, for 
+example, print options appear only in context, say when the cursor moves over 
+the output button of a graphic, avoiding visual clutter on the screen with 
+irrelevant information \cite{Mcgrenere2000affordances}. We will rely on user 
+feedback to optimize the practical utility of \textit{shinystan's} implementation 
+and user interface. 
+
+\subsubsection*{Improving and hardening \textit{shinystan}}
+Although already available on 
+\href{https://cran.r-project.org/web/packages/shinystan/index.html}{CRAN} 
+as a functional \href{https://www.youtube.com/watch?v=X31xqNHcvQs}{prototype},
+\textit{shinystan} will need to undergo considerable improvements of the 
+interface and under the hood during this project. Posterior predictive 
+checking is one area where the need for additional options and functionality 
+will be obvious to the sophisticated data scientists \cite{shinystan}. 
+We also want to expand the existing collaborative model sharing via the internet.
 
 \section*{Collaborative software development and computer resources}
-
 \subsection*{Best practices and proven methods for software design, construction, and implementation}
 We will follow accepted best practices, proven methods and industry standards for software design, construction and implementation, for example the rules of clarity, composition, separation, simplicity, parsimony, transparency, etc... as detailed by Raymond \cite{Raymond2003art}, as we did in building \textit{rstan} and \textit{Stan}, our  prototype is build around. We will pay special attention to modularity and function routines in the design of our software packages and on the integration with existing subroutines already written in the parent software suites \textit{Stan} and \textit{rstan} or existing C++ libraries. 
 
@@ -706,10 +804,15 @@ Montefiore Medical and Columbia University will provide the computer cluster acc
 As also discussed under human subject protection and in resources and in the letter of support by Dr. Mirhaji, some of the data sets to be used for this project cannot be completely de-identified, but are 'limited data sets', because they still contain some patient identifiers (e.g., age in years or zip code) and as such are covered under HIPPA. Hence, the computer clusters housing the data and where we run the analysis on, have to be compliant with the Health Insurance Portability and Accountability Act (HIPPA. Clinical Research Informatics at Montefiore will house any data set falling under the Health Insurance Portability and Accountability Act (HIPPA) and guarantee compliance with relevant federal data safety and privacy regulations. 
 
 \section*{Dissemination and unimpeded utilization of the products of this project}
-The goal of this project is to encourage widespread adoption of cutting edge multi-level hierarchical modeling for data driven outcomes research by clinical scientists and to support the use and re-purposing of our open-source applications. 
-
-\subsubsection*{Software and data sharing plan}
-As also detailed in the data sharing plan, to facilitate the widest possible uninhibited unimpeded utilization, our software will be licensed under the General Public License and will be available on the online repository CRAN. The benefits  are that our products \textit{rstanarm} and \textit{shinystan}: 
+The goal of this project is to encourage widespread adoption of cutting edge 
+multi-level hierarchical modeling for data driven outcomes research by 
+clinical scientists and to support the use and re-purposing of our 
+open-source applications. 
+As also detailed in the data sharing plan, to facilitate the widest 
+possible uninhibited unimpeded utilization, our software will be 
+licensed under the General Public License and will be available on 
+the online repository CRAN. The benefits  are that our products 
+\textit{rstanarm} and \textit{shinystan}: 
  
 1) will be freely available to researchers and the general public, including for commercial use; 
 

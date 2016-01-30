@@ -885,16 +885,6 @@ Analysis for Bayesian Models},
   Url                      = {http://CRAN.R-project.org/package=shinystan}
 }
 
-@InProceedings{GabryISCB2015,
-  Title                    = {Interactive graphical analysis, exploration and posterior predictive checking of multi-level hierarchical Bayesian models},
-  Author                   = {Gabry, Jonah and Andreae, Michael and Gao, Yuanjun and Song, Dongying},
-  Booktitle                = {36th Annual Conference of the International Society for Clinical Biostatics},
-  Year                     = {2015},
-  Pages                    = {C32.1},
-
-  Location                 = {Utrecht, Netherlands}
-}
-
 @Manual{rstanarm,
   Title                    = {rstanarm: Bayesian Applied Regression Modeling via Stan},
   Author                   = {Jonah Gabry and Ben Goodrich},
