@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.14)  27 JAN 2016 12:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.7.14)  2 FEB 2016 11:36
 entering extended mode
 **ResearchPlan.tex
 
@@ -380,28 +380,31 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen153
 \titlewidthfirst=\dimen154
 )
+(C:\Users\Micheal\AppData\Roaming\MiKTeX\2.9\tex\latex\mdwtools\mdwlist.sty
+Package: mdwlist 1996/05/02 1.1 Various list-related things
+)
 (C:\Users\Micheal\Dropbox\Professional\KL2\BigDataR01\PA-14-156\ResearchPlan\Re
 searchPlan.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 72.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 62.
+Package hyperref Info: Link coloring OFF on input line 72.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -411,9 +414,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count122
 )
-LaTeX Info: Redefining \ref on input line 62.
-LaTeX Info: Redefining \pageref on input line 62.
-LaTeX Info: Redefining \nameref on input line 62.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
 
 (C:\Users\Micheal\Dropbox\Professional\KL2\BigDataR01\PA-14-156\ResearchPlan\Re
 searchPlan.out)
@@ -456,7 +459,7 @@ Package caption Info: End \AtBeginDocument code.
 * \evensidemargin=-28.90756pt
 * \topmargin=-65.90756pt
 * \headheight=12.0pt
-* \headsep=25.0pt
+* \headsep=20.0pt
 * \topskip=11.0pt
 * \footskip=30.0pt
 * \marginparwidth=59.0pt
@@ -472,204 +475,199 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 63.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 69.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 107.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 73.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 79.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 84.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 144.
 [1
 
 {C:/Users/Micheal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 110.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 157.
 
-<Figures/DistrogramNACOR.pdf, id=12, 796.9775pt x 597.23125pt>
+<Figures/DistrogramNACOR.pdf, id=11, 796.9775pt x 597.23125pt>
 File: Figures/DistrogramNACOR.pdf Graphic file (type pdf)
 
 <use Figures/DistrogramNACOR.pdf>
-Package pdftex.def Info: Figures/DistrogramNACOR.pdf used on input line 119.
+Package pdftex.def Info: Figures/DistrogramNACOR.pdf used on input line 185.
 (pdftex.def)             Requested size: 211.02483pt x 158.12883pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 124.
+LaTeX Font Info:    Try loading font information for U+msa on input line 193.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 124.
+LaTeX Font Info:    Try loading font information for U+msb on input line 193.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPl
 an/Figures/DistrogramNACOR.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 139.
+Overfull \hbox (0.90886pt too wide) in paragraph at lines 247--251
+[]\T1/phv/m/n/10.95 Inference based on par-tial pool-ing out-per-forms (a) the 
+no-pooling and (b) the complete-pooling ap-proaches,
+ []
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
-File: omsphv.fd 
-)
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 139.
- [3]
-<Figures/DistrogramMetaAnalysis.pdf, id=90, 796.9775pt x 597.23125pt>
-File: Figures/DistrogramMetaAnalysis.pdf Graphic file (type pdf)
-
-<use Figures/DistrogramMetaAnalysis.pdf>
-Package pdftex.def Info: Figures/DistrogramMetaAnalysis.pdf used on input line 
-154.
-(pdftex.def)             Requested size: 211.02483pt x 158.12883pt.
+[3]
+<Figures/DistrogramMultiLevelMetaAnalysis.pdf, id=99, 597.23125pt x 796.9775pt>
+File: Figures/DistrogramMultiLevelMetaAnalysis.pdf Graphic file (type pdf)
+<use Figures/DistrogramMultiLevelMetaAnalysis.pdf>
+Package pdftex.def Info: Figures/DistrogramMultiLevelMetaAnalysis.pdf used on i
+nput line 309.
+(pdftex.def)             Requested size: 184.65276pt x 246.40378pt.
  [4 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPla
-n/Figures/DistrogramMetaAnalysis.pdf>]
-[5] <Figures/Hamiltonian.png, id=153, 177.66376pt x 256.70906pt>
+n/Figures/DistrogramMultiLevelMetaAnalysis.pdf>] [5]
+<Figures/Hamiltonian.png, id=158, 177.66376pt x 256.70906pt>
 File: Figures/Hamiltonian.png Graphic file (type png)
 
 <use Figures/Hamiltonian.png>
-Package pdftex.def Info: Figures/Hamiltonian.png used on input line 211.
+Package pdftex.def Info: Figures/Hamiltonian.png used on input line 454.
 (pdftex.def)             Requested size: 151.0149pt x 218.20372pt.
- [6 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPla
-n/Figures/Hamiltonian.png>]
-<Figures/shinystan.png, id=166, 246.6816pt x 83.1105pt>
+
+Underfull \hbox (badness 1014) in paragraph at lines 461--470
+[][]\T1/phv/m/n/10.95 The \T1/phv/m/sl/10.95 rsta-n-arm \T1/phv/m/n/10.95 pack-
+age uti-lizes the im-ple-men-ta-tion of Hamil-to-nian
+ []
+
+[6 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
+/Figures/Hamiltonian.png>]
+<Figures/shinystan.png, id=170, 246.6816pt x 83.1105pt>
 File: Figures/shinystan.png Graphic file (type png)
 
 <use Figures/shinystan.png>
-Package pdftex.def Info: Figures/shinystan.png used on input line 226.
+Package pdftex.def Info: Figures/shinystan.png used on input line 495.
 (pdftex.def)             Requested size: 296.01642pt x 99.73207pt.
 
-Underfull \hbox (badness 1354) in paragraph at lines 233--252
-\T1/phv/m/n/10.95 and their out-put would ac-cel-er-ate the
- []
-
-<Figures/Bayesian_imputation.pdf, id=169, 686.565pt x 298.11375pt>
+<Figures/Bayesian_imputation.pdf, id=173, 686.565pt x 298.11375pt>
 File: Figures/Bayesian_imputation.pdf Graphic file (type pdf)
 
 <use Figures/Bayesian_imputation.pdf>
-Package pdftex.def Info: Figures/Bayesian_imputation.pdf used on input line 275
+Package pdftex.def Info: Figures/Bayesian_imputation.pdf used on input line 539
 .
 (pdftex.def)             Requested size: 274.62112pt x 119.24338pt.
- [7 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPla
-n/Figures/shinystan.png>]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 343.
 
-
-Package natbib Warning: Citation `Stan_Software_2014' on page 8 undefined on in
-put line 343.
-
-
-Package natbib Warning: Citation `Stan_Software_2014' on page 8 undefined on in
-put line 363.
-
-
-Overfull \hbox (13.81866pt too wide) in paragraph at lines 333--374
-\T1/phv/m/n/10.95 gre-gate and in-di-vid-ual pa-tient data, when pub-lished re-
-sults were in-suf-fi-cient for clas-si-cal meta-analysis$[]$.
+Underfull \hbox (badness 3769) in paragraph at lines 546--567
+[][]\T1/phv/m/n/10.95 Auxiliary data are ad-di-tional in-for-ma-tion
  []
 
-[8 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
-/Figures/Bayesian_imputation.pdf>]
-<Figures/SoftwareTrajectory.pdf, id=257, 794.97pt x 614.295pt>
+[7 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
+/Figures/shinystan.png> <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/P
+A-14-156/ResearchPlan/Figures/Bayesian_imputation.pdf>]
+Overfull \hbox (25.9949pt too wide) in paragraph at lines 595--637
+\T1/phv/m/n/10.95 ag-gre-gate and in-di-vid-ual pa-tient data, when pub-lished 
+re-sults were in-suf-fi-cient for clas-si-cal meta-analysis$[]$.
+ []
+
+<Figures/SoftwareTrajectory.pdf, id=255, 794.97pt x 614.295pt>
 File: Figures/SoftwareTrajectory.pdf Graphic file (type pdf)
 
 <use Figures/SoftwareTrajectory.pdf>
-Package pdftex.def Info: Figures/SoftwareTrajectory.pdf used on input line 379.
+Package pdftex.def Info: Figures/SoftwareTrajectory.pdf used on input line 642.
 
 (pdftex.def)             Requested size: 316.5453pt x 244.60757pt.
 
-Underfull \hbox (badness 1377) in paragraph at lines 382--383
-\T1/phv/m/n/10.95 vel-op-ments based on the \T1/phv/m/sl/10.95 rstan \T1/phv/m/
-n/10.95 pack-
+Underfull \hbox (badness 2828) in paragraph at lines 645--655
+\T1/phv/m/n/10.95 age that en-ables some of the most
  []
 
 
-Underfull \hbox (badness 1337) in paragraph at lines 382--383
-\T1/phv/m/n/10.95 mon ap-plied re-gres-sion mod-els to be
+Underfull \hbox (badness 1092) in paragraph at lines 645--655
+\T1/phv/m/n/10.95 com-mon ap-plied re-gres-sion mod-els to
  []
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 382--383
-\T1/phv/m/n/10.95 es-ti-mated us-ing Markov Chain Monte
- []
-
-
-Underfull \hbox (badness 4429) in paragraph at lines 382--383
+Underfull \hbox (badness 4429) in paragraph at lines 645--655
 \T1/phv/m/n/10.95 the Cen-ter for Dis-ease Con-trol and
  []
 
-[9 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
-/Figures/SoftwareTrajectory.pdf>]
-LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 395.
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 395.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 453.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 456.
- [10]
-Underfull \hbox (badness 1681) in paragraph at lines 462--469
-\T1/phv/m/n/10.95 the wrap-per func-tion $\OML/cmm/m/it/10.95 stan[]aov$ \T1/ph
-v/m/n/10.95 parses
+
+Underfull \hbox (badness 2005) in paragraph at lines 645--655
+\T1/phv/m/n/10.95 NSF: SES-1205516) were among the
  []
 
-[11]
-LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 532.
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 532.
 
-Underfull \hbox (badness 6316) in paragraph at lines 550--551
+Underfull \hbox (badness 4429) in paragraph at lines 645--655
+\T1/phv/m/n/10.95 many fed-eral in-sti-tu-tions fund-ing our
+ []
+
+[8 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPlan
+/Figures/SoftwareTrajectory.pdf>]
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 676.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 676.
+ [9]
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 720.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 720.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 732.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 735.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 784.
+
+
+Package natbib Warning: Citation `GabryISCB2015' on page 10 undefined on input 
+line 784.
+
+[10]
+Underfull \hbox (badness 6316) in paragraph at lines 837--843
 [][]\T1/phv/m/n/10.95 As we move from the
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 550--551
-\T1/phv/m/n/10.95 Markov chain Monte Carlo
+Overfull \hbox (4.77371pt too wide) in paragraph at lines 837--843
+\T1/phv/m/n/10.95 tures be-come richer with model-
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 550--551
-\T1/phv/m/n/10.95 sim-u-la-tions (raw draws from
+Underfull \hbox (badness 3815) in paragraph at lines 837--843
+\T1/phv/m/n/10.95 more ac-ces-si-ble in-for-ma-tion
  []
 
-
-Underfull \hbox (badness 1102) in paragraph at lines 550--551
-\T1/phv/m/n/10.95 user friendly \T1/phv/m/sl/10.95 rsta-n-arm \T1/phv/m/n/10.95
- pack-
- []
-
-[12] [13] <Figures/Timeline.pdf, id=365, 597.55246pt x 421.09319pt>
+[11] [12] <Figures/Timeline.pdf, id=384, 607.068pt x 238.49101pt>
 File: Figures/Timeline.pdf Graphic file (type pdf)
 
 <use Figures/Timeline.pdf>
-Package pdftex.def Info: Figures/Timeline.pdf used on input line 614.
-(pdftex.def)             Requested size: 369.29749pt x 260.2462pt.
- [14 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPl
-an/Figures/Timeline.pdf>]
+Package pdftex.def Info: Figures/Timeline.pdf used on input line 969.
+(pdftex.def)             Requested size: 369.29749pt x 145.079pt.
+
+Underfull \hbox (badness 1824) in paragraph at lines 972--977
+\T1/phv/m/n/10.95 lin-eates the planned project
+ []
+
+[13 <C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/PA-14-156/ResearchPla
+n/Figures/Timeline.pdf>] [14]
 (C:\Users\Micheal\Dropbox\Professional\KL2\BigDataR01\PA-14-156\ResearchPlan\Re
-searchPlan.bbl [15] [16] [17])
+searchPlan.bbl [15] [16] [17] [18])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 635.
-[18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 635.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 996.
+[19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 996.
 
 (C:\Users\Micheal\Dropbox\Professional\KL2\BigDataR01\PA-14-156\ResearchPlan\Re
 searchPlan.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 635.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 635.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 996.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 996.
 Package rerunfilecheck Info: File `ResearchPlan.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 635.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 996.
  ) 
 Here is how much of TeX's memory you used:
- 9397 strings out of 493921
- 136790 string characters out of 3147276
- 327023 words of memory out of 3000000
- 12457 multiletter control sequences out of 15000+200000
+ 9440 strings out of 493921
+ 137839 string characters out of 3147276
+ 325023 words of memory out of 3000000
+ 12490 multiletter control sequences out of 15000+200000
  54985 words of font info for 72 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 41i,8n,38p,1616b,629s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,8n,38p,356b,689s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/font
@@ -679,9 +677,9 @@ onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on ResearchPlan.pdf (18 pages, 776550 bytes).
+Output written on ResearchPlan.pdf (19 pages, 768885 bytes).
 PDF statistics:
- 460 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
+ 492 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
