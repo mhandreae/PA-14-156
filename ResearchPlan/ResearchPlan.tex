@@ -70,7 +70,7 @@
 %\graphicspath{ {C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/ConceptGraphics/} }
 
 \begin{document}
-\part*{Specific Aims}
+\section*{Specific Aims}
 National health databases and electronic health records (EHR) are inherently 
 clustered by procedure, provider, service, institution and geography. Often 
 neglected, this rich spatial and temporal organization is most realistically 
@@ -159,22 +159,22 @@ Below we illustrate the clustered, nested data structure of contemporary health
 care delivery and electronic health data capture with the example of the 
 National Anesthesia Clinical Outcomes Registry (NACOR). NACOR is maintained by the 
 Anesthesia Quality Institute and funded by the American Society of 
-Anesthesiologists, and we will utilize NACOR as a use case for dissemination in 
+Anesthesiologists. We will utilize NACOR as a use case for dissemination in 
 workshops for perioperative data scientists.
 
 \subsection*{Perioperative health care delivery and data capture are nested and clustered.}
 Anesthesia is an illustrative case of the how health care is increasingly 
 electronically documented, which facilitates the continuous collection of 
-physiological data and therapeutic interventions during critical periods. In order to 
-support building, this electronically captured data 
-is jointed with surgical and anesthesia procedure codes International 
-Classification of Disease (ICD) codes, provider identifiers, patient perioperative 
+physiological data and therapeutic interventions during critical periods. 
+This electronically captured data 
+is jointed with surgical and anesthesia procedure codes, International 
+Classification of Disease codes, provider identifiers, patient perioperative 
 risk, outcome and provider compliance assessment. Participating institutions upload 
-this comprehensive file from their anesthesia information management systems 
-(AIMS) directly to NACOR. NACOR contains at present over 30 million individual 
+this comprehensive file from their anesthesia information management systems
+directly to NACOR. NACOR contains at present over 30 million individual 
 electronic records of anesthesia care provided and, like similar databases, is 
 growing rapidly. This data set invites health services and outcomes research, 
-but (as pointed out in the letter of support by Dr. Dutton, last director or 
+but (see letter of support by Dr. Dutton, last director or 
 NACOR and Dr. Kheterpal director of MPOG, the other large perioperative EHR 
 database) their exploitation is limited by the lack of accessible software to investigate 
 important scientific questions with realistic hierarchical models.
@@ -196,12 +196,16 @@ intercept $\beta_{oi}$ to vary according to the $i$th anesthesiology provider ca
 $\mu_i$ and within-provider variance $\sigma_i$ vary by hospital. $x_n$ is a vector of patient level predictors, and $\beta$ is a vector 
 of regression coefficients.  
 
-We seek to further illustrate the nested structure of outcome data in health care with two examples from labor analgesia and spine surgery: 
-Anesthesiologists may feel more or less inclined or competent to offer regional anesthesia techniques. Provision of epidural labor 
-anesthesia varies widely across the nation and within an institution and is predicted by socioeconomic and racial patient characteristics 
-\cite{Rust2004,Glance2007}. There is substantially less bleeding, on average, during spine surgery when performed by a neurosurgeons than by an 
-orthopedic surgeon. However, a particularly gifted orthopedic surgeon may outperform the average neurosurgeon with regards to surgical 
-blood loss.
+Two more examples to further 
+illustrate the nested structure of health care outcomes: 
+Anesthesiologists may feel more or less inclined or competent to offer 
+regional anesthesia for labor pain. Provision of epidural labor 
+anesthesia varies widely across the nation and within an institution and 
+is predicted by socioeconomic and racial patient characteristics 
+\cite{Rust2004,Glance2007}.  
+While an average a neurosurgeon may have less bloods loss during spine 
+surgery, a particularly gifted orthopedic surgeon may outperform the 
+average neurosurgeon with regards to blood loss.
 
 \section*{Hierarchical models capture contemporary health care practice realistically}
 Hierarchical modeling could transform electronic health records based outcomes research, because the rich spatial and temporal 
