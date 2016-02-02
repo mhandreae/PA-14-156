@@ -141,9 +141,9 @@ online tutorials. To solicit the data scientist community feedback, engage new
 software developers and to incorporate improvements to our software through 
 online user and developer groups.
 
-\part*{Research Strategy}
+\section*{Research Strategy}
 
-\part*{Significance}
+\section*{Significance}
 
 \section*{The nested structure of health care delivery and electronic health data}
 Clinical data scientists are faced with an abundance of useful electronic health data, 
@@ -415,11 +415,11 @@ imputation and clustering can be integrated into a single model that
 incorporates auxiliary data.
 
 \subsection*{Punchline: Hierarchical models reflect the clustered structure of contemporary health care 
-delivery most realistically, and can be used to address incomplete records, but how can we fit them efficiently?}
+delivery most realistically, and can be used to address incomplete records.}
 
-\part*{Innovation}
+\section*{Innovation}
 
-We propose to continue building two software packages. \textit{rstanarm} to make 
+We propose to further develop two software packages. \textit{rstanarm} to make 
 multi-level hierarchical modeling more accessible and \textit{shinystan} 
 for graphical exploration and confirmation. \textit{rstanarm} and 
 \textit{shinystan} will address the dearth of accessible software 
@@ -431,9 +431,9 @@ advanced hierarchical modeling in a linked software package.
 
 \subsection*{Accessible advanced hierarchical modeling for EHR}
 
-For \textit{basic} hierarchical models, there are simple and accessible software 
-packages both in the frequentistist and the Bayesian paradigm, but advanced multilevel 
-hierarchical modeling is currently restricted to data scientists and statisticians 
+For basic hierarchical models, there are accessible software 
+packages both in the frequentistist and the Bayesian paradigm, but advanced 
+hierarchical modeling is currently restricted to data scientists 
 with advanced computational and statistical expertise. Even for these specialists, 
 the step learning curve of advanced probabilistic programming languages like 
 \textit{Stan} constitutes a significant barrier to harness the full potential 
@@ -444,7 +444,7 @@ by Drs. Sacks and O'Malley).
 very advanced hierarchical models using Bayesian techniques. It can work for large data 
 sets and utilizes a straitforward and familiar syntax to specify models. Like the 
 rest of the \textit{Stan} ecosystem, it is open source and free to the public. 
-The tranparent modeling approach in \textit{rstanarm} will make analysis more 
+The transparency of \textit{rstanarm} will make analysis more 
 reproducible and reliable enough even for federal regulatory processes. 
 
 \subsection*{Fast and flexible hierarchical modeling for realistic data driven outcomes research }
@@ -565,7 +565,7 @@ prediction algorithm \cite{Hall_25389642}. Using auxilliary data to complete
 missing information is novel in data driven outcomes research and our 
 software, \textit{rstanarm} and \textit{mi}, will disseminate this promising approach. 
 
-\part*{Approach}
+\section*{Approach}
 
 We propose to develop two accessible software packages, (\textit{rstanarm} 
 and \textit{shinystan}), for the programming language and software environment 
@@ -591,7 +591,18 @@ Github \cite{Chacon2009ProGit}, Google Hangouts, and email.
 
 \section*{Preliminary work}
 
-\subsection*{Prior work in statistical software development and data driven outcomes research} 
+\subsection*{Prior work in statistical software development and data driven outcomes research}
+
+\begin{wrapfigure}{l}{0.6\textwidth} 
+ \vspace{- 15pt}
+    \centering
+\includegraphics[width=0.6\textwidth]{Figures/SoftwareTrajectory.pdf}
+  \vspace{-32pt}
+  \caption{Software development trajectory}
+    \label{fig:trajectory}
+ \vspace{- 15pt}
+\end{wrapfigure}
+ 
 Dr. Andreae published several meta-analyses and synthesized the evidence 
 from clinical trials by pooling aggregate and individual patient data, when 
 published results were insufficient for classical meta-analysis 
@@ -626,7 +637,7 @@ theoretical ground work for the development of the cutting-edge Hamiltonian
 Monte Carlo algorithms \cite{Hoffman2014,Stan_Software_2014} 
 that are at the basis of \textit{Stan}, the engine 
 under the hood of our user oriented software package \textit{rstanarm}, 
-this project proposes to develop. His team includes Dr. Betancourt, 
+we propose to develop. His team includes Dr. Betancourt, 
 consultant on this grant with his special expertise on the differential 
 geometry of the underlying Hamiltonian Monte Carlo algorithm
 motivating automated tuning heuristics and certain optimality criteria 
@@ -635,14 +646,9 @@ critical part in our programming of the \textit{Stan} model library
 which \textit{rstanarm} will call on and in the tools for graphical exploration
 we propose to implement in \textit{shinystan}.
 
-\subsection*{The trajectory leading to the development of the prototype software} 
+\subsection*{The trajectory leading to the development of \textit{rstanarm} and \textit{shinystan}} 
 
-\begin{wrapfigure}{l}{0.6\textwidth} %this figure will be at the right
-    \centering
-\includegraphics[width=0.6\textwidth]{Figures/SoftwareTrajectory.pdf}
-\end{wrapfigure}
-
-Dr. Goodrich, Andreae, and their collaborators worked together on the software packages 
+Dr. Goodrich, Andreae, and their collaborators worked together on the first stable versions of the software packages 
 \textit{shinystan} and \textit{rstanarm}, which are extensions to the \textit{rstan} package 
 that enables some of the most common applied regression models to be estimated using Hamiltonian Monte Carlo. 
 The National Institute of Health, the Center for Disease Control and the National Science Foundation, 
@@ -650,16 +656,15 @@ The National Institute of Health, the Center for Disease Control and the Nationa
 federal institutions funding our team's prior software \cite{Stan-manual:2015} development and their application 
 to cutting=edge biomedical data driven outcomes research. The proposed work is hence a direct continuation of the 
 above described preliminary work of developing and implementing novel ground breaking algorithms for hierarchical 
-modeling of fine grained correlated data and their biomedical applications. In the graphic to the left above, we 
+modeling of fine grained correlated data and their biomedical applications as sketched in Figure \ref{fig:trajectory}. In the graphic to the left above, we 
 outline the trajectory that led to the current project proposal.
-
 
 \section*{Project scope and goals }
 
-The project proposes to develop two accessible software packages for the programming language and software environment \textit{R} 
-to integrate incomplete information with hierarchical modeling for data driven outcomes research. We propose to develop two applications.
+We propose to further develop, test and harden the first stable versions of two software 
+packages \textit{rstanarm} and \textit{shinystan}.
 
-\subsection*{rstanarm for accessible multilevel hierarchical modeling}
+\subsection*{\textit{rstanarm} for accessible multilevel hierarchical modeling}
 The first proposed software package \textit{rstanarm} should allow data scientists to specify the most common applied regression models 
 and hierarchical models and estimate them via the Hamiltonian Monte Carlo (HMC) algorithm implemented in \textit{Stan} without (a) 
 the need to understand the underlying intricacies (e.g., auxiliary parameterization) normally required to optimize convergence and 
@@ -667,33 +672,30 @@ without (b) the need to build large convoluted contrast matrices  or keep track 
 model formulation as other popular software packages for linear and mixed modeling in \textit{R} like \textit{lme4} \cite{lme4}, will 
 make model building easy for novice \textit{rstanarm} users. 
 
-\subsection*{shinystan for interactive graphical exploration and diagnosis of MCMC simulations}  
+\subsection*{\textit{shinystan} for interactive graphical exploration and diagnosis of MCMC simulations}  
 The second package, \textit{shinystan}, is a graphical user interface for interactively exploring any model estimated by MCMC. As a 
 package for \textit{R}, \textit{shinystan}  provides multidimensional statistical, graphical and computational tools for any analyzing,
 inspecting, displaying, representing, parsing, and searching high-dimensional MCMC output, but is optimized for HMC. By using a web-based 
 interactive intuitive user interface \textit{shinystan} is user-friendly and requires minimal training for novices.
 
 \subsection*{rstanarm and shinystan are available on the \textit{R} software repository CRAN}
-Both \textit{rstanarm} \cite{rstanarm} and \textit{shinystan} \cite{shinystan, Team2015} are available on the \textit{R} software 
-repository CRAN. The project proposes to further develop these two prototypes \textit{rstanarm} and \textit{shinystan} into solid, 
-reliable, tested R packages and to disseminate their use. Both packages will serve as extensions to the \textit{rstan} package 
-(we developed), which enables the most common applied regression models to be estimated using novel Hamiltonian Monte Carlo algorithms. 
-The final product packages will be available to researchers and the general public via the free software repository CRAN. 
+Both \textit{rstanarm} \cite{rstanarm} and \textit{shinystan} \cite{shinystan, Team2015} are already 
+available on the \textit{R} software  repository CRAN. We propose to further develop 
+these two first stable versions of \textit{rstanarm} and \textit{shinystan} into solid, 
+reliable, tested R packages and to disseminate their use. Both packages will serve as extensions to the \textit{rstan} 
+package (we developed), which enables the most common applied regression models to be estimated 
+using novel Hamiltonian Monte Carlo algorithms. Updates and the final packages will be available to researchers 
+and the general public via the free software repository CRAN. 
 
 \section*{Software Specification}
 
-\subsection*{rstanarm}
+\subsection*{rstanarm allows simple specification for multi-level hierarchical models}
 The software package \href{https://github.com/stan-dev/rstanarm}{\textit{rstanarm}}
-will enable the estimation of advanced applied general linear regression models using 
-the existing probabilistic programming language \textit{Stan}. 
+will enable the estimation of advanced general linear models. 
 \textit{rstanarm} implements full Bayesian statistical inference;  
 however, \textit{rstanarm} allows users to specify their 
 hierarchical models using the simplified syntax already commonly 
-used in standard software packages like \textit{lme4} in the statistical 
-software environment \textit{R}. 
-
-\subsubsection*{rstanarm allows simple specification for multi-level hierarchical models}
-
+used in standard \textit{R} software packages like \textit{lme4}. 
 Data scientists familiar with the widely used statistical software environment R will 
 find \textit{rstanarm} intuitive, because models are specified using the familiar 
 standard R modeling syntax to describe the mean structure of mixed models. 
@@ -717,14 +719,9 @@ scientist can therefore take advantage of the more efficient HMC algorithms impl
 without knowing the underlying programming language or the auxiliary reparametrizations that 
 increase the efficiency of the Markov chains, which we discuss further below.
 
-\subsubsection*{A suite of pre-compiled \textit{Stan} programs allows for a simple call to sophisticated modeling functions}
+\subparagraph*{A suite of pre-compiled \textit{Stan} programs allows for a simple call to sophisticated modeling functions}
 
-\textit{rstanarm} already implements many generalized linear 
-models with and without group-specific terms. We wrote and optimized several models 
-in the probabilistic programming language \textit{Stan} that are
-pre-compiled in \textit{rstanarm}. Users can now build hierarchical models via simple high-level functions, as detailed below.
-
-\begin{wraptable}{l}{0.6\textwidth}
+\begin{wraptable}{l}{0.51\textwidth}
 \footnotesize
 \begin{tabular}{@{}
 >{\columncolor[HTML]{EFEFEF}}l l@{}}
@@ -737,6 +734,11 @@ lm.stan                & Pre-compiled optimized model written in \textit{Stan}  
 \end{tabular}
 \label{ProcessTable}
 \end{wraptable}
+
+\textit{rstanarm} already implements many generalized linear 
+models with and without group-specific terms. We wrote and optimized several models 
+in the probabilistic programming language \textit{Stan} that are
+pre-compiled in \textit{rstanarm}. Users can now build hierarchical models via simple high-level functions, as detailed below.
 
 To take an ANOVA model as an example, the wrapper function $stan\_aov$ parses the 
 model specification and hands the data and prior specification to $stan\_lm$ and 
@@ -753,11 +755,9 @@ priors are chosen in simple models, the posterior means will tend to be very sim
 estimates \cite{Gelman-Hill_2014}. However, \textit{rstanarm} uses the same user-friendly interface to estimate 
 sophisticated hierarchical models that are too complicated for classical frequentist inference.
 
-\subsubsection*{Prior specification for regularization or to incorporate external information}
-
-Priors \textit{can} incorporate subjective beliefs or existing information 
-about a parameter,  which we discussed in more detail under significance \
-\cite{carlin1997bayes}. 
+\subparagraph*{Prior specification can be used for regularization or to incorporate external information.} 
+Priors \textit{can} incorporate subjective beliefs or existing information about a parameter,  
+which we discussed in more detail under significance \cite{carlin1997bayes}. 
 Priors can be used to regularize classical models \cite{gelman2008weakly}. 
 Bayesian models require priors and \textit{rstanarm} by default usually
 adds independent weakly informative priors on the coefficients of generalized linear models, 
@@ -771,7 +771,7 @@ degrees of freedom approach infinity and as the degrees of freedom are
 one or the Cauchy distribution, leaving the user the option of robust 
 priors to allow for outliers to achieve more robust inference). 
 
-\subsubsection*{Further hardening, expansion and integration of \textit{rstanarm}}
+\subparagraph*{Further hardening, expansion and integration of \textit{rstanarm}}
 While \textit{rstanarm} delivers some functionality for data scientist and is already available from 
 \href{https://cran.rstudio.com/web/packages/rstanarm/}{CRAN}, much of this project will be devoted to hardening existing functionality, 
 expanding functionality, and integrating functionality from other R packages. We need to incorporate user feedback, weed out 
@@ -779,47 +779,9 @@ possible bugs, and include many more functions and advanced models, such as chan
 we want to work on a more seamless integration with our \textit{R} package for multiple imputation of missing data 
 \href{https://cran.r-project.org/web/packages/mi/index.html}{\textit{mi}}.
 
-\subsection*{shinystan}
-We propose to develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
-{\textit{shinystan}} \cite{GabryISCB2015,shinystan} as a the 
-graphical user interface for interactively 
-exploring virtually any Bayesian model output but optimized for \textit{Stan}. 
+\subsection*{shinystan for interactive intuitive graphical exploration of MCMC output}
 
-\subsubsection*{Goal: interactive intuitive graphical exploration of MCMC output} 
-To extract the results from objects representing model fits, data scientist can 
-use generic extractor functions such as print() and coef(), but often lack a suitable 
-method for extracting an interesting result of the model fit and have to resort to 
-writing tedious customized code. Important model diagnostics 
-(e.g., influence() to assess  homoscedastic residual errors) are not 
-developed even for classical multi-level models \cite{Galecki2013linear}, 
-and data scientists certainly lack tools for interactive intuitive graphical 
-exploration of MCMC output.
-
-\subsubsection*{Implementation}
-We will further implement \textit{shinystan}
-in \textit{Shiny}, an R package for interactive 
-web applications. The graphical rendering of the plots in \textit{shinystan} 
-utilizes the superb graphical package \textit{ggplot} by Hackley Wickham. 
-Many of our new graphical functions of \textit{shinystan} will eventually be 
-integrated directly into \textit{rstan} to allow users to integrate the graphical 
-and numerical output of \textit{shinystan} directly into reports generated with 
-markdown in R through the \textit{knitr} package.
-
-\subsubsection*{Model checking}
-shinystan will facilitate many diagnostics to optimize model convergence, explore unexpected parameter 
-correlations, and assess the correctness of the model specification. Here we will delineate two examples.
-\begin{enumerate}
-\item (a) residual diagnostics, e.g., for continuous covariates, a scatterplot of the residuals against the values of the covariate
- 
-\item (b) influence diagnostics
-\end{enumerate}
-
-\subsubsection*{Automation of meta-data extraction and management in \textit{shinystan}}
-The automation of many data exploration processes saves time, but implies the extraction of the meta-information about the model and 
-its parameters as detailed in Table \ref{ObjectCharactersitics}. Data scientist working with the raw draws from the MCMC output 
-have to extract, manage and program a plethora of details to explore higher level structure and statistics of their output. 
-
-\begin{wraptable}{l}{0.7\textwidth}
+\begin{wraptable}{l}{0.65\textwidth}
 \footnotesize
 \begin{tabular}{@{}
 >{\columncolor[HTML]{EFEFEF}}l l@{}}
@@ -834,14 +796,34 @@ shinystan & detailed user-friendly model meta-data, posterior predictive draws..
 \label{ObjectCharactersitics}
 \end{wraptable}
 
+We propose to develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
+{\textit{shinystan}} \cite{GabryISCB2015,shinystan} as an interactive graphical user interface to explore virtually any Bayesian model output, 
+yet optimized for \textit{Stan}. \textit{shinystan} is implemented in in \textit{Shiny}, an R package for interactive web applications.
+Data scientist may use generic extractor functions such as print() and coef(), but often lack a suitable 
+method for extracting an interesting result from the model fit and hence have to resort to 
+writing tedious customized code. Important model diagnostics (e.g., influence() to assess  homoscedastic residual errors) 
+are not developed even for classical multi-level models \cite{Galecki2013linear}. Data scientists certainly lack 
+good tools for graphical exploration of MCMC output. The graphical rendering of the plots in \textit{shinystan} 
+utilizes the superb graphical package \textit{ggplot} by Hackley Wickham. 
+We will develop function calls to render the code generating customized \textit{shinystan} graphical and numerical output, to allow users to integrate these directly into reports generated with markdown in R through the \textit{knitr} package. We will develop additional diagnostics in \textit{shinystan} to optimize model convergence, explore unexpected parameter 
+correlations, and assess the correctness of the model specification with (a) residual diagnostics, e.g., for continuous 
+covariates, a scatterplot of residuals versus covariates and (b) influence diagnostics.
+
+%\subsubsection*{Automation of meta-data extraction and management in \textit{shinystan}}
+\subparagraph{The automation of many data exploration processes in \textit{shinystan}} saves time, 
+but implies the extraction of the meta-information about the model and 
+its parameters as detailed in Table \ref{ObjectCharactersitics}. Data scientist working with the raw draws from the MCMC output 
+have to extract, manage and program a plethora of details to explore higher level structure and statistics of their output. 
+
+
 As we move from the MCMC output (raw draws from posterior
 distributions) to the user-facing output object structures become richer with model-specific 
 information (e.g., \textit{Stan} code). The user-friendly \textit{rstanarm} 
 package contains even more accessible information that is derived from the original function call. 
 Finally, the interactive web based tool \textit{shinystan} extracts and processes much more meta-data to 
-facilitate interactive and intuitive visual exploration and troubleshooting.
+facilitate access to the required fit object elements for visual exploration and troubleshooting.
 
-\subsubsection*{Affordances: designing intuitive user interfaces}
+\subparagraph*{Affordances: designing intuitive user interfaces}
 We will place special emphasis on the concept of affordance in our "intuitive" 
 design of the \textit{shinystan} graphical user interfaces, e.g., in employing 
 strong visual clues, provide clickable buttons and tabs, sliders, and other 
@@ -853,7 +835,7 @@ irrelevant information \cite{Mcgrenere2000affordances}. We will rely on user
 feedback to optimize the practical utility of \textit{shinystan's} implementation 
 and user interface.
 
-\subsubsection*{Improving and hardening \textit{shinystan}}
+\subparagraph*{Improving and hardening \textit{shinystan}}
 Although already available on 
 \href{https://cran.r-project.org/web/packages/shinystan/index.html}{CRAN} 
 as a functional \href{https://www.youtube.com/watch?v=X31xqNHcvQs}{package},
@@ -863,15 +845,12 @@ checking is one area where the need for additional options and functionality.
 We also want to expand the existing collaborative model sharing via the internet.
 
 \section*{Collaborative software development and computer resources}
-\subsection*{Best practices and proven methods for software design, construction, and implementation}
-We will follow accepted best practices, proven methods, and industry standards for software design, construction and implementation.
-For example the rules of clarity, composition, separation, simplicity, parsimony, transparency, etc. as detailed by 
+We will follow accepted best practices, proven methods, and industry standards for software design, construction and implementation.For example the rules of clarity, composition, separation, simplicity, parsimony, transparency, etc. as detailed by 
 Raymond \cite{Raymond2003art}, as we did in building \textit{rstan} and \textit{Stan}. We will pay special attention to modularity 
 and function routines in the design of our software packages and on the integration with existing subroutines already written in the 
 parent software suites \textit{Stan} and \textit{rstan}. 
 
-\subsubsection*{Collaborative code development using online repositories }
-The source code of \textit{rstanarm} and \textit{shinystan} are managed through the Git version control system 
+\subparagraph*{The source code of \textit{rstanarm} and \textit{shinystan} are managed through the Git version control system}
 \cite{Chacon2009ProGit} via the online software repository \href{https://github.com/}{Github} for integrated issue tracking, 
 progress milestones, and code history tracking \cite{loeliger2012version}. We will use the Git process \cite{Driessen2010successful}, 
 as we did sucessfully for the development of \textit{Stan} \cite{Stan-manual:2015}. This  process is based on collaborative code review, 
@@ -881,22 +860,19 @@ bugs or suggest improvements. Further commits are commonly added after substanti
 On Github, altered syntax is highlighted and changes are transparent and revertible, making collaborative software development easier. 
 Github's distributed structure implies that everybody cloning the repository generates a backup. We prototype and test additional 
 functions and features before inserting them in any package update. All of our code is thoroughly tested.
-
-\subsubsection*{Communication}
+%\subsubsection*{Communication}
 The development, extension, testing and maintenance of our packages is a collaborative effort by our multidisciplinary team with 
 communication and input taking place in several venues. Public user groups and discussion are archived and freely accessible. 
 Confidential deliberations, (e.g., regarding grant related matters), are held in private restricted groups. We will hold weekly video 
 conferences to prioritize issues and discuss progress.
 
 \subsection*{Computer resources and data security}
-\subsubsection*{Montefiore medical and Columbia University computer cluster access}
 Montefiore Medical and Columbia University will provide the computer cluster access required for the computationally more intensive 
 models and provider server space to house the software and webpages. We will run models in our statistical software packages in parallel 
 for statistical inferences of large hierarchical clinical data sets. Clinical Research Informatics at Montefiore will provide scale-able 
 remote access via a secure virtual private network to up to 32 Xenon Intel processors in parallel on a windows virtual machine with up to 
 128 GB RAM to meet the variable needs of the project throughout the course of the grant. 
 
-\subsubsection*{Data security and confidentiality}
 As also discussed under human subject protection and in resources and in the letter of support by Dr. Mirhaji, some of the data sets to 
 be used for this project cannot be completely de-identified, but are 'limited data sets', because they still contain some patient 
 identifiers (e.g., age in years or zip code) and as such are covered under HIPPA. Hence, the computer clusters housing the data and where 
@@ -907,29 +883,13 @@ guarantee compliance with relevant federal data safety and privacy regulations.
 \section*{Dissemination and unimpeded utilization of the products of this project}
 The goal of this project is to encourage widespread adoption of cutting edge 
 hierarchical modeling for data driven outcomes research by clinical scientists and to support the use and re-purposing of our 
-open-source applications. As also detailed in the data sharing plan, to facilitate the widest 
-possible uninhibited unimpeded utilization, our software will be 
-licensed under the General Public License and will be available on 
-the online repository CRAN. The benefits  are that our products 
-\textit{rstanarm} and \textit{shinystan}: 
- 
-1) will be freely available to researchers and the general public, including for commercial use; 
-
-2) shall remain freely available to the public;
-
-3) may be freely extended, customized, and incorporated into the other tools that also are licensed under the same terms; 
-
-4) can be maintained if the original developers are no longer able to; 
-
-5) can be enhanced based on user-provided feedback for bug-fixes, examples, and enhancements.
-
-The software developed for this grant will hence all be incorporated into the public repository CRAN, 
+open-source applications. The software developed for this grant will hence all be incorporated into the public repository CRAN, 
 the Comprehensive R Archive Network of the open-source R Project for Statistical Computing. Our source code and documentation 
 will be distributed under the least restrictive open-source licensing terms possible: R's licensing is \textit{copyleft} under the 
 GNU General Public License. \textit{Copyleft} refers to licensing arrangement that allow for the software can be used, modified and/or 
-distributed freely on condition that anything derived is bound by the same condition. 
+distributed freely on condition that anything derived is bound by the same condition. The benefits  are that our products 
+\textit{rstanarm} and \textit{shinystan} (1) will be freely available to researchers and the general public, including for commercial use, (2) shall remain freely available to the public and may be freely extended, (3) may be incorporated into the other tools that also are licensed under the same terms, (4) can be maintained if the original developers are no longer able to, and (5) can be enhanced based on user-provided feedback for bug-fixes, examples, and enhancements.
 
-\subsection*{Dissemination}
 \subsubsection*{Prior team experience and exposure in statistical and quantitative teaching and dissemination}
 Our project team have ample experience in teaching, publishing and promoting software and quantitative methods and skills in the project 
 team, including faculty in graduate programs focused on teaching quantitative skills to social science and biomedical audiences. 
@@ -938,7 +898,7 @@ meetings; our team presented workshops at a wide spectrum of scientific and stat
 conferences like the Annual meeting of the American Society of Anesthesiologists to machine learning venues like the Annual Conference 
 on Neural Information Processing Systems (NIPS). Presentations  and products by our team have been featured on YouTube and blogs.   
 
-\subsubsection*{Books, tutorials, workshops lectures and outreach}
+\subsubsection*{Books, tutorials, workshops lectures and outreach to disseminate hierarchical modeling}
 Throughout the duration of the project we will disseminate the software packages in tutorials, workshops, lectures, books and other forms 
 of outreach. In particular, we will offer hands on workshops in small groups to multipliers based on our applied practical use cases at 
 international conferences as outlined also in the budget justification. These will be interlinked and supported by online material, for 
@@ -964,10 +924,6 @@ including further develop our \textit{rstanarm} and \textit{shinystan}
 
 \section*{Timeline and potential problems}
 
-\begin{wrapfigure}{l}{0.7\textwidth} %this figure will be at the right
-    \centering
-\includegraphics[width=0.7\textwidth]{Figures/Timeline.pdf}
-\end{wrapfigure}
 
 The adjacent time line delineates the planned project progress by year. We begin by setting up the project team in the first year, 
 establishing our online user interface and updating the \textit{rstanarm} package in CRAN. In year two and three, we will sequentially 
@@ -975,12 +931,20 @@ add additional models and provide advanced tools for visualization. We start to 
 change-point models, scaling eventually these also to multilevel models. In the fourth project year, we will begin to integrate 
 missing data algorithms into \textit{rstanarm} and finally scale the packages to large datasets in year five.
 
+\begin{wrapfigure}{l}{0.7\textwidth} %this figure will be at the right
+    \centering
+\includegraphics[width=0.7\textwidth]{Figures/Timeline.pdf}
+\end{wrapfigure}
+
 Some colleagues are reluctant to make powerful statistical tools accessible to the novice users that do not understand them. We counter 
 however that the simplicity of the \textit{rstanarm} syntax will allow novice users to learn to specify more realistic models by 
 making the underlying hierarchical model structure more transparent.  \textit{rstanarm} will also allow outcomes research to be 
 more transparent and reproducible. Also \textit{shinystan} will contribute to the ease with which advanced hierarchical models and MCMC 
 results can be shared, questioned, and discussed.
- 
+
+
+
+\newpage 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
