@@ -72,55 +72,52 @@ Columbia University, New York, NY  & Postdoctoral  & 06/2013  & Applied Statisti
 
 Although my degrees have been in political science, I am essentially
 a computational statistician with interests in multiple applied fields. 
-I will be a co-principal investigator on this grant proposing to build 
-accessible software to facilitate the building of complex hierarchical 
-models for data-driven clinical outcomes research.
+I will be a co-principal investigator on this grant in order to build 
+and enhance accessible software to facilitate complex hierarchical 
+modeling by clinical outcomes researchers.
 
 My co-principal investigator, Michael Andreae is a perioperative physician; 
-I feel he and his colleagues at the Albert Einstein College of Medicine complement 
-me very well with their extensive experience in clinical medicine and applied 
-statistical modeling for outcomes research. Hence my focus in this project will 
-be on software development (\textit{rstanarm} and \textit{shinystan}) and 
-advanced hierarchical modeling for our use cases, as well as teaching and 
-dissemination to the high end users through workshops and online user groups. 
-But we will lead the project jointly and in a close nit collaboration including 
-frequent interaction with the senior co-investigators, for which I am well 
-prepared also thanks to my prior experience as a co-investigator in an NIH 
-funded project. 
+He and his colleagues at the Albert Einstein College of Medicine
+have extensive experience in clinical medicine and applied statistical modeling 
+for outcomes research, which will allow me to focus on the complimentary
+tasks of adding to our existing software (\textit{Stan}, \textit{rstan}, 
+\textit{rstanarm}, \textit{shinystan}, and \textit{loo}) for hierarchical modeling 
+In addition, I will be heavily involved in teaching and dissemination through 
+workshops and online user groups. But all of our software has been developed 
+jointly, and my previous experience with the NIH has been as part of a team of
+researchers, so I anticipate no problems leading the project anlong with 
+Michael and collaporating frequently with the senior and junior co-investigators.
 
 I have been a core developer of the Bayesian statistical software project called 
 \textit{Stan} almost since its inception in 2011 and am the maintainer of two packages 
 for the statistical software environment R in which we implement our new software 
-\textit{rstanarm} and \textit{shinystan}. (1) \textit{Rstan} provides the interface 
-to the Stan library in the R environment. (2) \textit{mi} is a software package 
-for multiple imputation of missing data I developed after completing my Ph.D., as 
-postdoctoral researcher on an Institute for Education Sciences grant.
+\textit{rstan} and \textit{rstanarm}. The \textit{rstan} package provides an interface 
+to the \textit{Stan} library from the R environment, while \textit{rstanarm} is a narrower 
+interface to a few models that are written in the Stan language. In addition, from 2010 to
+2013 I developed \textit{mi}, which is an R package for multiple imputation of missing data 
+as a postdoctoral researcher on an Institute for Education Sciences grant.
 
 This grant application proposes substantial enhancements to our aforementioned 
-existing software projects (\textit{Stan}, \textit{Rstan} and \textit{mi}), which 
-have been developed in collaboration with Andrew Gelman and other researchers at and 
-outside Columbia University. \textit{Stan's} selling point is the Hamiltonian Monte 
-Carlo algorithm that makes its effective sampling rate orders of magnitude faster 
-than any other existing software. \textit{Stan} and \textit{Rstan} have been 
+software projects, which have been developed in collaboration with Andrew Gelman and 
+other researchers at and outside Columbia University. \textit{Stan's} selling point is a 
+Hamiltonian Monte Carlo algorithm that tends to achieve a much higher effective sampling size
+than any other Bayesian software. \textit{Stan} and the interfaces to Stan have been 
 well-received in a variety of scientific fields. In the past five years, \textit{Stan} 
 has already become prominent in applied statistics and the social sciences, and we 
 would like to bring these achievements to the field of medicine and expand upon 
 them during the next five years. 
 
-As a lecturer at Columbia University, I teach mostly advanced hierarchical modeling 
-and data imputation in their Quantitative Methods in the Social Sciences graduate 
+As a lecturer at Columbia University, I teach both Bayesian hierarchical modeling 
+and multiple imputation in the Quantitative Methods in the Social Sciences master's
 program. Between semesters, I give workshops to promote and disseminate \textit{Stan}, 
-for example, I taught a two-day workshop on \textit{Stan} at the headquarters of 
-The Climate Corporation, which employs dozens of data scientists who study agriculture 
-in light of climate change. With this experience I am ideally prepared to disseminate 
-our new software \textit{rstanarm} and \textit{shinystan} in workshops, tutorials 
+such as a two-day workshop on \textit{Stan} at a firm that employs dozens of data 
+scientists who study agriculture in light of climate change. This experience has 
+prepared me very well to further disseminate our new software to medical researchers in workshops 
 and online.
 
-I am personally thrilled about this project not only because of the interdisciplinary 
-collaboration with applied clinical data scientist to port our advanced algorithms 
-and models into data driven clinical outcomes research, but also because it will 
-allow me to further develop some graphical theoretical approaches to improve 
-model diagnostics in collaboration with Drs. Andreae, Betancourt and Jonah Galbry. 
+I am personally thrilled about the interdisciplinary 
+collaboration with applied clinical data scientists to enhance our advanced algorithms 
+and to port our models to data-driven clinical outcomes research. 
 
 \vspace{2mm}
 
@@ -173,13 +170,12 @@ Stan has done more to popularize modeling with correlation matrices
 than have the original papers whose ideas were incorporated into Stan
 and extended upon by me personally.
 
-Arguably, it is the data scientists using Stan, who make novel contributions 
-to science. While that is true, Stan as their principal inference tool has 
-become a necessary element  facilitating that process. Most Stan
-users initially turn to Stan because their research problem is too complicated
-for more commonly available open source or commercial software to handle well. 
-Thus, Stan provides the means for scientists to make their well-founded inferences
-from data.
+Arguably, it is the data scientists using Stan who make novel contributions 
+to science. While that is true, Stan can be and has been a necessary
+tool which facilitates that process. Most Stan users initially turn to Stan because 
+their research problem is too complicated to be handled well by more commonly available 
+open source and commercial software. Thus, Stan provides the means for scientists to 
+make their well-founded inferences from data.
 
 \vspace{2mm}
 
@@ -191,14 +187,13 @@ Language'', (\textit{accepted to the Journal of Statistical Software})
 \subsection*{rstanarm: An R package to democratize Stan}
 
 Part of the power of Stan is that researchers can specify almost any
-model with the Stan language, and Stan's algorithms will, albeit sometime 
-requiring transformations, auxiliary parameterizations and other tweaks, 
-likely be able to efficiently produce a set of random draws from the 
-posterior distribution of that model. However, the hurdle of specifying a model 
-in the Stan language can be too high for beginners or for quantitative 
-researchers that have limited formal training in probability theory. 
+model with the Stan language, and Stan's algorithms will likely be able to 
+efficiently produce a set of random draws from the posterior distribution of that model, 
+perhaps after some transformations, reparameterizations and other tweaks. However, the 
+hurdle of specifying a model in the Stan language can be too high for beginners or for 
+quantitative researchers that have limited formal training in probability theory. 
 The rstanarm R package is our latest attempt to make Stan accessible to a wider 
-set of researchers by providing a spectrum of models in the Stan language that 
+set of researchers by providing a core set of models in the Stan language that 
 are ready to be executed by R functions whose syntax is very familiar to 
 anyone who has fit models in R before.
 
@@ -208,7 +203,8 @@ a variety of likelihood and link functions, so-called generalized
 ''mixed'' models possibly with smooth additive terms such as splines,
 and models for ordinal outcomes. Within two days of rstanarm's first
 release, an R enthusiast named Wayne Folta (who is not part of the
-Stan development team and was until that time unkown to us) \href{http://thinkinator.com/2016/01/12/r-users-will-now-inevitably-become-bayesians/}{blogged}
+Stan development team and was until that time unkown to us) 
+\href{http://thinkinator.com/2016/01/12/r-users-will-now-inevitably-become-bayesians/}{blogged}
 that the ''third reason {[}why everyone isn\textquoteright t using
 Bayesian methods for regression modeling{]} has recently been shattered
 in the R world by not one but two packages: brms and rstanarm. Interestingly,
@@ -229,7 +225,8 @@ is very exciting!
 In the future, we would like to add to the collection of models in
 rstanarm and include them in other interfaces to Stan besides R. In
 particular, we would like to add functionality that is essential to
-medical researchers.
+medical researchers that Michael Andreae and Charles Hall have
+suggested.
 
 \vspace{2mm}
 
@@ -243,43 +240,42 @@ R package \href{https://cran.r-project.org/web/packages/rstanarm/vignettes/rstan
 
 Missing and incomplete date are a major problem in survey research 
 and electronic health records alike. In a medical
-context, some data may be \emph{missing} 
-because they were not collected. For example, in the absence of pertinent symptoms, 
+context, some data may be missing because they were not collected. For example, 
+in the absence of pertinent symptoms, 
 a doctor is less likely to order an expensive or invasive 
-test, likely not to add any relevant information.
+test that would not be expected to add any relevant information.
 Conversely, symptomatic patients  are more likely to be tested. 
 As a result, data are not missing completely at random, data are 
 collected or missing contingent on disease status. 
-Thus, an analysis limited to only the complete cases only may produce severely biased
+Thus, an analysis limited to only the complete cases will produce severely biased
 estimates for the population as a whole.
 
-The same problem manifests itself in different ways in the social
-sciences where some data is \emph{missing} because the survey respondents
+The same problem manifests itself in different ways in education research and the
+social sciences where some data is missing because the survey respondents
 (or other units of observation) refuse to provide it. Missing data
-is very common for sensitive questions like income, race. 
-Again, any analysis of only the complete
-cases is known to produce biased results.
+is very common for sensitive questions like income and race. 
+Again, any analysis of only the complete cases is known to produce biased results.
 
 In recent years, the most common pro-active approach to dealing with
 missing data is to impute the missing values multiple times using
-some sort of model. There are two main algorithms for modeling incomplete
-data, one of which is implemented by my \textit{mi} R package, which has been
-in development for about a decade, was rewritten along with collaborators
+some sort of model. There are two main algorithms for modeling variables with
+missing data, one of which is implemented by my \textit{mi} R package, which has
+been in development for about a decade, was rewritten along with collaborators
 as part of my postdoctoral research at Columbia University between
-2010 and 2013, and is still being maintained by me. My \textit{mi} package
+2010 and 2013, and is still being maintained by me. The \textit{mi} package
 and other implementations of similar imputation algorithms have helped
 a generation of scientists handle incomplete data in a more principled
-fashion. My fellow developers of the \textit{mi} package have recently published
-a paper comparing its performance to the other main algorithm for
-modeling incomplete data and found that \textit{mi}'s approach is preferable
-for discrete variables with missingness, which are the vast majority
-of the variables collected in the social sciences and in clinical outcomes 
-research.
+fashion. My fellow developers of the \textit{mi} package and I have recently
+published a paper in the leading journal for political methodology comparing its 
+performance to the other main algorithm for modeling incomplete data. We found that 
+\textit{mi}'s approach is preferable for discrete variables with missingness, which 
+are the vast majority of the variables collected in the social sciences and in clinical 
+outcomes research.
 
-In this project we will integrate \textit{rstanarm} and \textit{mi} by using
-the former to estimate the quantities needed by \textit{mi} to multiply impute
+For this project, we will integrate \textit{rstanarm} and \textit{mi} by using
+the former to estimate the quantities needed by the latter to multiply impute
 the missing values. In addition, we have plans to to introduce
-a third category imputation algorithm building on the combined
+a third category of imputation algorithm that builds on the combined
 strengths of the two most popular algorithms today.
 
 \vspace{2mm}
@@ -304,20 +300,18 @@ if the NCS had been allowed to continue.
 We were asked to assess a sampling design for the NCS where hospitals
 were sampled from a list in the first stage and delivering mothers
 were sampled from each selected hospital in the second stage. 
-Regardless of the scientific value of this approach (questioned by some), we
-were merely asked to evaluate the cost-effectiveness of this approach
-using computer simulations. Devising and programming the simulations in R, 
-my role was essential to the team. 
+We were narrowly asked to evaluate the statistical properties of this approach
+using computer simulations.  My role --- to devise and program the simulations in R 
+--- was an essential component of the team's recommendations. 
 
-We found that this research design was 
-not particularly efficient, due to the high-degree of socio-demographic 
-clustering of mothers within a hospital (the Primary Sampling Unit). 
-Misquoted to the National Academy of Science's Panel on the Design of 
-the National Children\textquoteright s Study the other
-three consultants and I agreed that our simulations were the first
-time that a survey design such as this had been rigorously studied \textit{a priori}.
-Without them, the NCS might have been flying blind with a design that
-would not have served medical researchers well. 
+We found that this research design was not particularly efficient, due to the high
+degree of socio-demographic clustering of mothers within a hospital (the Primary Sampling Unit). 
+Nevertheless, the three other consultants and I agreed that our simulations were the first
+time that a survey design with hospitals as PSUs had been rigorously studied.
+Without our simulations, the NCS might have been flying blind with a survey design that
+would not have served medical researchers well. At the time that the NCS was discontinued, 
+we were planning a set of follow-up simulations to better compare alternative survey designs 
+using Stan, Census data, and a list of obstetricians that worked in each hospital.
 
 \vspace{2mm}
 
@@ -330,8 +324,8 @@ to Jennifer Kwan at the National Institutes of Health on 4/1/2014.
 
 \section*{D. Research Support}
 
-Alfred P. Sloan Foundation, G-2015-13987, \emph{Stan Community and
-Continuity}, PI: Andrew Gelman
+\subsubsection*{Alfred P. Sloan Foundation, G-2015-13987, \emph{Stan Community and
+Continuity}, PI: Andrew Gelman}
 
 \noindent Role: Contractor during the Summer of 2015
 
@@ -342,4 +336,22 @@ and to ensure that it thrives over the long term. My specific role
 in this regard was to develop and maintain the R package that provides
 an interface to Stan, which is by far the most popular way of using
 Stan in the community.
+
+\subsubsection*{Kennedy Shriver National Institute of Child Health and Human Development
+at the National Institutes of Health, \emph{National Children's Study
+Sampling Design Consultant}, RFQ 13-048 PO \#275201300316P*1}
+
+\noindent Role: Contractor during 2013 and 2014
+
+I --- along with Martin Frankel, Rob Santos, and Nancy Reichman --- 
+analyzed a proposed sampling design for the National Children's Study
+for Jennifer Kwan and her supervisor Steven Hirschfeld. My role was
+primarily to implement the computer simulations to show the properties
+of the resulting estimates if the sampling design were implemented on
+similar data on births that were provided to us from the State Inpatient 
+Database. The research memos we wrote were never made public but were
+referred to as NICHD (2013i) in the 2014 report by The Panel on the Design of
+the National Children's Study and Implications for the Generalizeability of
+the Results.
+
 \end{document}
