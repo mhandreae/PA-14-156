@@ -141,9 +141,9 @@ online tutorials. To solicit the data scientist community feedback, engage new
 software developers and to incorporate improvements to our software through 
 online user and developer groups.
 
-\part*{Research Strategy}
+\section*{Research Strategy}
 
-\part*{Significance}
+\section*{Significance}
 
 \section*{The nested structure of health care delivery and electronic health data}
 Clinical data scientists are faced with an abundance of useful electronic health data, 
@@ -415,9 +415,9 @@ imputation and clustering can be integrated into a single model that
 incorporates auxiliary data.
 
 \subsection*{Punchline: Hierarchical models reflect the clustered structure of contemporary health care 
-delivery most realistically, and can be used to address incomplete records, but how can we fit them efficiently?}
+delivery most realistically, and can be used to address incomplete records.}
 
-\part*{Innovation}
+\section*{Innovation}
 
 We propose to further develop two software packages. \textit{rstanarm} to make 
 multi-level hierarchical modeling more accessible and \textit{shinystan} 
@@ -565,7 +565,7 @@ prediction algorithm \cite{Hall_25389642}. Using auxilliary data to complete
 missing information is novel in data driven outcomes research and our 
 software, \textit{rstanarm} and \textit{mi}, will disseminate this promising approach. 
 
-\part*{Approach}
+\section*{Approach}
 
 We propose to develop two accessible software packages, (\textit{rstanarm} 
 and \textit{shinystan}), for the programming language and software environment 
@@ -721,11 +721,6 @@ increase the efficiency of the Markov chains, which we discuss further below.
 
 \subparagraph*{A suite of pre-compiled \textit{Stan} programs allows for a simple call to sophisticated modeling functions}
 
-\textit{rstanarm} already implements many generalized linear 
-models with and without group-specific terms. We wrote and optimized several models 
-in the probabilistic programming language \textit{Stan} that are
-pre-compiled in \textit{rstanarm}. Users can now build hierarchical models via simple high-level functions, as detailed below.
-
 \begin{wraptable}{l}{0.51\textwidth}
 \footnotesize
 \begin{tabular}{@{}
@@ -739,6 +734,11 @@ lm.stan                & Pre-compiled optimized model written in \textit{Stan}  
 \end{tabular}
 \label{ProcessTable}
 \end{wraptable}
+
+\textit{rstanarm} already implements many generalized linear 
+models with and without group-specific terms. We wrote and optimized several models 
+in the probabilistic programming language \textit{Stan} that are
+pre-compiled in \textit{rstanarm}. Users can now build hierarchical models via simple high-level functions, as detailed below.
 
 To take an ANOVA model as an example, the wrapper function $stan\_aov$ parses the 
 model specification and hands the data and prior specification to $stan\_lm$ and 
@@ -780,6 +780,22 @@ we want to work on a more seamless integration with our \textit{R} package for m
 \href{https://cran.r-project.org/web/packages/mi/index.html}{\textit{mi}}.
 
 \subsection*{shinystan for interactive intuitive graphical exploration of MCMC output}
+
+\begin{wraptable}{l}{0.65\textwidth}
+\footnotesize
+\begin{tabular}{@{}
+>{\columncolor[HTML]{EFEFEF}}l l@{}}
+\toprule
+\textbf{Object} & \textbf{Increasingly informative object characteristics} \\ \midrule
+MCMC & raw data from Markov chain Monte Carlo chains \\ \midrule
+rstan & structured embedded model information (\textit{Stan} code, parameter names...) \\ \midrule
+rstanarm & accessible aggregate derived statistics (coefficients, SE, fitted, residuals) \\ \midrule
+shinystan & detailed user-friendly model meta-data, posterior predictive draws... \\ \bottomrule
+\end{tabular}
+\caption{Progressive enrichment of object characteristics in \textit{shinystan} }
+\label{ObjectCharactersitics}
+\end{wraptable}
+
 We propose to develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
 {\textit{shinystan}} \cite{GabryISCB2015,shinystan} as an interactive graphical user interface to explore virtually any Bayesian model output, 
 yet optimized for \textit{Stan}. \textit{shinystan} is implemented in in \textit{Shiny}, an R package for interactive web applications.
@@ -799,20 +815,6 @@ but implies the extraction of the meta-information about the model and
 its parameters as detailed in Table \ref{ObjectCharactersitics}. Data scientist working with the raw draws from the MCMC output 
 have to extract, manage and program a plethora of details to explore higher level structure and statistics of their output. 
 
-\begin{wraptable}{l}{0.65\textwidth}
-\footnotesize
-\begin{tabular}{@{}
->{\columncolor[HTML]{EFEFEF}}l l@{}}
-\toprule
-\textbf{Object} & \textbf{Increasingly informative object characteristics} \\ \midrule
-MCMC & raw data from Markov chain Monte Carlo chains \\ \midrule
-rstan & structured embedded model information (\textit{Stan} code, parameter names...) \\ \midrule
-rstanarm & accessible aggregate derived statistics (coefficients, SE, fitted, residuals) \\ \midrule
-shinystan & detailed user-friendly model meta-data, posterior predictive draws... \\ \bottomrule
-\end{tabular}
-\caption{Progressive enrichment of object characteristics in \textit{shinystan} }
-\label{ObjectCharactersitics}
-\end{wraptable}
 
 As we move from the MCMC output (raw draws from posterior
 distributions) to the user-facing output object structures become richer with model-specific 
@@ -922,10 +924,6 @@ including further develop our \textit{rstanarm} and \textit{shinystan}
 
 \section*{Timeline and potential problems}
 
-\begin{wrapfigure}{l}{0.7\textwidth} %this figure will be at the right
-    \centering
-\includegraphics[width=0.7\textwidth]{Figures/Timeline.pdf}
-\end{wrapfigure}
 
 The adjacent time line delineates the planned project progress by year. We begin by setting up the project team in the first year, 
 establishing our online user interface and updating the \textit{rstanarm} package in CRAN. In year two and three, we will sequentially 
@@ -933,12 +931,20 @@ add additional models and provide advanced tools for visualization. We start to 
 change-point models, scaling eventually these also to multilevel models. In the fourth project year, we will begin to integrate 
 missing data algorithms into \textit{rstanarm} and finally scale the packages to large datasets in year five.
 
+\begin{wrapfigure}{l}{0.7\textwidth} %this figure will be at the right
+    \centering
+\includegraphics[width=0.7\textwidth]{Figures/Timeline.pdf}
+\end{wrapfigure}
+
 Some colleagues are reluctant to make powerful statistical tools accessible to the novice users that do not understand them. We counter 
 however that the simplicity of the \textit{rstanarm} syntax will allow novice users to learn to specify more realistic models by 
 making the underlying hierarchical model structure more transparent.  \textit{rstanarm} will also allow outcomes research to be 
 more transparent and reproducible. Also \textit{shinystan} will contribute to the ease with which advanced hierarchical models and MCMC 
 results can be shared, questioned, and discussed.
- 
+
+
+
+\newpage 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
