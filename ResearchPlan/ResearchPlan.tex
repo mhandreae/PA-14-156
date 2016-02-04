@@ -689,6 +689,27 @@ and the general public via the free software repository CRAN.
 \section*{Software Specification}
 
 \subsection*{rstanarm allows simple specification for multi-level hierarchical models}
+
+\begin{wraptable}{l}{0.51\textwidth}
+ \vspace*{-17pt}
+ \footnotesize
+
+\begin{tabular}{@{}
+>{\columncolor[HTML]{EFEFEF}}l l@{}}
+\toprule
+\textbf{Function Call} & \textbf{Underlying process in \textit{rstanarm}}                        \\ \midrule
+stan\_aov               & User interface for simplified model specification  \\
+stan\_lm               & Parsing linear model specification \\
+stan\_lm.fit           & Workhorse function to call pre-comiled \textit{Stan} model  \\
+lm.stan                & Pre-compiled optimized model written in \textit{Stan}                   \\ \bottomrule
+\end{tabular}
+
+ \vspace*{-7pt}
+ \caption{Handing down model specification and data}
+ \label{ProcessTable}
+ \vspace*{-12pt}
+\end{wraptable}
+
 The software package \href{https://github.com/stan-dev/rstanarm}{\textit{rstanarm}}
 will enable the estimation of advanced general linear models. 
 \textit{rstanarm} implements full Bayesian statistical inference;  
@@ -718,28 +739,11 @@ scientist can therefore take advantage of the more efficient HMC algorithms impl
 without knowing the underlying programming language or the auxiliary reparametrizations that 
 increase the efficiency of the Markov chains, which we discuss further below.
 
-\subparagraph*{A suite of pre-compiled \textit{Stan} programs allows for a simple call to sophisticated modeling functions}
-
-\begin{wraptable}{l}{0.51\textwidth}
-\footnotesize
-\begin{tabular}{@{}
->{\columncolor[HTML]{EFEFEF}}l l@{}}
-\toprule
-\textbf{Function Call} & \textbf{Underlying process}                        \\ \midrule
-stan\_aov               & User interface for simplified model specification  \\
-stan\_lm               & Parsing linear model specification \\
-stan\_lm.fit           & Workhorse function to call pre-comiled \textit{Stan} model  \\
-lm.stan                & Pre-compiled optimized model written in \textit{Stan}                   \\ \bottomrule
-\end{tabular}
-\label{ProcessTable}
-\end{wraptable}
-
-\textit{rstanarm} already implements many generalized linear 
+\subsubsection*{A suite of pre-compiled \textit{Stan} programs allows for a simple call to sophisticated modeling functions.} \textit{rstanarm} already implements many generalized linear 
 models with and without group-specific terms. We wrote and optimized several models 
 in the probabilistic programming language \textit{Stan} that are
-pre-compiled in \textit{rstanarm}. Users can now build hierarchical models via simple high-level functions, as detailed below.
-
-To take an ANOVA model as an example, the wrapper function $stan\_aov$ parses the 
+pre-compiled in \textit{rstanarm}. Users can now build hierarchical models via simple high-level functions. 
+We take an ANOVA model as an example in Table \ref{ProcessTable}, the wrapper function $stan\_aov$ parses the 
 model specification and hands the data and prior specification to $stan\_lm$ and 
 then to a lower-level workhorse function, $stan\_lm.fit$, which in turn 
 calls the pre-compiled and optimized \textit{Stan} model specified in 
@@ -779,7 +783,11 @@ we want to work on a more seamless integration with our \textit{R} package for m
 \href{https://cran.r-project.org/web/packages/mi/index.html}{\textit{mi}}.
 
 \subsection*{shinystan for interactive intuitive graphical exploration of MCMC output}
+We propose to further develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
+{\textit{shinystan}} \cite{GabryISCB2015,shinystan} as an interactive graphical user interface to explore virtually any Bayesian model output, 
+yet optimized for \textit{Stan}. 
 
+\vspace*{-7pt}
 \begin{wraptable}{l}{0.65\textwidth}
 \footnotesize
 \begin{tabular}{@{}
@@ -793,12 +801,10 @@ shinystan & detailed user-friendly model meta-data, posterior predictive draws..
 \end{tabular}
 \caption{Progressive enrichment of object characteristics in \textit{shinystan} }
 \label{ObjectCharactersitics}
+\vspace*{-17pt}
 \end{wraptable}
 
-We propose to develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
-{\textit{shinystan}} \cite{GabryISCB2015,shinystan} as an interactive graphical user interface to explore virtually any Bayesian model output, 
-yet optimized for \textit{Stan}. \textit{shinystan} is implemented in in \textit{Shiny}, an R package for interactive web applications.
-Data scientist may use generic extractor functions such as print() and coef(), but often lack a suitable 
+Implemented in in \href{http://shiny.rstudio.com/}{\textit{Shiny}}, \textit{shinystan} is an R package for interactive web applications \cite{shinystan-software:2015,shinystan}. Data scientist already use generic extractor functions such as print() and coef(), but often lack a suitable 
 method for extracting an interesting result from the model fit and hence have to resort to 
 writing tedious customized code. Important model diagnostics (e.g., influence() to assess  homoscedastic residual errors) 
 are not developed even for classical multi-level models \cite{Galecki2013linear}. Data scientists certainly lack 
