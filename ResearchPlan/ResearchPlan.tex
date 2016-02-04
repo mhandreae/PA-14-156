@@ -804,10 +804,11 @@ are not developed even for classical multi-level models \cite{Galecki2013linear}
  \vspace*{-17pt}
 \end{wraptable}
 
-Data scientists certainly lack 
-good tools for graphical exploration of MCMC output. The graphical rendering of the plots in \textit{shinystan} 
+Data scientists certainly lack good tools for graphical exploration of MCMC output. The graphical rendering of the plots in \textit{shinystan} 
 utilizes the superb graphical package \textit{ggplot} by Hackley Wickham. 
-We will develop function calls to render the code generating customized \textit{shinystan} graphical and numerical output, to allow users to integrate these directly into reports generated with markdown in R through the \textit{knitr} package. We will develop additional diagnostics in \textit{shinystan} to optimize model convergence, explore unexpected parameter 
+We will develop function calls to render the code generating customized \textit{shinystan} graphical and numerical 
+output, to allow users to integrate these directly into reports generated with markdown in R through the \textit{knitr} 
+package. We will develop additional diagnostics in \textit{shinystan} to optimize model convergence, explore unexpected parameter 
 correlations, and assess the correctness of the model specification with (a) residual diagnostics, e.g., for continuous 
 covariates, a scatterplot of residuals versus covariates and (b) influence diagnostics.
 
@@ -823,25 +824,21 @@ Finally, the interactive web based tool \textit{shinystan} extracts and processe
 facilitate access to the required fit object elements for visual exploration and troubleshooting.
 
 \subparagraph*{Affordances: designing intuitive user interfaces}
-We will place special emphasis on the concept of affordance in our "intuitive" 
-design of the \textit{shinystan} graphical user interfaces, e.g., in employing 
-strong visual clues, provide clickable buttons and tabs, sliders, and other 
-hands on interactive controls \cite{NormanAffordances1999}. Active exploration 
-by \textit{shinystan} users will reveal nested and sequential affordances, for 
-example, print options appear only in context, say when the cursor moves over 
-the output button of a graphic, avoiding visual clutter on the screen with 
-irrelevant information \cite{Mcgrenere2000affordances}. We will rely on user 
-feedback to optimize the practical utility of \textit{shinystan's} implementation 
-and user interface.
+As we further develop the interface we will place special emphasis on the concept of affordance in our "intuitive" 
+design of the \textit{shinystan} graphical user interfaces, e.g., in employing strong visual clues, provide clickable buttons and tabs, sliders, and other 
+hands on interactive controls \cite{NormanAffordances1999}. Active exploration by \textit{shinystan} users will reveal nested and sequential 
+affordances, for example, print options appear only in context, say when the cursor moves over the output button of a graphic, 
+avoiding visual clutter on the screen with irrelevant information \cite{Mcgrenere2000affordances}. We will rely on user 
+feedback to optimize the practical utility of \textit{shinystan's} implementation and user interface.
 
 \subparagraph*{Improving and hardening \textit{shinystan}}
-Although already available on 
-\href{https://cran.r-project.org/web/packages/shinystan/index.html}{CRAN} 
-as a functional \href{https://www.youtube.com/watch?v=X31xqNHcvQs}{package},
-\textit{shinystan} will need to undergo considerable improvements of the 
-interface and under the hood during this project. Posterior predictive 
-checking is one area where the need for additional options and functionality. 
-We also want to expand the existing collaborative model sharing via the internet.
+Although already available on \href{https://cran.r-project.org/web/packages/shinystan/index.html}{CRAN} 
+as a fully functional \href{https://www.youtube.com/watch?v=X31xqNHcvQs}{package},
+\textit{shinystan} will need to undergo considerable improvements of the interface and under the hood during this project. Posterior predictive 
+checking is one area where the need for additional options and functionality. We also want to expand the existing collaborative 
+model sharing via the internet. 
+
+\subparagraph{Improving the graphical representation of shrinkage in hierarchical models for meta-analysis.} Forest plots display the effect estimates of individual clinical studies (investigating the therapeutic benefit of interventions), stacked sequentially above their pooled effect estimate \cite{Lewis2001forestplot}. Naively speaking and visually, pooling for evidence synthesis appears to shrink the confidence interval of the pooled estimate and increases its precision. This visual display is widely accepted and understood, and can be extended to several hierarchical levels to show group specific differences of effect in sub-populations and differences in variability at the study or pooled effect level. The multilevel (Bayesian) hierarchical modeling we advocated \cite{AndreaeJohnsonAbstract2013} would pull the effect estimates of group level estimates and individual study estimates towards the higher level means. This shrinkage depends on parameter and model choices and may be controversial. To be compelling, the effects of these choices on shrinkage need to be transparent. To our knowledge, no prior work exists on \textit{visualizing} shrinkage in hierarchical models and certainly not in the field of evidence synthesis.
 
 \section*{Collaborative software development and computer resources}
 We will follow accepted best practices, proven methods, and industry standards for software design, construction and implementation.For example the rules of clarity, composition, separation, simplicity, parsimony, transparency, etc. as detailed by 
