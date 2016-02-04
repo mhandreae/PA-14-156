@@ -54,7 +54,7 @@ B.~Efron and C.~Morris.
 
 \bibitem{Gelman-Hill_2014}
 A.~Gelman, J.~B. Carlin, H.~S. Stern, and D.~B. Rubin.
-\newblock {\em Bayesian data analysis}, volume~2.
+\newblock {\em Bayesian data analysis}.
 \newblock Taylor \& Francis, 2014.
 
 \bibitem{Gelman2009}
@@ -410,6 +410,18 @@ A.~Gelman, A.~Jakulin, M.~G. Pittau, and Y.-S. Su.
   other regression models.
 \newblock {\em The Annals of Applied Statistics}, pages 1360--1383, 2008.
 
+\bibitem{GabryISCB2015}
+J.~Gabry, M.~Andreae, Y.~Gao, and D.~Song.
+\newblock Interactive graphical analysis, exploration and posterior predictive
+  checking of multi-level hierarchical Bayesian models.
+\newblock In {\em 36th Annual Conference of the International Society for
+  Clinical Biostatics}, page C32.1, 2015.
+
+\bibitem{shinystan-software:2015}
+{shinyStan Team}.
+\newblock shinyStan: R Package for Interactive Exploration of Markov Chain
+  Monte Carlo Output, Version 0.1, 2015.
+
 \bibitem{Galecki2013linear}
 A.~Galecki and T.~Burzykowski.
 \newblock {\em Linear mixed-effects models using R: A step-by-step approach}.
@@ -425,15 +437,15 @@ J.~McGrenere and W.~Ho.
 \newblock Affordances: Clarifying and evolving a concept.
 \newblock In {\em Graphics Interface}, volume 2000, pages 179--186, 2000.
 
+\bibitem{Lewis2001forestplot}
+S.~Lewis and M.~Clarke.
+\newblock Forest plots: trying to see the wood and the trees.
+\newblock {\em British Medical Journal}, 322(7300):1479, 2001.
+
 \bibitem{Raymond2003art}
 E.~S. Raymond.
 \newblock {\em The art of Unix programming}.
 \newblock Addison-Wesley Professional, 2003.
-
-\bibitem{Chambers2014object}
-J.~M. Chambers et~al.
-\newblock Object-Oriented Programming, Functional Programming and R.
-\newblock {\em Statistical Science}, 29(2):167--180, 2014.
 
 \bibitem{loeliger2012version}
 J.~Loeliger and M.~McCullough.
