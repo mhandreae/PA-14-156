@@ -568,10 +568,10 @@ software, \textit{rstanarm} and \textit{mi}, will disseminate this promising app
 
 \section*{Approach}
 
-We propose to develop two accessible software packages, (\textit{rstanarm} 
+We propose to further develop two accessible software packages, (\textit{rstanarm} 
 and \textit{shinystan}), for the programming language and software environment 
-\textit{R} to integrate incomplete information with hierarchical modeling for 
-data driven outcomes research. These software products will make 
+\textit{R}. These software products will integrate incomplete information 
+with hierarchical modeling for data driven outcomes research and make 
 multidimensional statistical and computational methods for 
 analyzing, inspecting, displaying, representing, parsing, and 
 searching high-dimensional data more accessible to 
@@ -603,11 +603,10 @@ software environment R to impute missing data \cite{miCRAN}. Drs. Goodrich
 and Gelman developed along with other colleagues several widely cited and used software packages 
 including the probabilistic programming language \textit{Stan}\cite{Stan_Software_2014}, 
 which serves as the basis for the proposed work. Dr. Hall also published on missing data 
-imputation \cite{Hall2009a, Wang_20029935, Wang_20029935} and is nationally 
+imputation \cite{Hall2009a, Wang_20029935, Wang_20029935} and is internationally 
 recognized for the development and application of change point models in 
-epidemiology and surveillance 
-\cite{Hall2000, Hall2001, Hall2003bayesian, Hall2009, Hall2015}. 
-More recently, Dr. Hall played a major role as the lead statistician 
+epidemiology and surveillance \cite{Hall2000, Hall2001, Hall2003bayesian, Hall2009, Hall2015}. 
+More recently, Dr. Hall has played a major role as the lead statistician 
 for the World Trade Center (WTC) Health Program at the Fire Department 
 of the City of New York, supervising data analyses based on medical 
 records \cite{Aldrich2010, Hall2015, Zeig-Owens2011}.  
@@ -738,7 +737,7 @@ models with and without group-specific terms. We wrote and optimized several mod
 in the probabilistic programming language \textit{Stan} that are
 pre-compiled in \textit{rstanarm}. Users can now build hierarchical models via simple high-level functions. 
 We take an ANOVA model as an example in Table \ref{ProcessTable}, the wrapper function $stan\_aov$ parses the 
-model specification and hands the data and prior specification to $stan\_lm$ and 
+model specification and hands the data and specification of priors (or their defaults) to $stan\_lm$ and 
 then to a lower-level workhorse function, $stan\_lm.fit$, which in turn 
 calls the pre-compiled and optimized \textit{Stan} model specified in 
 $lm.stan$. The the Hamiltonian Monte Carlo output is returned in reverse order
@@ -805,10 +804,11 @@ are not developed even for classical multi-level models \cite{Galecki2013linear}
  \vspace*{-17pt}
 \end{wraptable}
 
-Data scientists certainly lack 
-good tools for graphical exploration of MCMC output. The graphical rendering of the plots in \textit{shinystan} 
+Data scientists certainly lack good tools for graphical exploration of MCMC output. The graphical rendering of the plots in \textit{shinystan} 
 utilizes the superb graphical package \textit{ggplot} by Hackley Wickham. 
-We will develop function calls to render the code generating customized \textit{shinystan} graphical and numerical output, to allow users to integrate these directly into reports generated with markdown in R through the \textit{knitr} package. We will develop additional diagnostics in \textit{shinystan} to optimize model convergence, explore unexpected parameter 
+We will develop function calls to render the code generating customized \textit{shinystan} graphical and numerical 
+output, to allow users to integrate these directly into reports generated with markdown in R through the \textit{knitr} 
+package. We will develop additional diagnostics in \textit{shinystan} to optimize model convergence, explore unexpected parameter 
 correlations, and assess the correctness of the model specification with (a) residual diagnostics, e.g., for continuous 
 covariates, a scatterplot of residuals versus covariates and (b) influence diagnostics.
 
@@ -824,25 +824,21 @@ Finally, the interactive web based tool \textit{shinystan} extracts and processe
 facilitate access to the required fit object elements for visual exploration and troubleshooting.
 
 \subparagraph*{Affordances: designing intuitive user interfaces}
-We will place special emphasis on the concept of affordance in our "intuitive" 
-design of the \textit{shinystan} graphical user interfaces, e.g., in employing 
-strong visual clues, provide clickable buttons and tabs, sliders, and other 
-hands on interactive controls \cite{NormanAffordances1999}. Active exploration 
-by \textit{shinystan} users will reveal nested and sequential affordances, for 
-example, print options appear only in context, say when the cursor moves over 
-the output button of a graphic, avoiding visual clutter on the screen with 
-irrelevant information \cite{Mcgrenere2000affordances}. We will rely on user 
-feedback to optimize the practical utility of \textit{shinystan's} implementation 
-and user interface.
+As we further develop the interface we will place special emphasis on the concept of affordance in our "intuitive" 
+design of the \textit{shinystan} graphical user interfaces, e.g., in employing strong visual clues, provide clickable buttons and tabs, sliders, and other 
+hands on interactive controls \cite{NormanAffordances1999}. Active exploration by \textit{shinystan} users will reveal nested and sequential 
+affordances, for example, print options appear only in context, say when the cursor moves over the output button of a graphic, 
+avoiding visual clutter on the screen with irrelevant information \cite{Mcgrenere2000affordances}. We will rely on user 
+feedback to optimize the practical utility of \textit{shinystan's} implementation and user interface.
 
 \subparagraph*{Improving and hardening \textit{shinystan}}
-Although already available on 
-\href{https://cran.r-project.org/web/packages/shinystan/index.html}{CRAN} 
-as a functional \href{https://www.youtube.com/watch?v=X31xqNHcvQs}{package},
-\textit{shinystan} will need to undergo considerable improvements of the 
-interface and under the hood during this project. Posterior predictive 
-checking is one area where the need for additional options and functionality. 
-We also want to expand the existing collaborative model sharing via the internet.
+Although already available on \href{https://cran.r-project.org/web/packages/shinystan/index.html}{CRAN} 
+as a fully functional \href{https://www.youtube.com/watch?v=X31xqNHcvQs}{package},
+\textit{shinystan} will need to undergo considerable improvements of the interface and under the hood during this project. Posterior predictive 
+checking is one area where the need for additional options and functionality. We also want to expand the existing collaborative 
+model sharing via the internet. 
+
+\subparagraph{Improving the graphical representation of shrinkage in hierarchical models for meta-analysis.} Forest plots display the effect estimates of individual clinical studies (investigating the therapeutic benefit of interventions), stacked sequentially above their pooled effect estimate \cite{Lewis2001forestplot}. Naively speaking and visually, pooling for evidence synthesis appears to shrink the confidence interval of the pooled estimate and increases its precision. This visual display is widely accepted and understood, and can be extended to several hierarchical levels to show group specific differences of effect in sub-populations and differences in variability at the study or pooled effect level. The multilevel (Bayesian) hierarchical modeling we advocated \cite{AndreaeJohnsonAbstract2013} would pull the effect estimates of group level estimates and individual study estimates towards the higher level means. This shrinkage depends on parameter and model choices and may be controversial. To be compelling, the effects of these choices on shrinkage need to be transparent. To our knowledge, no prior work exists on \textit{visualizing} shrinkage in hierarchical models and certainly not in the field of evidence synthesis.
 
 \section*{Collaborative software development and computer resources}
 We will follow accepted best practices, proven methods, and industry standards for software design, construction and implementation.For example the rules of clarity, composition, separation, simplicity, parsimony, transparency, etc. as detailed by 
@@ -866,7 +862,7 @@ communication and input taking place in several venues. Public user groups and d
 Confidential deliberations, (e.g., regarding grant related matters), are held in private restricted groups. We will hold weekly video 
 conferences to prioritize issues and discuss progress.
 
-\subparagraph{Montefiore Medical and Columbia University will provide the computer cluster access} required for the computationally more intensive 
+\subparagraph{Montefiore Medical Center and Columbia University will provide the computer cluster access} required for the computationally more intensive 
 models and provider server space to house the software and webpages. We will run models in our statistical software packages in parallel 
 for statistical inferences of large hierarchical clinical data sets. Clinical Research Informatics at Montefiore will provide scale-able 
 remote access via a secure virtual private network to up to 32 Xenon Intel processors in parallel on a windows virtual machine with up to 
@@ -877,7 +873,7 @@ be used for this project cannot be completely de-identified, but are 'limited da
 identifiers (e.g., age in years or zip code) and as such are covered under HIPPA. Hence, the computer clusters housing the data and where 
 we run the analysis on, have to be compliant with the Health Insurance Portability and Accountability Act (HIPPA. Clinical Research 
 Informatics at Montefiore will house any data set falling under the Health Insurance Portability and Accountability Act (HIPPA) and 
-guarantee compliance with relevant federal data safety and privacy regulations. 
+guarantee compliance with relevant federal data safety and privacy regulations, (letter by Dr. Mirhaji). 
 
 \section*{Dissemination and unimpeded utilization of the products of this project}
 The goal of this project is to encourage widespread adoption of cutting edge 
