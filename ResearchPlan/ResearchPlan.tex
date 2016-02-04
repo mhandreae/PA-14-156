@@ -154,15 +154,12 @@ variables observed. This growth implies that we can investigate increasingly fin
 models. Whereas before we were limited to models of the mean structure and effect, we 
 now want to our models to account for clinical heterogeneity.
 
-\subsection*{The National Anesthesia Clinical Outcomes Registry}
-Below we illustrate the clustered, nested data structure of contemporary health 
-care delivery and electronic health data capture with the example of the 
-National Anesthesia Clinical Outcomes Registry (NACOR). NACOR is maintained by the 
-Anesthesia Quality Institute and funded by the American Society of 
-Anesthesiologists. We will utilize NACOR as a use case for dissemination in 
-workshops for perioperative data scientists.
+\subparagraph*{The National Anesthesia Clinical Outcomes Registry (NACOR)} illustrates 
+the clustered, nested data structure of contemporary health  care delivery and electronic health data capture. 
+NACOR is maintained by the Anesthesia Quality Institute and funded by the American Society of 
+Anesthesiologists. We will utilize NACOR as a use case for dissemination in workshops for perioperative data scientists.
 
-\subsection*{Perioperative health care delivery and data capture are nested and clustered.}
+\subparagraph*{Perioperative health care delivery and data capture are nested and clustered.}
 Anesthesia is an illustrative case of the how health care is increasingly 
 electronically documented, which facilitates the continuous collection of 
 physiological data and therapeutic interventions during critical periods. 
@@ -179,18 +176,21 @@ NACOR and Dr. Kheterpal director of MPOG, the other large perioperative EHR
 database) their exploitation is limited by the lack of accessible software to investigate 
 important scientific questions with realistic hierarchical models.
 
-\subsection*{Outcomes and care delivered depend on procedure, providers and patient characteristics.} 
+\subparagraph*{Outcomes and care delivered depend on procedure, providers and patient characteristics.} 
+We explain the hierarchical structure of health care delivery with our NACOR model on anesthesia quality \cite{AndreaeWhite2015}. 
+The (dichotomous) outcome (e.g., postoperative nausea) of 
+an anesthetic for a given individual will depend on the surgical procedure the patient is undergoing and under 
+which service, but also on the local institutional culture and indeed the individual anesthesia provider and 
+his or her qualifications and preferences (Figure \ref{fig:NACOR}). 
 
 \begin{wrapfigure}{l}{0.4\textwidth} 
+\vspace*{-12pt}
 \includegraphics[width=0.4\textwidth]{Figures/DistrogramNACOR.pdf} 
 \caption{Hierarchical structure of health care delivered in the perioperative setting.}
 \label{fig:NACOR}
-\end{wrapfigure}
+\vspace*{-12pt}
+\end{wrapfigure} 
 
-Figure \ref{fig:NACOR} explains the hierarchical structure of health care delivery with our model on anesthesia quality 
-using NACOR data. The (dichotomous) outcome of particular anesthetic for a given individual, (e.g., postoperative nausea), 
-will depend on the surgical procedure the patient is undergoing and under which service, but also depends on the local 
-institutional culture and indeed the individual anesthesia provider and his or her qualifications and preferences \cite{AndreaeWhite2015}. 
 Outcome $y_n$ for the $n$th patient is a Boolean indicator to be predicted by a logistic regression. We allow the patient-specific
 intercept $\beta_{oi}$ to vary according to the $i$th anesthesiology provider caring for the patient. The provider level mean 
 $\mu_i$ and within-provider variance $\sigma_i$ vary by hospital. $x_n$ is a vector of patient level predictors, and $\beta$ is a vector 
@@ -404,7 +404,7 @@ data point with its confidence interval (indicating the precision of the imputat
 is then fed into the estimation at the next higher level of the model
  \cite{Gelman2001imputation}. 
 
-\subsection*{EHR data are not missing at random.}
+\subparagraph*{EHR data are not missing at random.}
 Physicians chose which test 
 to administer 
 to inform specific therapeutic decisions and different types of data are recorded 
@@ -414,7 +414,6 @@ units like the ICU). Under Innovation, we explain  how both missing data
 imputation and clustering can be integrated into a single model that 
 incorporates auxiliary data.
 
-\textbf{Hierarchical models reflect the clustered structure of contemporary health care delivery most realistically, and can be used to address incomplete records.}
 
 \section*{Innovation}
 
@@ -581,26 +580,12 @@ We will develop our software further into solid, reliable, tested software packa
 Both packages will serve as extension to the \textit{rstan} package we developed, 
 which enables the most common applied regression models to be estimated using 
 novel Hamiltonian Monte Carlo algorithms. All of these R packages are available to 
-researchers and via the CRAN software repository. 
-
-This project (software development and dissemination) will be guided by 
+researchers and via the CRAN software repository. This project (software development and dissemination) will be guided by 
 our multidisciplinary project team. The team will conduct its work through 
 regularly scheduled weekly meetings and collaborate online via 
 Github \cite{Chacon2009ProGit}, Google Hangouts, and email. 
 
-\section*{Preliminary work}
-
 \subsection*{Prior work in statistical software development and data driven outcomes research}
-
-\begin{wrapfigure}{l}{0.6\textwidth} 
- \vspace{- 15pt}
-    \centering
-\includegraphics[width=0.6\textwidth]{Figures/SoftwareTrajectory.pdf}
-  \vspace{-32pt}
-  \caption{Software development trajectory}
-    \label{fig:trajectory}
- \vspace{- 15pt}
-\end{wrapfigure}
  
 Dr. Andreae published several meta-analyses and synthesized the evidence 
 from clinical trials by pooling aggregate and individual patient data, when 
@@ -647,6 +632,16 @@ we propose to implement in \textit{shinystan}.
 
 \subsection*{The trajectory leading to the development of \textit{rstanarm} and \textit{shinystan}} 
 
+\begin{wrapfigure}{l}{0.6\textwidth} 
+ \vspace{- 15pt}
+    \centering
+\includegraphics[width=0.6\textwidth]{Figures/SoftwareTrajectory.pdf}
+  \vspace{-32pt}
+  \caption{Software development trajectory}
+    \label{fig:trajectory}
+ \vspace{- 15pt}
+\end{wrapfigure}
+
 Dr. Goodrich, Andreae, and their collaborators worked together on the first stable versions of the software packages 
 \textit{shinystan} and \textit{rstanarm}, which are extensions to the \textit{rstan} package 
 that enables some of the most common applied regression models to be estimated using Hamiltonian Monte Carlo. 
@@ -660,8 +655,7 @@ outline the trajectory that led to the current project proposal.
 
 \section*{Project scope and goals }
 
-We propose to further develop, test and harden the first stable versions of two software 
-packages \textit{rstanarm} and \textit{shinystan}.
+We propose to further develop, test and harden our two software packages \textit{rstanarm} and \textit{shinystan}.
 
 \subsection*{\textit{rstanarm} for accessible multilevel hierarchical modeling}
 The first proposed software package \textit{rstanarm} should allow data scientists to specify the most common applied regression models 
@@ -678,17 +672,36 @@ inspecting, displaying, representing, parsing, and searching high-dimensional MC
 interactive intuitive user interface \textit{shinystan} is user-friendly and requires minimal training for novices.
 
 \subsection*{rstanarm and shinystan are available on the \textit{R} software repository CRAN}
-Both \textit{rstanarm} \cite{rstanarm} and \textit{shinystan} \cite{shinystan, Team2015} are already 
+For both \textit{rstanarm} \cite{rstanarm} and \textit{shinystan} \cite{shinystan, Team2015} first stable versions are already 
 available on the \textit{R} software  repository CRAN. We propose to further develop 
-these two first stable versions of \textit{rstanarm} and \textit{shinystan} into solid, 
-reliable, tested R packages and to disseminate their use. Both packages will serve as extensions to the \textit{rstan} 
+these into solid, reliable, tested R packages and to disseminate their use. Both packages will serve as extensions to the \textit{rstan} 
 package (we developed), which enables the most common applied regression models to be estimated 
-using novel Hamiltonian Monte Carlo algorithms. Updates and the final packages will be available to researchers 
-and the general public via the free software repository CRAN. 
+using novel Hamiltonian Monte Carlo algorithms. 
 
 \section*{Software Specification}
 
-\subsection*{rstanarm allows simple specification for multi-level hierarchical models}
+\subsection*{rstanarm allows for simple specification of multi-level hierarchical models}
+
+\begin{wraptable}{l}{0.51\textwidth}
+ \vspace*{-17pt}
+ \footnotesize
+
+\begin{tabular}{@{}
+>{\columncolor[HTML]{EFEFEF}}l l@{}}
+\toprule
+\textbf{Function Call} & \textbf{Underlying process in \textit{rstanarm}}                        \\ \midrule
+stan\_aov               & User interface for simplified model specification  \\
+stan\_lm               & Parsing linear model specification \\
+stan\_lm.fit           & Workhorse function to call pre-comiled \textit{Stan} model  \\
+lm.stan                & Pre-compiled optimized model written in \textit{Stan}                   \\ \bottomrule
+\end{tabular}
+
+ \vspace*{-7pt}
+ \caption{Handing down model specification and data}
+ \label{ProcessTable}
+ \vspace*{-12pt}
+\end{wraptable}
+
 The software package \href{https://github.com/stan-dev/rstanarm}{\textit{rstanarm}}
 will enable the estimation of advanced general linear models. 
 \textit{rstanarm} implements full Bayesian statistical inference;  
@@ -712,34 +725,16 @@ y \sim x1 +(x2|g)
 
 where the dependent response variable $y$ is on the left of a Tilde ($\sim$) operator; 
 the independent terms, $x_1, x_2...$ are on the right and separated by the $+$ 
-operator. Group-specific terms are distinguished by vertical bars $|$ 
-separating expressions for design matrices from grouping factors. Clinical data 
-scientist can therefore take advantage of the more efficient HMC algorithms implemented in \textit{Stan}, 
-without knowing the underlying programming language or the auxiliary reparametrizations that 
-increase the efficiency of the Markov chains, which we discuss further below.
+operator. Group-specific terms are distinguished by vertical bars $|$ separating expressions for design matrices from grouping factors. Data 
+scientist can now take advantage of the highly efficient HMC algorithms implemented in \textit{Stan} and benefit from auxiliary reparametrizations to 
+increase efficiency, without understanding \textit{Stan} or the underlying transformations.
 
-\subparagraph*{A suite of pre-compiled \textit{Stan} programs allows for a simple call to sophisticated modeling functions}
-
-\begin{wraptable}{l}{0.51\textwidth}
-\footnotesize
-\begin{tabular}{@{}
->{\columncolor[HTML]{EFEFEF}}l l@{}}
-\toprule
-\textbf{Function Call} & \textbf{Underlying process}                        \\ \midrule
-stan\_aov               & User interface for simplified model specification  \\
-stan\_lm               & Parsing linear model specification \\
-stan\_lm.fit           & Workhorse function to call pre-comiled \textit{Stan} model  \\
-lm.stan                & Pre-compiled optimized model written in \textit{Stan}                   \\ \bottomrule
-\end{tabular}
-\label{ProcessTable}
-\end{wraptable}
-
+\subsubsection*{A suite of pre-compiled \textit{Stan} programs allows for a simple call to sophisticated modeling functions.} 
 \textit{rstanarm} already implements many generalized linear 
 models with and without group-specific terms. We wrote and optimized several models 
 in the probabilistic programming language \textit{Stan} that are
-pre-compiled in \textit{rstanarm}. Users can now build hierarchical models via simple high-level functions, as detailed below.
-
-To take an ANOVA model as an example, the wrapper function $stan\_aov$ parses the 
+pre-compiled in \textit{rstanarm}. Users can now build hierarchical models via simple high-level functions. 
+We take an ANOVA model as an example in Table \ref{ProcessTable}, the wrapper function $stan\_aov$ parses the 
 model specification and hands the data and prior specification to $stan\_lm$ and 
 then to a lower-level workhorse function, $stan\_lm.fit$, which in turn 
 calls the pre-compiled and optimized \textit{Stan} model specified in 
@@ -779,42 +774,45 @@ we want to work on a more seamless integration with our \textit{R} package for m
 \href{https://cran.r-project.org/web/packages/mi/index.html}{\textit{mi}}.
 
 \subsection*{shinystan for interactive intuitive graphical exploration of MCMC output}
+We propose to further develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
+{\textit{shinystan}} \cite{GabryISCB2015,shinystan} as an interactive graphical user interface to explore virtually any Bayesian model output, 
+yet optimized for \textit{Stan}. Implemented in in \href{http://shiny.rstudio.com/}{\textit{Shiny}}, \textit{shinystan} is an R package for 
+interactive web applications \cite{shinystan-software:2015,shinystan}. Data scientist already use generic extractor functions such as print() and coef(), 
+but often lack a suitable method for extracting an interesting result from the model fit and hence have to resort to 
+writing tedious customized code. Important model diagnostics (e.g., influence() to assess  homoscedastic residual errors) 
+are not developed even for classical multi-level models \cite{Galecki2013linear}.
 
 \begin{wraptable}{l}{0.65\textwidth}
-\footnotesize
-\begin{tabular}{@{}
->{\columncolor[HTML]{EFEFEF}}l l@{}}
-\toprule
-\textbf{Object} & \textbf{Increasingly informative object characteristics} \\ \midrule
-MCMC & raw data from Markov chain Monte Carlo chains \\ \midrule
-rstan & structured embedded model information (\textit{Stan} code, parameter names...) \\ \midrule
-rstanarm & accessible aggregate derived statistics (coefficients, SE, fitted, residuals) \\ \midrule
-shinystan & detailed user-friendly model meta-data, posterior predictive draws... \\ \bottomrule
+ \vspace*{-7pt}
+ \footnotesize
+
+ \begin{tabular}{@{}
+ >{\columncolor[HTML]{EFEFEF}}l l@{}}
+ \toprule
+ \textbf{Object} & \textbf{Increasingly informative object characteristics} \\ \midrule
+ MCMC & raw data from Markov chain Monte Carlo chains \\ \midrule
+ rstan & structured embedded model information (\textit{Stan} code, parameter names...) \\ \midrule
+ rstanarm & accessible aggregate derived statistics (coefficients, SE, fitted, residuals) \\ \midrule
+ shinystan & detailed user-friendly model meta-data, posterior predictive draws... \\ \bottomrule
 \end{tabular}
-\caption{Progressive enrichment of object characteristics in \textit{shinystan} }
-\label{ObjectCharactersitics}
+ 
+ \vspace*{-7pt}
+ \caption{Progressive enrichment of object characteristics in \textit{shinystan} }
+ \label{ObjectCharactersitics}
+ \vspace*{-17pt}
 \end{wraptable}
 
-We propose to develop \href{http://andrewgelman.com/2015/03/02/introducing-shinystan/}
-{\textit{shinystan}} \cite{GabryISCB2015,shinystan} as an interactive graphical user interface to explore virtually any Bayesian model output, 
-yet optimized for \textit{Stan}. \textit{shinystan} is implemented in in \textit{Shiny}, an R package for interactive web applications.
-Data scientist may use generic extractor functions such as print() and coef(), but often lack a suitable 
-method for extracting an interesting result from the model fit and hence have to resort to 
-writing tedious customized code. Important model diagnostics (e.g., influence() to assess  homoscedastic residual errors) 
-are not developed even for classical multi-level models \cite{Galecki2013linear}. Data scientists certainly lack 
+Data scientists certainly lack 
 good tools for graphical exploration of MCMC output. The graphical rendering of the plots in \textit{shinystan} 
 utilizes the superb graphical package \textit{ggplot} by Hackley Wickham. 
 We will develop function calls to render the code generating customized \textit{shinystan} graphical and numerical output, to allow users to integrate these directly into reports generated with markdown in R through the \textit{knitr} package. We will develop additional diagnostics in \textit{shinystan} to optimize model convergence, explore unexpected parameter 
 correlations, and assess the correctness of the model specification with (a) residual diagnostics, e.g., for continuous 
 covariates, a scatterplot of residuals versus covariates and (b) influence diagnostics.
 
-%\subsubsection*{Automation of meta-data extraction and management in \textit{shinystan}}
 \subparagraph{The automation of many data exploration processes in \textit{shinystan}} saves time, 
 but implies the extraction of the meta-information about the model and 
 its parameters as detailed in Table \ref{ObjectCharactersitics}. Data scientist working with the raw draws from the MCMC output 
 have to extract, manage and program a plethora of details to explore higher level structure and statistics of their output. 
-
-
 As we move from the MCMC output (raw draws from posterior
 distributions) to the user-facing output object structures become richer with model-specific 
 information (e.g., \textit{Stan} code). The user-friendly \textit{rstanarm} 
@@ -865,8 +863,7 @@ communication and input taking place in several venues. Public user groups and d
 Confidential deliberations, (e.g., regarding grant related matters), are held in private restricted groups. We will hold weekly video 
 conferences to prioritize issues and discuss progress.
 
-\subsection*{Computer resources and data security}
-Montefiore Medical and Columbia University will provide the computer cluster access required for the computationally more intensive 
+\subparagraph{Montefiore Medical and Columbia University will provide the computer cluster access} required for the computationally more intensive 
 models and provider server space to house the software and webpages. We will run models in our statistical software packages in parallel 
 for statistical inferences of large hierarchical clinical data sets. Clinical Research Informatics at Montefiore will provide scale-able 
 remote access via a secure virtual private network to up to 32 Xenon Intel processors in parallel on a windows virtual machine with up to 
@@ -923,17 +920,20 @@ including further develop our \textit{rstanarm} and \textit{shinystan}
 
 \section*{Timeline and potential problems}
 
+\begin{wrapfigure}{l}{0.7\textwidth} %this figure will be at the right
+ \vspace*{-12pt}
+    \centering
+  \includegraphics[width=0.7\textwidth]{Figures/Timeline.pdf}
+ \vspace*{-15pt}
+\end{wrapfigure}
 
-The adjacent time line delineates the planned project progress by year. We begin by setting up the project team in the first year, 
+The Timeline delineates the planned project progress by year. We begin by setting up the project team in the first year, 
 establishing our online user interface and updating the \textit{rstanarm} package in CRAN. In year two and three, we will sequentially 
 add additional models and provide advanced tools for visualization. We start to develop additional functions for meta-analysis and 
 change-point models, scaling eventually these also to multilevel models. In the fourth project year, we will begin to integrate 
 missing data algorithms into \textit{rstanarm} and finally scale the packages to large datasets in year five.
 
-\begin{wrapfigure}{l}{0.7\textwidth} %this figure will be at the right
-    \centering
-\includegraphics[width=0.7\textwidth]{Figures/Timeline.pdf}
-\end{wrapfigure}
+
 
 Some colleagues are reluctant to make powerful statistical tools accessible to the novice users that do not understand them. We counter 
 however that the simplicity of the \textit{rstanarm} syntax will allow novice users to learn to specify more realistic models by 
