@@ -150,7 +150,7 @@ being modeled. Incomplete and noisy measurements cannot easily be incorporated i
 Individual patient data do not easily fit traditional meta-analysis
 \cite{Andreae2015,Andreae2012}.
 
-\subsection*{Modeling the multifaceted correlations in EHR is reflecting actual clinical practice}
+\subparagraph*{Modeling the multifaceted correlations in EHR is reflecting actual clinical practice}
 To realistically model the multifaceted correlations seen in actual clinical 
 practice, we specified a logistic regression model  (Figure~ \ref{fig:NACOR}) 
 that predicts anesthesia quality in the NACOR database
@@ -166,11 +166,11 @@ lower-level parameters to vary across groups \cite{Bafumi_Gelman_2007}.
 In hierarchical models, we can borrow strength from larger groups and thereby improve estimates for 
 smaller subgroups \cite{ParkGelman2004bayesian}.
 
-\subsection*{Hierarchical models provide efficient inferences with partial pooling}
+\subparagraph*{Hierarchical models provide efficient inferences with partial pooling}
 Inference based on partial pooling outperforms (a) the no-pooling and (b) the 
 complete-pooling approaches, as can be shown mathematically \cite{Efron_1975} 
 or via cross-validation \cite{Gelman-Hill_2014}: In frequentist terminology, by trading an increase in 
-bias for a reduction in variance, hierarchical modeling can reducing the mean square error both
+bias for a reduction in variance, hierarchical modeling can reduce the mean square error both
 in estimating unknowns and in predicting future outcomes.
 
 (a) The no-pooling approach entails estimate the model separately for each mutually exclusive and
@@ -192,14 +192,14 @@ scientificamerican0577-119.pdf}{Scientific American}
 \cite{Stein_paradox_Scientific_American}. 
 Our co-investigator, Dr. Hall, recently applied this approach to seizure prediction \cite{Hall2009a}.
 
-\subsubsection*{Borrowing strength is beneficial even in very large data sets}
+\subparagraph*{Borrowing strength is beneficial even in very large data sets}
 In summary, the geographic, spatial and other heterogeneities outlined above  
 can undermine the precision of estimates or predictions even for 
 extremely large clinical data sets. Partial pooling can improve estimation and prediction
 by borrowing strength from different but related groups
 \cite{Tukey1963borrowing,Jones1986collected}. 
 
-\section*{Meta-analysis: hierarchical modeling of outcomes research}
+\section*{Meta-analysis: hierarchical modeling for outcomes research}
 Systematic reviews and meta-analysis \cite{Sackett1996} --- the synthesis of trial data 
 to support clinical decision making --- is another example of hierarchical modeling where traditional software and 
 classical modeling approaches limit progress in data-intensive outcomes research \cite{Andreae2015}.  
@@ -211,7 +211,7 @@ However, studies on perioperative outcomes tend to vary in design and reported o
 evidence synthesis challenging with classical frequentist statistical models \cite{Spiegelhalter_11134920}, (see 
 letter of support by Dr. Sacks). Different study designs can make it difficult to perform meta-analysis or meta-regression 
 with classical methods and standard systematic review software \cite{Deeks2011chapter}. Classical meta-analysis may also 
-underestimate the between-study-variability for small numbers of trials \cite{Song2012,Cornell2014,Andreae2015}. 
+underestimate the between-study-variability for small numbers of trials \cite{Andreae2015,Song2012,Cornell2014}. 
 Classical meta-analysis is an example of data with a \textit{single} level of hierarchical grouping: patients' 
 outcomes are grouped within clinical trials \cite{egger2008systematic}. There are however several constraints and limitations 
 with this classical approach to meta-analysis that could be overcome with more sophisticated hierarchical modeling  
@@ -220,9 +220,8 @@ with this classical approach to meta-analysis that could be overcome with more s
 \subsubsection*{Hierarchical models integrate all available data for evidence synthesis}
 
 Trial or population characteristics may introduce another level of grouping, for example pooling long-term outcomes 
-after regional anesthesia by surgical intervention \cite{Andreae2013,Abroug2011}. Trials may observe outcomes at several 
-sequential follow-up visits, leading to repeated (correlated) observations grouped by patient that are then grouped by trial 
-in the meta-analysis.
+after regional anesthesia by surgical intervention \cite{Andreae2013,Abroug2011}. Trials may also observe outcomes at several 
+sequential follow-up visits, leading to repeated (correlated) observations grouped by patient that are then grouped by trial, then grouped by surgery in a multi-level meta-analysis.
 
 \begin{wrapfigure}{l}{0.35\textwidth} 
  \vspace*{-14pt}
@@ -234,7 +233,7 @@ in the meta-analysis.
 \end{wrapfigure}
 
 We build a multilevel hierarchical model to pool individual patient data with continuous and 
-dichotomous aggregate study-level data, clustered at the study level by followup interval and surgical 
+dichotomous aggregate study-level data, clustered at the study level by followup interval and grouped by surgical 
 intervention performed (Figure \ref{fig:MetaAnalysis}). Besides the three levels of hierarchical modeling just outlined 
 (follow-up observations grouped by patient, patients grouped withing trials, trials within population), 
 Additional hierarchical structure may be needed reconcile the substantial between-study variance in findings \cite{Andreae2015}. 
@@ -243,7 +242,7 @@ meta-analysis requires \textit{all} available data sources \cite{Deeks2011chapte
 the integration of dichotomous outcomes and continuous outcomes is challenging with traditional software
 \cite{Andreae2015, Roth2015CriticalCare}. 
 
-\subsection*{The antithesis of complete versus no-pooling limits meta-analysis of perioperative outcomes}
+\subparagraph*{The antithesis of complete versus no-pooling limits meta-analysis of perioperative outcomes}
 To illuminate how the false dichotomy between complete versus non-pooling also limits evidence 
 synthesis, we consider meta-analysis of trials with repeated observations on the outcome of interest. 
 The follow-up intervals (at which perioperative outcomes are reported) 
@@ -260,9 +259,18 @@ to ignore the fact that the effect estimates may depend on how long after the in
 (b) No-pooling: Conducting separate meta-analysis for each follow-up visit would undermining the main 
 strength of meta-analysis, in addition to the estimates being statistically unjustified and imprecise.
 
-\subsubsection*{Clustering and correlations can bias clinical inferences in meta-analysis }
-An even more serious bias results from failing to consider correlations 
-between outcomes. Interpretation of meta-analyses, and especially Cochrane Reviews, in clinical practice 
+\subparagraph*{Clustering can bias estimation of confidence intervals.} To 
+correctly estimate confidence intervals even in a simple Student t-test, 
+we have to consider if the data are independent, which they would not be if
+they are observed for the same patient multiple times. Failure to take into 
+account dependence in clustered observation may lead to incorrect inferences. 
+Correction to confidence intervals, such as weighted jackknife methods, can 
+improve matters, but such approaches are often ignored in EHR research 
+and they depend on characteristics that may not hold in faceted EHR data
+
+\subparagraph*{Clustering and correlations can bias clinical inferences in meta-analysis }
+A serious bias results from failing to consider correlations 
+between outcomes in the interpretation of meta-analyses. Even Cochrane Reviews, in clinical practice 
 are often reduced to "shows a significant effect" vs. "shows no significant effect". But modeling rather than
 ignoring the correlations between outcomes could turn a significant effect into a non-significant effect 
 (or vice versa) and the origianl model could overestimate or underestimate the variability of correlated outcomes. 
@@ -273,7 +281,7 @@ significant effect" and thwart further attempt to study this intervention,
 while a $95$\% confidence interval of $0.7-0.9$ for the effect estimate may 
 lead to widespread adoption of this therapeutic approach, with huge clinical impact.
 
-\subsubsection*{Ecological, disease and geographic study level characteristics can influence inferences}
+\subparagraph*{Ecological, disease and geographic study level characteristics can influence inferences}
 There are other forms of ecological bias to be considered in meta-analysis besides clustering by reported time endpoint. Geographical or 
 historical settings, similar surgical procedures, or related diseases will lead to correlated outcomes in patient cohorts 
 \cite{Abroug2011,Andreae2013,Andreae2015,Roth2015CriticalCare}. 
@@ -281,7 +289,7 @@ Thus, the same false dichotomy of complete pooling versus no-pooling limits meta
 medicine. The locations of the estimates, their precision, and the inter- and within-study variability may all differ considerably 
 contingent on disease, procedure, or other study level characteristics \cite{Andreae2013,Andreae2015,Roth2015CriticalCare}.
 
-\subsubsection*{Partial pooling across similar populations}
+\subparagraph*{Partial pooling across similar populations}
 The principle hierarchical modeling for evidence synthesis is analogous to outcome research in general where we 
 consider effects that more prominent in one trial or subgroup of the population and not as strong in another similar, but 
 distinct, trial or subgroup. Examples include the meta-analyses of a treatment effect in conditions with different but 
@@ -292,8 +300,7 @@ to some estimated extent in a hierarchical meta-analysis. The principle applies 
 estimates, and the inter- and within-subgroup variability differ considerably from the subgroups used to obtain 
 the aforementioned findings.
 
-\subsection*{Hierarchical modeling to improve data-intensive outcomes research}
- 
+\subparagraph*{Hierarchical modeling to improve data-intensive outcomes research}
 Hierarchical models are thus a useful tool for analyses of
 heterogeneous perioperative outcome data. This is true for meta-analysis 
 of long-term studies with varied design to better inform clinical 
@@ -301,15 +308,6 @@ decisions\cite{AndreaeJohnsonAbstract2013,Spiegelhalter2004bayesian} and
 for outcomes research in our hierarchically structured contemporary health care delivery system. 
 Advanced hierarchical models can be difficult to fit with traditional software but should be 
 made more accessible (see letter of support by Drs. OMalley, Sacks and DiMaggio).
-
-\subsection*{Clustering can bias estimation of confidence intervals.} To 
-correctly estimate confidence intervals even in a simple Student t-test, 
-we have to consider if the data are independent, which they would not be if
-they are observed for the same patient multiple times. Failure to take into 
-account dependence in clustered observation may lead to incorrect inferences. 
-Correction to condience intervals, such as weighted jackknife methods, can 
-improve matters, but such approaches are often ignored in EHR research 
-and they depend on characteristics that may not hold in faceted EHR data. 
 
 \section*{Integrating incomplete data into clustered EHR modeling}
 Too often data scientists either (1) fit sophisticated models, but limit their analysis 
