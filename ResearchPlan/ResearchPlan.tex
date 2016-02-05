@@ -350,7 +350,7 @@ automatic differentiation, which relieves researchers of the burden of supplying
 a function that calculates the gradient of the posterior distribution with respect
 to the (perhaps thousands of) parameters in their model.
 
-Despite all these technological advances, \textit{Stan} is currently not widely used
+\subparagraph{Despite all these technological advances, \textit{Stan} is currently not used widely enough}
 in medical research, although it is now well-known in other subfields. Our grant
 proposal is innovative in the sense that it will break down three barriers to using
 \textit{Stan} productively in data-intensive medical research. 
@@ -359,11 +359,11 @@ First, up until the last few months, the only way to use \textit{Stan} was to wr
 model from scratch in the Stan language, which requires considerable expertise in 
 probability theory and substantial experience using \textit{Stan} in order to estimate
 a model as complex as a hierarchical regression with many grouping factors. Today, it
-is quite possible to use our \textit{rstanarm} package for \textit{R} to estimate
-pre-written hierarchical models in the Stan language that are very general, highly
-optimized, and extensively tested by Dr. Goodrich and Mr. Gabry. Thusfar, \textit{rstanarm}
-has focused on applications in the social sciences and more work is needed to enhance
-\textit{rstanarm} for medical research by incporating suggestions from medical researchers.
+is quite possible to use our first stable version of our new \textit{rstanarm} package for \textit{R} to estimate
+pre-written pre-compiled hierarchical models in the Stan language that are very general, highly
+optimized, and have been extensively tested by us. Thus far, \textit{rstanarm}
+may be too narrowly focused on applications in the social sciences and more work is needed to enhance
+\textit{rstanarm} for medical research by incorporating suggestions from medical researchers,  (see letter of support by Dr. DiMaggio).
 
 Second, although \textit{Stan} can treat missing values on continuous variables as 
 additional unknowns of the posterior distribution, it is not particularly easy to do so
@@ -380,20 +380,20 @@ Third, a variety of things can nevertheless go wrong, and it is critical that su
 problems be recognized and overcome. For example, \textit{Stan}'s self-tuning is a 
 work in progress and in any particular research project may require the user to tweak 
 one setting. Or one reparameterization of the model may be much more computationally efficient 
-than a logically equivalent one. Finally, the model may simply fail to fit the data well.
+than another logically equivalent parameterization. Finally, the model may simply fail to fit the data well.
 We will innovate by continuing to develop \textit{shinystan}, which is a web-application
-that integrates with \textit{rstanarm} and provides a plethora of graphs to visualize the 
+that integrates with \textit{rstanarm} and provides a plethora of tools to visualize the 
 parameter estimates, diagnose the supplemental Hamiltonian MCMC output, and make scientific
-inferences (see letter of support by Dr. DiMaggio). Without \textit{shinystan}, understanding 
-the output of a complex hierarchical model would be difficult for all but the most computationally 
-sophisticated medical researchers.
+inferences. Without \textit{shinystan}, understanding the output of an advanced hierarchical model may be rather difficult
+for all but the most computationally sophisticated medical researchers.
 
 \section*{Approach}
 
 We propose to further develop three accessible software packages (\textit{rstanarm} 
 \textit{shinystan}, and \textit{mi}) for the programming language and software environment 
-\textit{R} so that they are reliable and well-tested. Each of these \textit{R} packages are currently available for 
-free to researchers via the Comprehensive R Archive Network (CRAN) software repository. Our software development project will be guided by a multidisciplinary 
+\textit{R} so that they are reliable, and trustworthy being extensively tested in different setting and applications. 
+Each of these \textit{R} packages are currently available for free to any researchers via the Comprehensive R Archive Network (CRAN) 
+software repository. Our software development project will be guided by a multidisciplinary 
 team, which will conduct its work through regularly scheduled weekly meetings and collaborate online via Github 
 \cite{Chacon2009ProGit}, Google Hangouts, and email.
 
@@ -417,19 +417,19 @@ finance to medicine to data mining.
 Although there are many examples of BUGS models available on the internet, a BUGS model
 essentially has to be written from scratch for each new research project, which is too much
 to ask of many medical researchers. At the same time, it is widely known that it is all too easy to 
-write a model in the BUGS \textit{language} that is infeasible for the BUGS MCMC \textit{engines} 
+write a model in the BUGS \textit{language} that is unfeasible for the BUGS MCMC \textit{engines} 
 to sample from efficiently. In particular, BUGS models with many parameters are difficult to fit 
-because BUGS typically can only update the state of the Markov chain one parameter at a time
-(see letter by Drs. Kheterpal and Dutton and letter by Dr. Sacks).
+because BUGS typically can only update the state of the Markov chain one parameter at a time.
 
 Consequently, in recent years many hierarchical modelers have shifted back to essentially
 frequentist estimators that choose the common parameters to maximize a (perhaps penalized) 
 likelihood function that integrates out all the group-specific unknowns. Examples of this
 approach include the \textit{lme4} package for R, the PROC MIXED subroutine for SAS, and
-the \texttt{xtmixed} and \texttt{gllamm} functions for Stata. 
+the \texttt{xtmixed} and \texttt{gllamm} functions for Stata. Researchers can often not fit the models they find scientifically most credible, (see letter by Drs. Kheterpal and Dutton and letter by Dr. Sacks). 
 
-These approaches have their pros and cons. One on hand, they make multilevel modeling much more accessable to a larger number
-of researchers because the user-facing functions are abstract. A user need only specify the
+The aforementioned approaches have their pros and cons. One on hand, they may make multilevel modeling 
+accessible to a larger number
+of researchers because the user-facing functions employ familiar simple notation, simplifying model specification. A user need only specify the
 outcome and the predictors, the grouping structure, and perhaps some options in order to estimate
 a model that has been pre-written in a compiled language. Thus, users need not write customized 
 modeling code like they would with BUGS.
@@ -447,15 +447,16 @@ Finally, complicated hierarchical models often encounter computational problems 
 the optimizer from finding the maximum in the interior of the parameter space.
 
 The \textit{Stan} language, mathematical library, and algorithms pick up where BUGS left off.
-An enormous variety of hierarchical models can be specified in the Stan language, although the
+An enormous variety of hierarchical models can be specified in the Stan language, but the
 researcher needs to possess considerable skill in computational statistics in order to specify
-a complex model. Given a hierarchical specification, the Hamiltonian MCMC engine included in \textit{Stan}
+such an advanced hierarchical model. Given the hierarchical specification, the Hamiltonian MCMC engine included in \textit{Stan}
 can sample from the posterior distribution efficiently, even if there are hundreds of thousands
 of parameters to estimate. With MCMC estimators, both the common and the group-specific parameters
 are part of the joint posterior distribution, so their uncertainty can easily be summarized by
 the standard deviation of the posterior samples, credible intervals, and so forth.
 
-What is needed now is to tack back in the direction of the \textit{lme4} package in order to
+What is needed now, what we propose to develop further, what we implemented in the first functional version of our software packages 
+\textit{rstanarm}, is to tack back in the direction of the \textit{lme4} package in order to
 make the power of \textit{Stan}'s Hamiltonian MCMC engine available to a broader subset of medical
 researchers who are interested in estimating hierarchical models (see letter of support 
 by Drs. Sacks and O'Malley). This step has been partially accomplished
@@ -474,7 +475,7 @@ operator. Group-specific terms are distinguished by vertical bars $|$ separating
 
 Thus, the researcher need not express a hierarchical model in the Stan language in order to estimate that model with \textit{Stan}'s Hamiltonian
 MCMC engine because \textit{rstanarm} comes with abstract models have already been written in the Stan language by 
-Dr. Goodrich and Mr. Gabry and, of equal importance, have been tested to verify that the models work correctly. In short, 
+our team and, of equal importance, have been tested to verify that the models work correctly. In short, 
 \textit{rstanarm} combines the user-friendliness of \textit{lme4} with the 
 computational efficiency of \textit{Stan} and is integrated with the other parts of the Stan ecosystem
 --- all of which are open-source and free for anyone to use --- such as the \textit{shinystan} package for 
@@ -497,10 +498,10 @@ To date, \textit{rstanarm} has only had one official release, so there are some 
 incompletely implemented and a trickle of small bugs have already been discovered by users, which 
 may continue for some time as \textit{rstanarm} gets more exposure in different research contexts.
 Nevertheless, the foundation of \textit{rstanarm} appears to be solid and it is ready to be built
-upon in order to make even more sophisticated and flexible hierarchical models accessable to medical researchers.
-Dr. Goodrich and Mr. Gabry stand ready to implement the models suggested by Drs. Andreae, Hall, and 
-Gong, as well as the broader medical research community. One of Dr. Hall's first suggestions is to
-support change-point models in \textit{rstanarm}.
+upon in order to make even more sophisticated and flexible hierarchical models accessible to medical researchers.
+Dr. Goodrich and Mr. Gabry stand ready to collaborate with Drs. Andreae, Hall, and 
+Gong, as well as the broader medical research community to implement more specific models and to tune them for data-driven outcomes research. 
+In response to one of Dr. Hall's first suggestions, we will develop support for change-point models in \textit{rstanarm}.
 
 \subsection*{The state of software for multiple imputation of missing data}
 
@@ -523,7 +524,7 @@ grouping structure that exists in many data-generating processes, such as EMR. A
 the imputation process tends to dilute the group structure that is essential to the analysis.
 
 There are two major imputation algorithms. One assumes that all of the variables are jointly
-multivariate normal and estimates its mean vector and variance-covariance matrix via an
+multivariate normal and estimates its mean vector and variance-co-variance matrix via an
 iterative process that draws values from a conditional multivariate normal distribution that
 conditions on all the observed data for each observation. This approach is simple, but is 
 not theoretically appropriate for binary or categorical data, which cannot be generated as
@@ -535,14 +536,14 @@ The second major imputation algorithm specifies a sequence of conditional distri
 where each model in the sequence pertains to the conditional distribution of one variable with
 missingness given (some subset of) the other variables. When each model is estimated, imputed
 values are drawn from a univariate conditional distribution that can be tailored to each 
-variable depending on how it is measured. Thus, the second approach avoids the embarassment
-of imputing continuous values for binary or categorical variables but suffers the embarassment
+variable depending on how it is measured. Thus, the second approach avoids the embarrassment
+of imputing continuous values for binary or categorical variables but suffers the embarrassment
 that the sequence of conditional distributions generally do not imply any valid joint 
 distribution over all the variables with missingness. Also, if there are many variables with
 missingness it is very tedious for users to specify a conditional model for each incomplete
 variable.
 
-The \textit{mi} package takes the latter approach but uses simplistic imputation models that 
+Our \textit{mi} package, which we propose to further develop, takes the latter approach but uses simplistic imputation models that 
 ignore the grouping structure that user may know exists in the data-generating process. As
 an initial step, we would like to reformulate the \textit{mi} package so that is uses the
 models in the \textit{rstanarm} package to impute. Hamiltonian MCMC is generally too slow
@@ -553,7 +554,7 @@ to quickly impute missing values from a model that takes into account, rather th
 the same grouping structure that the researcher plans to exploit when the substantive model
 is estimated on the completed data sets.
 
-Over the longer term, we would like to include models in the \textit{rstanarm} package that
+As the project progresses, we would like to include models in the \textit{rstanarm} package that
 simultaneously model the missing values, the missingness mechanism, and the outcome of 
 interest, which typically would include some specification of the grouping structure. This
 approach implies a well-defined joint posterior distribution of the model parameters and 
@@ -564,13 +565,12 @@ justified but also more precise.
 Variables with strong predictive power may not be recorded for all patients 
 or may be missing for the time window needed for prediction, which is a critical limitation 
 in the development of prediction algorithms and implementation of the 
-therapeutic interventions (see letter of support by Dr. Mirhaji). 
-Yet, incomplete data are the hallmark of EMRs. 
+therapeutic interventions (see letter of support by Dr. Mirhaji). Yet, incomplete data are the hallmark of EMRs. 
 Hierarchical models for incomplete data give valid estimates 
 \textit{if and only if} the missingness mechanism is ignorabe, which is to say that the parameters 
-for the missing data mechanism are indpenent from the parameters in the main model for the 
+for the missing data mechanism are independent from the parameters in the main model for the 
 outcome, and the data are either missing at random (MAR) or Missing Completely At Random 
-(MCAR) \cite{Rubin1976}. Indeed, these assumptions are unreasonale for EMRs. In our example, only 
+(MCAR) \cite{Rubin1976}. Indeed, these assumptions are not reasonable for EMRs. In our example, only 
 significant respiratory co-morbidity and symptoms will prompt physicians to request arterial blood gases (ABG). Trying to 
 impute missing ABG data using traditional multiple imputation algorithms would hence lead to biased 
 imputations. Imputation using auxiliary data can help overcome this limitation, as outlined below.
@@ -604,7 +604,8 @@ outcome is an emerging approach to help correct bias
 Bayesian methods \cite{Daniels2008, Schafer1997}. Joint hierarchical 
 modeling, including auxiliary data to impute incomplete patient records, 
 will improve the prediction model and facilitate the implementation of the 
-prediction algorithm \cite{Hall_25389642}.
+prediction algorithm \cite{Hall_25389642} for our use case to predict inpatient respiratory failure from EHR 
+in Montefiore Medical Center using the data from Dr. Gong's pragmatic trials APPROVE and PROVECheck.
 
 \subsection*{The state of software for visualizing MCMC output}
 
@@ -627,7 +628,7 @@ observed data, which are routine if the model was estimated by any of the
 functions in the \textit{rstanarm} package. If a hierarchical 
 model fails to converge, ascertaining why is crucial to troubleshooting. \textit{shinystan} 
 is already unmatched in combining ease of interactive graphical exploration 
-with sophisticated graphical rendering to explore correlation between parameters, autocorrelation
+with sophisticated graphical rendering to explore correlation between parameters, auto-correlation
 in the draws, the number of steps that the Hamiltonian MCMC sampler took on each iteration and 
 many other convergence diagnostics.
 
@@ -638,10 +639,11 @@ checking is one area where the need for additional options and functionality. We
 model sharing via the internet. We will not only further develop \textit{shinystan} 
 to make it more robust and scale it to work faster for larger models and data sets. We will continue to develop novel graphical 
 methods to assess model convergence with a special focus on hierarchical modeling. Finally, a
-major long-term goal for \textit{shinystan} is to be able to save the \textit{R} code that 
+major goal for \textit{shinystan} towards the completion of our project is to be able to save the \textit{R} code that 
 generates each of these graphics. When that capability is added, users will be able to
 include the plot-generating code in their \textit{R} scrips so that the graphics can 
-easily be updated whenever new observations are added to a data set or when the model is tweaked.
+easily be updated whenever new observations are added to a data set or when the model is tweaked. 
+This supports transparent reproducible research much better.
 
 As we further develop the interface we will place special emphasis on the concept of affordance in our "intuitive" 
 design of the \textit{shinystan} graphical user interfaces, e.g., in employing strong visual clues, provide clickable buttons and tabs, sliders, and other 
@@ -655,12 +657,12 @@ feedback to optimize the practical utility of \textit{shinystan's} implementatio
 In summary, we propose to further develop, test, and harden our three software packages: \textit{rstanarm}, \textit{shinystan}, and \textit{mi}.
 
 \subsection*{\textit{rstanarm} for accessible hierarchical modeling}
-The first proposed software package \textit{rstanarm} allows data scientists to specify the most common applied hierarchial regression models 
+The first proposed software package \textit{rstanarm} allows data scientists to specify the most common applied hierarchical regression models 
 and estimates them via \textit{Stan}'s implementation of Hamiltonian MCMC algorithm. Researchers do not
 need to understand the underlying intricacies (e.g., auxiliary parameterizations) that have been implemented in order to accelerate convergence and 
 do not need to build complicated data structures to keep track of group indexing. \textit{rstanarm}'s syntax makes hierarchical model building easy
 because it is the same as the familiar notation for specifying models in \textit{R} and popular \textit{R} packages such as \textit{lme4} \cite{lme4}.
-We will add additional models to \textit{rstanarm} so that it is the premere tool for hierarchical modeling in medical research.
+We will add additional models to \textit{rstanarm} so that it will become the premiere tool for hierarchical modeling in medical research.
 
 \subsection*{\textit{shinystan} for interactive graphical exploration and diagnosis of MCMC output}  
 The second \textit{R} package, \textit{shinystan}, is a graphical user interface for interactively exploring any model estimated by MCMC. 
@@ -674,13 +676,32 @@ the imputations, which would allow us to specify the group structure that is evi
 propose enhancing \textit{rstanarm} so that it can estimate models in a statistically principled way, even when some of
 the data are incomplete.
 
-\subsection*{Prior work in statistical software development and data-intensive outcomes research}
+\subparagraph*{The trajectory leading to the development of \textit{rstanarm} and \textit{shinystan}} 
+
+\begin{wrapfigure}{l}{0.6\textwidth} 
+ \vspace{- 15pt}
+    \centering
+\includegraphics[width=0.6\textwidth]{Figures/SoftwareTrajectory.pdf}
+  \vspace{-32pt}
+  \caption{Software development trajectory}
+    \label{fig:trajectory}
+ \vspace{- 15pt}
+\end{wrapfigure}
+
+The National Institute of Health, the Center for Disease Control and the National Science Foundation, 
+(NIH: 5R01GM074806, 5KL2TR001071, UH2-HL125119,  CDC: U01 OH010711-01 and NSF: SES-1205516) were among the many 
+federal institutions funding Stan \cite{Stan-manual:2015} development and its empirical applications.
+The work proposed here is thus a direct continuation of the aforementioned work that developed and implementing 
+ground-breaking algorithms that are capable of estimating complex hierarchical models. Figure \ref{fig:trajectory} to the above left 
+outlines the trajectory that led to the current project proposal.
+
+\subparagraph*{Prior work in statistical software development and data-intensive outcomes research}
  
 Dr. Andreae published several meta-analyses and synthesized the evidence 
 from clinical trials by pooling aggregate and individual patient data, when 
 published results were insufficient for classical meta-analysis 
 \cite{AndreaeJohnsonAbstract2013, Andreae2013, Andreae2015, Carter2015, Atchabahian2015}. Dr. Andreae, Hall, and 
-collaborators used the software \textit{rstanarm} and \textit{shinystan} to build a multilevel 
+collaborators used the software \textit{Stan}, \textit{rstanarm} and \textit{shinystan} to build a multilevel 
 hierarchical model to investigate health care disparities and quality of 
 anesthesia delivery in the large National Clinical Outcomes Registry maintained 
 by the American Society of Anesthesiology \cite{AndreaeWhite2015}. 
@@ -704,35 +725,15 @@ geometry of the underlying Hamiltonian MCMC algorithm in \textit{Stan} that allo
 \cite{BetancourtGeometry2016}.
 
 Dr. Goodrich is now the maintainer of the \textit{rstan} R package and the \textit{rstanarm} package that extends
-it, which was written entirely by Dr. Goodrich and Mr. Gabry. Mr. Gabry is the maintainer and essentially the
-sole author of the \textit{shinystan} R package.
+it, which was written entirely by Dr. Goodrich and Mr. Gabry. Mr. Gabry is the maintainer and was essentially the
+principal code writer of the \textit{shinystan} R package.
 
-Dr. Gong's ongoing NIH funded trial to predict and improve 
-respiratory outcomes after intubation based on real time 
-electronic medical records is just one of many examples of her 
-leading role in applied data driven outcomes research 
+Dr. Gong and Gelman's have an promising collaboration involving the ongoing NIH funded trial to predict and 
+improve respiratory outcomes after intubation based on real time electronic medical records. This trial is just
+one of many examples of Dr. Gong's leading role in applied data driven outcomes research 
 \cite{Gong2005, Gong2010, Gajic2011, Yu_24970344, Kor2014}. 
 
-\subsection*{The trajectory leading to the development of \textit{rstanarm} and \textit{shinystan}} 
-
-\begin{wrapfigure}{l}{0.6\textwidth} 
- \vspace{- 15pt}
-    \centering
-\includegraphics[width=0.6\textwidth]{Figures/SoftwareTrajectory.pdf}
-  \vspace{-32pt}
-  \caption{Software development trajectory}
-    \label{fig:trajectory}
- \vspace{- 15pt}
-\end{wrapfigure}
-
-The National Institute of Health, the Center for Disease Control and the National Science Foundation, 
-(NIH: 5R01GM074806, 5KL2TR001071, UH2-HL125119,  CDC: U01 OH010711-01 and NSF: SES-1205516) were among the many 
-federal institutions funding Stan \cite{Stan-manual:2015} development and its empirical applications.
-The work proposed here is thus a direct continuation of the aforementioned work that developed and implementing 
-ground-breaking algorithms that are capable of estimating complex hierarchical models. Figure \ref{fig:trajectory} to the above left 
-outlines the trajectory that led to the current project proposal.
-
-\section*{Collaborative software development and computer resources}
+\subsection*{Collaborative software development and computer resources}
 We will follow accepted best practices, proven methods, and industry standards for open-source software design, construction and implementation.
 For example, when building \textit{Stan} and its ecosystem of interfaces, we have trie to follow the rules of clarity, composition, separation, 
 simplicity, transparency, etc. set form by Raymond \cite{Raymond2003art}.
@@ -765,7 +766,7 @@ any computers that we use to analyze the data have to be compliant with the Heal
 Clinical Research Informatics at Montefiore will house any data set falling under HIPPA and 
 guarantee compliance with relevant federal data safety and privacy regulations (see letter by Dr. Mirhaji). 
 
-\section*{Dissemination and unimpeded utilization of the products of this project}
+\subsection*{Dissemination and unimpeded utilization of the products of this project}
 The goal of this project is to encourage widespread adoption of cutting-edge 
 hierarchical modeling for data-intensive outcomes research by clinical scientists and to support the use of our 
 open source applications. The software developed for this grant will hence all be incorporated into the public repository CRAN, 
@@ -799,13 +800,13 @@ detailed \href{http://mc-stan.org/documentation/}{technical} and practical tutor
 \href{https://cran.r-project.org/web/packages/rstanarm/vignettes/aov.html}{vignettes} available online, interspersing code, graphics 
 and detailed step-by-step explanations using \textit{R's}  \href{http://rmarkdown.rstudio.com/}{R Markdown \- Dynamic Documents for R}, 
 blogs, for example our \href{http://andrewgelman.com/}{blog} on Statistical Modeling, Causal Inference, and Social Science. In addition, 
-\textit{Stan} will be featured in the next edition of \cite{Gelman-Hill_2014}.
+\textit{rstanarm} and \textit{shinystan} will be featured in the next edition of Bayesian Data Analysis with many examples\cite{Gelman-Hill_2014}.
 
 \subsubsection*{Mechanisms for incorporating feedback and user reported corrections into the software.}
 
 We already have very active \href{https://groups.google.com/forum/#!forum/stan-users} {user groups} around \textit{Stan} and 
-with frequent online and face-to-face \href{http://www.meetup.com/bda-group/}{meetings}. We will incoporate more of
-\textit{rstanarm} and \textit{shinystan} in the future to to discuss implementation issues, engage advanced users in the development of 
+with frequent online and face-to-face \href{http://www.meetup.com/bda-group/}{meetings}. We will incorporate more of
+\textit{rstanarm} and \textit{shinystan} in the future to discuss implementation issues, engage advanced users in the development of 
 our packages and/or in designing courses around our models and software, but in particular to solicit their feedback. The user 
 forums have served also to assist novices in implementing their models in our software.
 Like our existing \href{https://github.com/stan-dev/example-models/wiki}{Wiki} on Github for \textit{Stan}, we will 
@@ -822,17 +823,21 @@ including further development of the \textit{rstanarm} and \textit{shinystan}
  \vspace*{-15pt}
 \end{wrapfigure}
 
-The Timeline delineates the planned project progress by year. We begin by setting up the project team in the first year, 
-establishing our online user interface and updating the \textit{rstanarm} package in CRAN. In year two and three, we will sequentially 
-add additional models and provide advanced tools for visualization. We start to develop additional functions for meta-analysis and 
+The Timeline delineates the planned project progress by year. We begin by setting up the project team in 
+the first year, establishing our online user interface and updating the \textit{rstanarm} package in CRAN. 
+In year two and three, we will sequentially add additional models and provide advanced tools 
+for visualization. We start to develop additional functions for meta-analysis and 
 change-point models, scaling eventually these also to multilevel models. In the fourth project year, we will begin to integrate 
 missing data algorithms into \textit{rstanarm} and finally scale the packages to large datasets in year five.
 
-Some colleagues are reluctant to make powerful statistical tools accessible to the novice users that do not understand them. We counter 
+Some colleagues are reluctant to make powerful statistical tools accessible to the novice users 
+who may not fully understand them. We counter 
 however that the simplicity of the \textit{rstanarm} syntax will allow novice users to learn to specify more realistic models by 
 making the underlying hierarchical model structure more transparent.  \textit{rstanarm} will also allow outcomes research to be 
-more transparent and reproducible. Finally, \textit{shinystan} will contribute to the ease with which advanced hierarchical models and MCMC 
-results can be shared, questioned, and discussed.
+more transparent and reproducible. The integration of \textit{mi} with \textit{Stan} through the use of 
+\textit{rstanarm's} pre-compiled will greatly improve incorporation of incomplete and missing data into 
+advanced coherent modeling. Finally, \textit{shinystan} will contribute to the ease 
+with which advanced hierarchical models and MCMC results can be shared, questioned, and discussed.
 
 \newpage 
 %----------------------------------------------------------------------------------------
