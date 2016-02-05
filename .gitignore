@@ -2,6 +2,8 @@
 *.gz
 *.aux
 *.bak
-*.bbl
+ResearchPlan/*.bbl
+ResearchPlan/*.pdf
 *.bak
 *.log
+

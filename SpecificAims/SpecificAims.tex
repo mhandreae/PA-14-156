@@ -1,0 +1,134 @@
+% NIH Grant Proposal for the Specific Aims and Research Plan Sections
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,notitlepage]{article}
+
+% A note on fonts: As of 2013, NIH allows Georgia, Arial, Helvetica, and Palatino Linotype. LaTeX doesn't have Georgia or Arial built in; you can try to come up with your own solution if you wish to use those fonts. Here, Palatino & Helvetica are available, leave the font you want to use uncommented while commenting out the other one.
+
+\usepackage[super]{natbib}
+\usepackage{palatino} % Palatino font
+%\usepackage{helvet} % Helvetica font
+\renewcommand*\familydefault{\sfdefault} % Use the sans serif version of the font
+\usepackage[T1]{fontenc}
+\linespread{1.05} % A little extra line spread is better for the Palatino font
+\usepackage{hyperref} % to allow hyperlinks to websites on the internet
+\usepackage[hypcap]{caption} % to point to the top of the image
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{graphicx} % Required for including images
+\usepackage{booktabs} % Top and bottom rules for tables
+\usepackage{wrapfig} % Allows in-line images
+%\usepackage[labelfont=\small]{caption} % Make figure numbering in captions bold
+\usepackage[top=0.6in,bottom=0.6in,left=0.6in,right=0.6in]{geometry} % Reduce the size of the margin
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\pagestyle{empty} % Remove page numbers
+%\let\oldtabular\tabular 
+%\renewcommand{\tabular}{\large\oldtabular}
+
+\hyphenation{ionto-pho-re-tic iso-tro-pic fortran} % Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
+
+  % to reduce white space between SECTIONS
+\usepackage[compact]{titlesec}
+\titlespacing{\part}{0pt}{*0pt}{*0pt}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+% Reduce whitespace arount lists
+\usepackage{mdwlist}
+\usepackage{verbatim}
+%\usepackage[compact]{titlesec}
+%\titlespacing{\part}{-200pt}{-100pt}{-200pt}
+%\titlespacing{\section}{0pt}{0pt}{0pt}
+%\titlespacing{\subsection}{0pt}{*0}{*0}
+%\titlespacing{\subsubsection}{-2pt}{*0}{*0}
+%\titlespacing{\subparagraph}{-5pt}{*0}{*0}
+%\titlespacing*{\subparagraph} {\parindent}{1ex plus 1ex minus .2ex}{0.5em}
+
+  
+  % to reduce white space between PARAGRAPHS
+%\setlength{\parskip}{-2pt}
+% \setlength{\parsep}{-2pt}
+
+  % additional parameters
+\setlength{\headsep}{20pt}
+%\setlength{\topskip}{0pt}
+%\setlength{\topmargin}{0pt}
+%\setlength{\topsep}{0pt}
+\setlength{\partopsep}{-2pt}
+%\setlength{\parindent}{1cm}
+
+% to reduce white space around figures
+% \setlength{\textfloatsep}{0pt plus 0pt minus 0pt}
+
+% Set graphics path to tell latex where to look for images
+%\graphicspath{ {C:/Users/Micheal/Dropbox/Professional/KL2/BigDataR01/ConceptGraphics/} }
+
+\begin{document}
+\subsection*{Specific Aims}
+
+National health databases and electronic health records (EHR) are 
+clustered by procedure, provider, service, institution and geography and inherently incomplete. Often 
+neglected, this rich spatial and temporal organization is most realistically 
+captured in hierarchical statistical models with cluster-specific parameters, but 
+estimating such models is still difficult for medical researchers using traditional software.
+Uncollected, incomplete or missing data can further hinder modeling or bias inferences.
+We propose to further develop the capabilities of the software called \textit{Stan} --- 
+which is a probabilistic programming language, mathematical library, suite of estimation
+algorithms, and ecosystem of supporting interfaces --- in order to make advanced hierarchical  
+modeling accessible to data scientists for EHR-based medical outcomes research with incomplete data.
+Making \textit{Stan} more accessible has the potential to transform the way medical outcomes research is conducted.
+
+\paragraph*{Flexibility and robustness of hierarchical modeling could 
+transform EHR based outcomes research.} Consider surgery as an 
+illustrative example. Patients in the same hospital undergoing the 
+same surgical intervention by the same team will show similar clinical 
+trajectories and responses. We are interested in investigating
+differences in therapeutic effects and in predicting adverse outcomes in order to prevent 
+them. Doing so entails (1) estimating individual intercept-shifts for each provider and procedure to control for potentially confounding differences 
+in quality of care by different teams, (2) allowing for spatial clustering of adherence  behavior, e.g., by different services, 
+which can be represented by multilevel modeling, and (3) partially pooling estimates to improve precision, especially in subgroups with sparse data.
+Prediction of adverse health outcomes can be improved by exploiting the implied correlations between different but related subsets of data. 
+Conversely, failure to account for the highly structured and correlated nature of health care delivery or 
+failure to account for the mechanisms by which some data are missing may lead to incorrect statistical inferences, poor predictions, 
+and adverse health consequences. Realistic modeling of the heterogeneity in care delivered may help to identify reasons for variance 
+in performance and may point to ways to improve outcomes. 
+
+\paragraph*{Classical approaches and traditional software often lack flexibility 
+for hierarchical modeling.} Most available software limits the types of 
+hierarchical models that can be estimated because their algorithms are more likely 
+to run into computational problems when estimating more complicated hierarchical models.
+In contrast, \textit{Stan} is a flexible, general-purpose modeling language and a 
+novel, powerful estimation engine that has facilitated advanced hierarchical modeling in biostatistics, epidemiology, public health, 
+political science, and pharmacokinetics. \textit{Stan's} development has been funded by the NSF, DoD, and other organizations. 
+\textit{Stan} and the interfaces to it (e.g. from \textit{Python, Julia, R}, etc.) are open source and platform-independent.
+
+\paragraph*{Good hierarchical modeling should be accessible, transparent and requires good model diagnostics} 
+However, building and tuning sophisticated hierarchical models with \textit{Stan} (or other available software) 
+is still very challenging even for the initiated. We lack visual exploratory and diagnostic tools 
+to recognize when a complicated model is logically  flawed or fails to fit the data empirically. We propose to enhance \textit{Stan's} 
+ecosystem with more accessible interfaces and statistical tools for principled model checking and re-specification.
+
+\paragraph*{Aim 1:} To further develop our software package \textit{rstanarm}, a more user-friendly interface to \textit{Stan}, 
+for the open-source statistical language and environment \textit{R}, in order to make it more suitable and accessible for clinical data 
+scientists and biostatisticians who want to estimate hierarchical models for EMR data.
+
+\paragraph*{Aim 2:} To further develop \textit{shinystan}, our interactive web application to 
+analyze and visually explore the output of \textit{Stan} models and to develop diagnostics 
+to identify and troubleshoot computational and empirical problems with advanced hierarchical models.
+
+\paragraph*{Aim 3:} To further develop \textit{mi}, our \textit{R} package for multiple imputation
+of missing data so that it can make use of \textit{Stan} via the models provided by \textit{rstanarm}.
+
+\paragraph*{Aim 4:} To explicate, document, and disseminate realistic hierarchical models for incomplete data 
+to the clinical data science community with hands on use cases, workshops, journal articles, and 
+online tutorials. To solicit the data scientist community feedback, engage new 
+software developers, and to incorporate improvements to our software.
+
+
+\end{document}
